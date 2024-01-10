@@ -1,0 +1,403 @@
+import 'package:flutter/material.dart';
+//import 'package:healthsync_app/pages/signup.dart';
+
+import 'package:healthsync_app/utils/utils.dart';
+
+class LoginClass extends StatefulWidget {
+  const LoginClass({Key? key}) : super(key: key);
+  @override
+  _SceneState createState() => _SceneState();
+}
+
+class _SceneState extends State<LoginClass>  
+{
+  //final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  
+  @override
+  Widget build(BuildContext context) {
+    double baseWidth = 360;
+    double fem = MediaQuery.of(context).size.width / baseWidth;
+    double ffem = fem * 0.97;
+    return SizedBox(
+      width: double.infinity,
+      child: Container(
+        // loginWQk (158:7)
+        width: double.infinity,
+        decoration: const BoxDecoration (
+          color: Color(0xffffffff),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(
+              // autogroupsy6qpAY (VyqVCL1TNdFkayXv7SY6Q)
+              width: 360*fem,
+              height: 213*fem,
+              child: Image.asset(
+                'assets/images/loginIntro.png',
+                width: 360*fem,
+                height: 213*fem,
+              ),
+            ),
+            Container(
+              // autogroupzrpvXKr (VyrGkrRgP9fJR3VtjzrPv)
+              padding: EdgeInsets.fromLTRB(6*fem, 65*fem, 12*fem, 77*fem),
+              width: double.infinity,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  
+                  
+                  
+                  
+                  
+                  
+                  Container(
+                      // autogroup3jvtvYC (Vyt5HgapHFNvYNTUc3jvt)
+                      margin: EdgeInsets.fromLTRB(5*fem, 0*fem, 4*fem, 32*fem),
+                      width: double.infinity,
+                      height: 44*fem,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          ElevatedButton(
+                            //child:const Text("Login"),
+                            onPressed:() {
+                              //navigate to login page
+                              
+                            },
+                          
+                          style: ElevatedButton.styleFrom(
+                          padding: EdgeInsets.zero,
+                          backgroundColor: Color(0xffffffff),
+                          foregroundColor: Color(0xff4c4d4f),
+                          side: const BorderSide(width:2,color: Color(0xff00b4d8)),
+                          elevation: 5 * fem,
+                          shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15 * fem),
+                        ),
+                      ),
+                              child: SizedBox(
+                                width: 162*fem,
+                                height: double.infinity,
+                                /*decoration: BoxDecoration (
+                                  border: Border.all(color: Color(0xff00b4d8)),
+                                  color: Color(0xffffffff),
+                                  borderRadius: BorderRadius.circular(15*fem),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Color(0x0c000000),
+                                      offset: Offset(0*fem, 1*fem),
+                                      blurRadius: 1*fem,
+                                    ),
+                                  ],
+                                ),*/
+                                child: Center(
+                                  child: Text(
+                                    'Login',
+                                    textAlign: TextAlign.center,
+                                    style: safeGoogleFont (
+                                      'Lato',
+                                      fontSize: 17*ffem,
+                                      fontWeight: FontWeight.w500,
+                                      height: 1.1764705882*ffem/fem,
+                                      color: Color(0xff4c4d4f),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          
+                            SizedBox(width: 9 * fem), // Add spacing between buttons
+                            ElevatedButton(
+                              onPressed: () {
+                              //Navigator.push(context,MaterialPageRoute(builder:(context)=>const SignupClass(),));
+                            },
+                            style: ElevatedButton.styleFrom(
+                            padding: EdgeInsets.zero,
+                            backgroundColor: Color(0xffffffff),
+                            foregroundColor: Color(0xff000000),
+                            side: const BorderSide(width:3,color: Color(0xff00b4d8)),
+                            elevation: 5 * fem,
+                            shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15 * fem),
+                         ),
+                       ),
+                          child:SizedBox(
+                            // tabbuttonDQp (159:206)
+                            width: 162*fem,
+                            height: double.infinity,
+                            /*decoration: BoxDecoration (
+                              border: Border.all(color: Color(0xff00b4d8)),
+                              borderRadius: BorderRadius.circular(15*fem),
+                            ),*/
+                            child: Center(
+                              child: Text(
+                                'Sign up',
+                                textAlign: TextAlign.center,
+                                style: safeGoogleFont (
+                                  'Inter',
+                                  fontSize: 17*ffem,
+                                  fontWeight: FontWeight.w700,
+                                  height: 1.1764705882*ffem/fem,
+                                  color: Color(0xff000000),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  
+                  
+                  
+                  
+                  //email
+                  Container(
+                    margin: const EdgeInsets.only(bottom: 25),
+                    child: TextField(
+                    controller: emailController,
+                    decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                    borderRadius:BorderRadius.circular(10*fem),
+                    borderSide: const BorderSide(
+                    color: Color(0xff00b4d8), 
+                    width:2,
+                  ),
+                ),
+                                    
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: const BorderSide(width: 2, color: Color(0xff00b4d8)),
+                        borderRadius: BorderRadius.circular(10*fem),
+                    ),
+                    filled:true,
+                    fillColor: const Color(0xfffffcfc),
+                    prefixIcon:SizedBox(
+                    width: 30*fem,  
+                    height: 50*fem,
+                    child: Padding(
+                    padding:EdgeInsets.all(4*fem),
+                    child:Image.asset(
+                    'assets/images/emailSVG.png',
+                     width:double.infinity,
+                     height:double.infinity,
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+                                  
+                    labelText:'Email',
+                    labelStyle: const TextStyle(
+                    fontSize: 24,
+                    fontFamily: 'Lato',
+                    color: Color(0xb2000000), 
+                  ),
+                    contentPadding: EdgeInsets.symmetric(vertical: 5 * fem, horizontal: 5 * fem),
+                  ),
+                ),
+              ),
+                  
+                  //password
+                  Container(
+                    margin: const EdgeInsets.only(bottom:15),
+                    child: TextField(
+                    controller: passwordController,
+                    decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                    borderRadius:BorderRadius.circular(10*fem),
+                    borderSide: const BorderSide(
+                    color: Color(0xff00b4d8), 
+                    width:2,
+                  ),
+                ),
+                                    
+                    focusedBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(width: 2, color: Color(0xff00b4d8)),
+                    borderRadius: BorderRadius.circular(10*fem),
+                  ),
+                    filled:true,
+                    fillColor: const Color(0xfffffcfc),
+                    prefixIcon:SizedBox(
+                    width: 30*fem,  
+                    height: 50*fem,
+                    child: Padding(
+                    padding:EdgeInsets.all(4*fem),
+                    child:Image.asset(
+                      'assets/images/passwordSVG.png',
+                        width:double.infinity,
+                        height:double.infinity,
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ),
+                                  
+                      labelText:'Password',
+                      labelStyle: const TextStyle(
+                      fontSize: 24,
+                      fontFamily: 'Lato',
+                      color: Color(0xb2000000), 
+                    ),
+                      contentPadding: EdgeInsets.symmetric(vertical: 5 * fem, horizontal: 5 * fem),
+                  ),
+                ),
+               ),
+                    
+                  Container(
+                    // autogroup1qji8wE (Vyqy1rzEe7FvUhWFr1qji)
+                    margin: EdgeInsets.fromLTRB(5*fem, 0*fem, 0*fem, 34*fem),
+                    width: double.infinity,
+                    height: 20*fem,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          // inputEzG (158:10)
+                          margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 71*fem, 0*fem),
+                          padding: EdgeInsets.fromLTRB(2.5*fem, 2*fem, 0*fem, 2*fem),
+                          height: double.infinity,
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                // fi8924271YEG (158:11)
+                                margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 6.5*fem, 0*fem),
+                                width: 15*fem,
+                                height: 15*fem,
+                                child: Image.asset(
+                                  'assets/images/fi8924271.png',
+                                  width: 15*fem,
+                                  height: 15*fem,
+                                ),
+                              ),
+                              Text(
+                                // rememberme3B2 (158:13)
+                                'Remember me',
+                                textAlign: TextAlign.center,
+                                style: safeGoogleFont (
+                                  'Lato',
+                                  fontSize: 16*ffem,
+                                  fontWeight: FontWeight.w600,
+                                  height: 1*ffem/fem,
+                                  color: Color(0xff64748b),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Text(
+                          // forgetpasswordMxQ (158:20)
+                          'Forget Password?',
+                          textAlign: TextAlign.center,
+                          style: safeGoogleFont (
+                            'Inter',
+                            fontSize: 16*ffem,
+                            fontWeight: FontWeight.w600,
+                            height: 1*ffem/fem,
+                            color: Color(0xff00b4d8),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  
+                  
+                  
+                  Container(
+                    // autogrouptk5zHr4 (Vyr8BGPT7nMBtgPohTk5z)
+                    margin: EdgeInsets.fromLTRB(90*fem, 0*fem, 94*fem, 25*fem),
+                    width: double.infinity,
+                    height: 36*fem,
+                    decoration: BoxDecoration (
+                      color: Color(0xff00b4d8),
+                      borderRadius: BorderRadius.circular(30*fem),
+                    ),
+                    child: Center(
+                      child: Center(
+                        child: Text(
+                          'Login',
+                          textAlign: TextAlign.center,
+                          style: safeGoogleFont (
+                            'Lato',
+                            fontSize: 20*ffem,
+                            fontWeight: FontWeight.w700,
+                            height: 1.2*ffem/fem,
+                            color: Color(0xffffffff),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    // inputLpL (158:14)
+                    margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 27*fem),
+                    padding: EdgeInsets.fromLTRB(32*fem, 8*fem, 32*fem, 8*fem),
+                    width: double.infinity,
+                    decoration: BoxDecoration (
+                      color: Color(0xffffffff),
+                      borderRadius: BorderRadius.circular(16*fem),
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Container(
+                          // line2pzQ (158:15)
+                          margin: EdgeInsets.fromLTRB(0*fem, 1*fem, 0*fem, 0*fem),
+                          width: 90.5*fem,
+                          height: 1*fem,
+                          decoration: const BoxDecoration (
+                            color: Color(0xffcbd5e1),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 8*fem,
+                        ),
+                        Text(
+                          // orloginwith7ic (158:16)
+                          'Or login with',
+                          textAlign: TextAlign.center,
+                          style: safeGoogleFont (
+                            'Lato',
+                            fontSize: 14*ffem,
+                            fontWeight: FontWeight.w600,
+                            height: 1.1428571429*ffem/fem,
+                            color: Color(0xff4c4d4f),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 8*fem,
+                        ),
+                        Container(
+                          // line1dgx (158:17)
+                          margin: EdgeInsets.fromLTRB(0*fem, 1*fem, 0*fem, 0*fem),
+                          width: 90.5*fem,
+                          height: 1*fem,
+                          decoration: const BoxDecoration (
+                            color: Color(0xffcbd5e1),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    // image17NPe (158:21)
+                    margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 4*fem, 0*fem),
+                    width: 48*fem,
+                    height: 48*fem,
+                    child: Image.asset(
+                      'assets/images/googleSVG.png',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+          );
+  }
+}
