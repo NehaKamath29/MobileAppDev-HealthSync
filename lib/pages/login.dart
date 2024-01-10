@@ -6,12 +6,12 @@ import 'package:healthsync_app/utils/utils.dart';
 class LoginClass extends StatefulWidget {
   const LoginClass({Key? key}) : super(key: key);
   @override
-  _SceneState createState() => _SceneState();
+  State<LoginClass> createState() => _LoginClassState();
 }
 
-class _SceneState extends State<LoginClass>  
+class _LoginClassState extends State<LoginClass>  
 {
-  //final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  final _formKey = GlobalKey<FormState>();
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   
@@ -20,10 +20,12 @@ class _SceneState extends State<LoginClass>
     double baseWidth = 360;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
-    return SizedBox(
-      width: double.infinity,
-      child: Container(
-        // loginWQk (158:7)
+    return SingleChildScrollView(
+        child:Form(
+        key:_formKey,
+      
+        child: Container(
+        
         width: double.infinity,
         decoration: const BoxDecoration (
           color: Color(0xffffffff),
@@ -119,7 +121,7 @@ class _SceneState extends State<LoginClass>
                             padding: EdgeInsets.zero,
                             backgroundColor: Color(0xffffffff),
                             foregroundColor: Color(0xff000000),
-                            side: const BorderSide(width:3,color: Color(0xff00b4d8)),
+                            side: const BorderSide(width:4,color: Color(0xff00b4d8)),
                             elevation: 5 * fem,
                             shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15 * fem),
@@ -138,7 +140,7 @@ class _SceneState extends State<LoginClass>
                                 'Sign up',
                                 textAlign: TextAlign.center,
                                 style: safeGoogleFont (
-                                  'Inter',
+                                  'Lato',
                                   fontSize: 17*ffem,
                                   fontWeight: FontWeight.w700,
                                   height: 1.1764705882*ffem/fem,
@@ -157,9 +159,10 @@ class _SceneState extends State<LoginClass>
                   
                   
                   //email
-                  Container(
-                    margin: const EdgeInsets.only(bottom: 25),
-                    child: TextField(
+                  //Container(
+                    //margin: const EdgeInsets.only(bottom: 25),
+                    //const SizedBox(height:20,),
+                    TextFormField(
                     controller: emailController,
                     decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
@@ -198,22 +201,30 @@ class _SceneState extends State<LoginClass>
                   ),
                     contentPadding: EdgeInsets.symmetric(vertical: 5 * fem, horizontal: 5 * fem),
                   ),
+                  validator: (email){
+                    if(email==null || email.isEmpty){
+                      return 'Email id required';
+                    }
+                    return null;
+                  },
                 ),
-              ),
+              //),
                   
                   //password
-                  Container(
-                    margin: const EdgeInsets.only(bottom:15),
-                    child: TextField(
-                    controller: passwordController,
-                    decoration: InputDecoration(
-                    enabledBorder: OutlineInputBorder(
-                    borderRadius:BorderRadius.circular(10*fem),
-                    borderSide: const BorderSide(
-                    color: Color(0xff00b4d8), 
-                    width:2,
+                  //Container(
+                    //margin: const EdgeInsets.only(bottom:15),
+                    const SizedBox(height:20,),
+                    TextFormField(
+                      obscureText: true,
+                      controller: passwordController,
+                      decoration: InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                      borderRadius:BorderRadius.circular(10*fem),
+                      borderSide: const BorderSide(
+                      color: Color(0xff00b4d8), 
+                      width:2,
+                    ),
                   ),
-                ),
                                     
                     focusedBorder: OutlineInputBorder(
                     borderSide: const BorderSide(width: 2, color: Color(0xff00b4d8)),
@@ -243,9 +254,15 @@ class _SceneState extends State<LoginClass>
                     ),
                       contentPadding: EdgeInsets.symmetric(vertical: 5 * fem, horizontal: 5 * fem),
                   ),
+                  validator: (password){
+                    if(password==null || password.isEmpty){
+                      return 'Password required';
+                    }
+                    return null;
+                  },
                 ),
-               ),
-                    
+               //),
+                  const SizedBox(height:15,), 
                   Container(
                     // autogroup1qji8wE (Vyqy1rzEe7FvUhWFr1qji)
                     margin: EdgeInsets.fromLTRB(5*fem, 0*fem, 0*fem, 34*fem),
@@ -306,7 +323,7 @@ class _SceneState extends State<LoginClass>
                   
                   
                   
-                  Container(
+                  /*Container(
                     // autogrouptk5zHr4 (Vyr8BGPT7nMBtgPohTk5z)
                     margin: EdgeInsets.fromLTRB(90*fem, 0*fem, 94*fem, 25*fem),
                     width: double.infinity,
@@ -330,7 +347,68 @@ class _SceneState extends State<LoginClass>
                         ),
                       ),
                     ),
+                  ),*/
+
+
+                  //Login button
+                    const SizedBox(height:20,),
+                    ElevatedButton(
+                      onPressed: () 
+                      {
+                        /*print('Username: ${SignupValidator.validateUsername(fullNameController.text)}');
+                        print('Email: ${SignupValidator.validateEmail(emailController.text)}');
+                        print('Phone Number: ${SignupValidator.validatePhoneNumber(phoneNumberController.text)}');
+                        print('Password: ${SignupValidator.validatePassword(passwordController.text)}');*/
+                        if(_formKey.currentState!.validate())
+                        print("Success");
+                        else
+                        print("Not a success");
+
+
+
+
+
+                        /*if (SignupValidator.isSignupFormValid(
+                        username: fullNameController.text,
+                        email: emailController.text,
+                        phoneNumber: phoneNumberController.text,
+                        password: passwordController.text,
+                      )) {
+                  // All validations passed, navigate to login page
+                      //Navigator.pushNamed(context, '/login');
+                      ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                      content:Text('Signup successful!'),
+                      ),
+                      );
+                      }*/
+                        // Add the logic you want to execute when the button is pressed
+                      },
+                      style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0xff00b4d8), // Background color
+                      shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15 * fem),
+                    ),
+                      minimumSize: Size(150 * fem, 40* fem),
                   ),
+                      //child: Padding(
+                      //padding: EdgeInsets.symmetric(vertical: 10 * fem),
+                      child: Text(
+                        'Login',
+                      style: safeGoogleFont(
+                      'Lato',
+                      fontSize: 20 * ffem,
+                      fontWeight: FontWeight.w700,
+                      color: Color(0xffffffff),
+                    ),
+                  ),
+                ),
+              //),
+                  
+                  
+                  
+                  
+                  
                   Container(
                     // inputLpL (158:14)
                     margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 27*fem),
@@ -398,6 +476,7 @@ class _SceneState extends State<LoginClass>
           ],
         ),
       ),
-          );
+          ),
+    );
   }
 }

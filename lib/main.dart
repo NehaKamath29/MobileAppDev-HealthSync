@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:healthsync_app/utils/utils.dart';
 //import 'package:healthsync_app/pages/android_large2.dart';
 // import 'package:myapp/page-1/angle-right.dart';
-//import 'package:healthsync_app/pages/login.dart';
-import 'package:healthsync_app/pages/signup.dart';
+import 'package:healthsync_app/pages/login.dart';
+//import 'package:healthsync_app/pages/signup.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget 
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget
     },*/
     home: const Scaffold(
 		body: SingleChildScrollView(
-			child: SignupClass(),
+			child: LoginClass(),
 		),
 		),
 	);

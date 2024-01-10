@@ -1,43 +1,46 @@
 import 'package:flutter/material.dart';
 import 'package:healthsync_app/utils/utils.dart';
-//import 'package:healthsync_app/pages/login.dart';
+import 'package:email_validator/email_validator.dart';
 
-class SignupClass extends StatefulWidget {
-  const SignupClass({Key? key}) : super(key: key);
+class FormScreen extends StatefulWidget {
+  const FormScreen({Key? key}) : super(key: key);
   @override
-  _SceneState createState() => _SceneState();
+  State<FormScreen> createState() => _FormScreenState();
 }
 
-class _SceneState extends State<SignupClass> 
+class _FormScreenState extends State<FormScreen> 
 {
-  //final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  final _formKey = GlobalKey<FormState>();
   TextEditingController fullNameController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   TextEditingController phoneNumberController = TextEditingController();
+  
   @override
   Widget build(BuildContext context) {
     double baseWidth = 360;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
-    return SizedBox(
+    
+    return SingleChildScrollView(
+      child:Form(
+      key: _formKey,
+      child: SizedBox(
       width: double.infinity,
       child: Container(
-        // signup2ZJ (159:110)
         width: double.infinity,
         height: 800*fem,
         decoration: const BoxDecoration (
           color: Color(0xffffffff),
         ),
         child: SizedBox(
-          // autogroupyxfvAQc (VysjJFti9bYXTW9v1yxFv)
           width: double.infinity,
           height: 769*fem,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(
-                // autogroupjogytrQ (VysysfwNTG1MhvkUEjoGY)
+                
                 width: 360*fem,
                 height: 216*fem,
                 child: Image.asset(
@@ -49,23 +52,12 @@ class _SceneState extends State<SignupClass>
 
 
               Container(
-                // autogroupzzq8R5e (VytNN2TzMNKZB9qj9ZZQ8)
                 padding: EdgeInsets.fromLTRB(9*fem, 30*fem, 9*fem, 0*fem),
                 width: double.infinity,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    
-                    
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   Container(
-                      // autogroup3jvtvYC (Vyt5HgapHFNvYNTUc3jvt)
+                    Container(
                       margin: EdgeInsets.fromLTRB(5*fem, 0*fem, 4*fem, 32*fem),
                       width: double.infinity,
                       height: 44*fem,
@@ -83,42 +75,30 @@ class _SceneState extends State<SignupClass>
                           padding: EdgeInsets.zero,
                           backgroundColor: Color(0xffffffff),
                           foregroundColor: Color(0xff4c4d4f),
-                          side: const BorderSide(width:3,color: Color(0xff00b4d8)),
+                          side: const BorderSide(width:4,color: Color(0xff00b4d8)),
                           elevation: 5 * fem,
                           shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15 * fem),
                         ),
                       ),
-                              child: SizedBox(
-                                width: 162*fem,
-                                height: double.infinity,
-                                /*decoration: BoxDecoration (
-                                  border: Border.all(color: Color(0xff00b4d8)),
-                                  color: Color(0xffffffff),
-                                  borderRadius: BorderRadius.circular(15*fem),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Color(0x0c000000),
-                                      offset: Offset(0*fem, 1*fem),
-                                      blurRadius: 1*fem,
-                                    ),
-                                  ],
-                                ),*/
-                                child: Center(
-                                  child: Text(
-                                    'Login',
-                                    textAlign: TextAlign.center,
-                                    style: safeGoogleFont (
-                                      'Lato',
-                                      fontSize: 17*ffem,
-                                      fontWeight: FontWeight.w500,
-                                      height: 1.1764705882*ffem/fem,
-                                      color: Color(0xff4c4d4f),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
+                      child: SizedBox(
+                      width: 162*fem,
+                      height: double.infinity,
+                      child: Center(
+                      child: Text(
+                      'Login',
+                       textAlign: TextAlign.center,
+                      style: safeGoogleFont (
+                      'Lato',
+                      fontSize: 23*ffem,
+                      fontWeight: FontWeight.w800,
+                      height: 1.1764705882*ffem/fem,
+                      color: Color(0xff4c4d4f),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
                           
                             SizedBox(width: 9 * fem), // Add spacing between buttons
                             ElevatedButton(
@@ -148,9 +128,9 @@ class _SceneState extends State<SignupClass>
                                 'Sign up',
                                 textAlign: TextAlign.center,
                                 style: safeGoogleFont (
-                                  'Inter',
-                                  fontSize: 17*ffem,
-                                  fontWeight: FontWeight.w700,
+                                  'Lato',
+                                  fontSize: 23*ffem,
+                                  fontWeight: FontWeight.w500,
                                   height: 1.1764705882*ffem/fem,
                                   color: Color(0xff000000),
                                 ),
@@ -161,29 +141,9 @@ class _SceneState extends State<SignupClass>
                       ],
                     ),
                   ),
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                     
                     //full name
-                    Container(
-                      margin: const EdgeInsets.only(bottom:25),
-                      child: TextField(
+                    TextFormField(
                       controller: fullNameController,
                       decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
@@ -215,7 +175,7 @@ class _SceneState extends State<SignupClass>
                   ),
                 ),
                                   
-                labelText:'Full Name',
+                labelText:'User Name',
                 labelStyle: const TextStyle(
                 fontSize: 24,
                 fontFamily: 'Lato',
@@ -223,42 +183,50 @@ class _SceneState extends State<SignupClass>
               ),
               contentPadding: EdgeInsets.symmetric(vertical: 5 * fem, horizontal: 5 * fem),
             ),
+            validator: (username){
+              if(username==null || username.isEmpty){
+                return 'User name required';
+                }
+              return null;
+            },
           ),
-        ),
-                                 
-                  //Email
-                  Container(
-                    margin: const EdgeInsets.only(bottom: 25),
-                    child: TextField(
-                    controller: emailController,
-                    decoration: InputDecoration(
-                    enabledBorder: OutlineInputBorder(
-                    borderRadius:BorderRadius.circular(10*fem),
-                    borderSide: const BorderSide(
-                    color: Color(0xff00b4d8), 
-                    width:2,
+        
+                //Email
+                  const SizedBox(height:20,),
+                    TextFormField(
+                      
+                      
+                      keyboardType: TextInputType.emailAddress,
+                      controller: emailController,
+                    
+                      decoration: InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                      borderRadius:BorderRadius.circular(10*fem),
+                      borderSide: const BorderSide(
+                      color: Color(0xff00b4d8), 
+                      width:2,
+                    ),
                   ),
-                ),
                                     
-                    focusedBorder: OutlineInputBorder(
+                      focusedBorder: OutlineInputBorder(
                       borderSide: const BorderSide(width: 2, color: Color(0xff00b4d8)),
                         borderRadius: BorderRadius.circular(10*fem),
+                      ),
+                      filled:true,
+                      fillColor: const Color(0xfffffcfc),
+                      prefixIcon:SizedBox(
+                      width: 30*fem,  
+                      height: 50*fem,
+                      child: Padding(
+                      padding:EdgeInsets.all(4*fem),
+                      child:Image.asset(
+                      'assets/images/emailSVG.png',
+                      width:double.infinity,
+                      height:double.infinity,
+                      fit: BoxFit.contain,
                     ),
-                    filled:true,
-                    fillColor: const Color(0xfffffcfc),
-                    prefixIcon:SizedBox(
-                    width: 30*fem,  
-                    height: 50*fem,
-                    child: Padding(
-                    padding:EdgeInsets.all(4*fem),
-                    child:Image.asset(
-                    'assets/images/emailSVG.png',
-                     width:double.infinity,
-                     height:double.infinity,
-                    fit: BoxFit.contain,
                   ),
                 ),
-              ),
                                   
                     labelText:'Email',
                     labelStyle: const TextStyle(
@@ -268,13 +236,22 @@ class _SceneState extends State<SignupClass>
                   ),
                     contentPadding: EdgeInsets.symmetric(vertical: 5 * fem, horizontal: 5 * fem),
                   ),
+                  validator: (email){
+                    if(email==null || email.isEmpty){
+                      return 'Email id required';
+                    }
+                    else if (!EmailValidator.validate(email)) {
+                      return 'Enter a valid email address';
+                    }
+                    return null;
+                  },
+                  
                 ),
-              ),
-                                
+                  
+                  
                   //Phone number
-                  Container(
-                    margin: const EdgeInsets.only(bottom:25),
-                      child: TextField(
+                  const SizedBox(height:20,),
+                      TextFormField(
                       controller: phoneNumberController,
                       decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
@@ -314,22 +291,36 @@ class _SceneState extends State<SignupClass>
                   ),
                     contentPadding: EdgeInsets.symmetric(vertical: 5 * fem, horizontal: 5 * fem),
                   ),
+                  validator: (phno){
+                    const pattern = r'^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$';
+                    final regExp = RegExp(pattern);
+                    if(phno==null || phno.isEmpty){
+                      return 'Phone number required';
+                    }
+                    else if(phno.length<10){
+                      return 'Phone number must contain 10 digits';
+                    }
+                    else if(!regExp.hasMatch(phno)){
+                      return 'Invalid phone number';
+                    }
+                    return null;
+                  },
                 ),
-              ),
-                                
+              
+                  
                   //password
-                  Container(
-                    margin: const EdgeInsets.only(bottom:15),
-                    child: TextField(
-                    controller: passwordController,
-                    decoration: InputDecoration(
-                    enabledBorder: OutlineInputBorder(
-                    borderRadius:BorderRadius.circular(10*fem),
-                    borderSide: const BorderSide(
-                    color: Color(0xff00b4d8), 
-                    width:2,
+                  const SizedBox(height:20,),
+                    TextFormField(
+                      obscureText: true,
+                      controller: passwordController,
+                      decoration: InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                      borderRadius:BorderRadius.circular(10*fem),
+                      borderSide: const BorderSide(
+                      color: Color(0xff00b4d8), 
+                      width:2,
+                    ),
                   ),
-                ),
                                     
                     focusedBorder: OutlineInputBorder(
                     borderSide: const BorderSide(width: 2, color: Color(0xff00b4d8)),
@@ -359,36 +350,57 @@ class _SceneState extends State<SignupClass>
                     ),
                       contentPadding: EdgeInsets.symmetric(vertical: 5 * fem, horizontal: 5 * fem),
                   ),
+                  validator: (password){
+                  if(password==null ||password.isEmpty){
+                  return 'Password required';
+                  }
+                  //password length should be greater than 6
+                  if (password.length <6){
+                  return 'Password must be longer than 6 characters';
+                  }
+                  if (!password.contains(RegExp(r'[A-Z]'))) {
+                    return 'Password should contain atleast one uppercase character';
+                  }
+                  if (!password.contains(RegExp(r'[0-9]'))) {
+                    return 'Password should contain atleast one digit';
+                  }
+                  if (!password.contains(RegExp(r'[!@#%^&*(),.?":{}|<>]'))) {
+                    return 'Password should contain atleast one speical character\n';
+                  }
+                  return null;
+            },
                 ),
-               ),
-                    
-                    
-                    Container(
-                      // autogroupxfzeYYC (VytCNK7wHYQMdigwrXfZe)
-                      margin: EdgeInsets.fromLTRB(92*fem, 0*fem, 92*fem, 15*fem),
-                      width: double.infinity,
-                      height: 36*fem,
-                      decoration: BoxDecoration (
-                        color: Color(0xff00b4d8),
-                        borderRadius: BorderRadius.circular(30*fem),
-                      ),
-                      child: Center(
-                        child: Center(
-                          child: Text(
-                            'Sign up',
-                            textAlign: TextAlign.center,
-                            style: safeGoogleFont (
-                              'Lato',
-                              fontSize: 20*ffem,
-                              fontWeight: FontWeight.w700,
-                              height: 1.2*ffem/fem,
-                              color: Color(0xffffffff),
-                            ),
-                          ),
-                        ),
-                      ),
+                  
+                  //Signup button
+                    const SizedBox(height:20,),
+                    ElevatedButton(
+                      onPressed: () 
+                      {
+                        if(_formKey.currentState!.validate())
+                        print("Success");
+                        else
+                        print("Not a success");
+                        // Add the logic you want to execute when the button is pressed
+                      },
+                      style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0xff00b4d8), // Background color
+                      shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15 * fem),
                     ),
-                    Container(
+                      minimumSize: Size(150 * fem, 40* fem),
+                  ),
+                      
+                      child: Text(
+                        'Sign up',
+                      style: safeGoogleFont(
+                      'Lato',
+                      fontSize: 20 * ffem,
+                      fontWeight: FontWeight.w700,
+                      color: Color(0xffffffff),
+                    ),
+                  ),
+                ),
+                Container(
                       // inputoDE (159:208)
                       padding: EdgeInsets.fromLTRB(32*fem, 8*fem, 32*fem, 8*fem),
                       width: double.infinity,
@@ -454,6 +466,8 @@ class _SceneState extends State<SignupClass>
           ),
         ),
       ),
-          );
+    ),
+  ),
+  );
   }
 }
