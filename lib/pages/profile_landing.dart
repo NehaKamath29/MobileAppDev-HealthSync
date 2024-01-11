@@ -1,0 +1,395 @@
+import 'package:flutter/material.dart';
+import 'package:healthsync_app/utils/utils.dart';
+
+
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    double baseWidth = 360;
+    double fem = MediaQuery.of(context).size.width / baseWidth;
+    double ffem = fem * 0.97;
+    return SizedBox(
+      width: double.infinity,
+      //height:double.infinity,
+      child: Container(
+        height:double.infinity,
+        width: double.infinity,
+        decoration: BoxDecoration (
+          color: Color(0xffffffff),
+          boxShadow: [
+            BoxShadow(
+              color: Color(0x3f000000),
+              offset: Offset(0*fem, 4*fem),
+              blurRadius: 2*fem,
+            ),
+          ],
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(
+             
+              width: 374*fem,
+              height: 409*fem,
+              child: Stack(
+                children: [
+                  Positioned(
+                    
+                    left: 0*fem,
+                    top: 0*fem,
+                    child: Align(
+                      child: SizedBox(
+                        width: 374*fem,
+                        height: 249*fem,
+                        child: Image.asset(
+                          'assets/images/profileIntroImg.png',
+                          fit:BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    // rectangle725xg (169:56)
+                    left: 30*fem,
+                    top: 198*fem,
+                    child: Align(
+                      child: SizedBox(
+                        width: 301*fem,
+                        height: 211*fem,
+                        child: Container(
+                          decoration: BoxDecoration (
+                            borderRadius: BorderRadius.circular(20*fem),
+                            border: Border.all(color: Color(0xffffffff)),
+                            color: Color(0xff9bc9ea),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Color(0x3f000000),
+                                offset: Offset(0*fem, 4*fem),
+                                blurRadius: 2*fem,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    // frameZcx (169:57)
+                    left: 104*fem,
+                    top: 111*fem,
+                    child: Align(
+                      child: SizedBox(
+                        width: 152*fem,
+                        height: 156*fem,
+                        child: Image.asset(
+                          'assets/images/profileIconSVG.png',
+                          width: 152*fem,
+                          height: 156*fem,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    // abcdef5LQ (169:70)
+                    left: 127.5*fem,
+                    top: 279*fem,
+                    child: Center(
+                      child: Align(
+                        child: SizedBox(
+                          width: 106*fem,
+                          height: 20*fem,
+                          /*child: Text(
+                            'ABCDEF',
+                            textAlign: TextAlign.center,
+                            style: safeGoogleFont (
+                              'Lato',
+                              fontSize: 27*ffem,
+                              fontWeight: FontWeight.w500,
+                              height: 0.7407407407*ffem/fem,
+                              color: Color(0xff000000),
+                            ),
+                          ),*/
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    // rectangle14895N (169:94)
+                    left: 59*fem,
+                    top: 328*fem,
+                    child: Align(
+                      child: SizedBox(
+                        width: 244*fem,
+                        height: 25*fem,
+                        child: Container(
+                          decoration: BoxDecoration (
+                            borderRadius: BorderRadius.circular(50*fem),
+                            color: Color(0xffffffff),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    // rectangle1493Re (169:95)
+                    left: 59*fem,
+                    top: 328*fem,
+                    child: Align(
+                      child: SizedBox(
+                        width: 123*fem,
+                        height: 25*fem,
+                        child: Container(
+                          decoration: BoxDecoration (
+                            borderRadius: BorderRadius.circular(50*fem),
+                            color: Color(0xff045d8f),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    // completedkax (169:96)
+                    left: 113*fem,
+                    top: 361*fem,
+                    child: Center(
+                      child: Align(
+                        child: SizedBox(
+                          width: 129*fem,
+                          height: 23*fem,
+                          child: Text(
+                            '45% completed',
+                            textAlign: TextAlign.center,
+                            style: safeGoogleFont (
+                              'Lato',
+                              fontSize: 19*ffem,
+                              fontWeight: FontWeight.w400,
+                              height: 1.2*ffem/fem,
+                              color: Color(0xff000000),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          
+            
+  //Edit profile
+  const SizedBox(height:40,),
+  Center(
+  child:SizedBox(
+    width:300*fem,
+    height:50*fem,
+  child:ElevatedButton(
+  onPressed: () {
+    // Add your logic here for 'Edit profile' button
+  },
+  style: ElevatedButton.styleFrom(
+    padding: EdgeInsets.all(10 * fem), // Add padding to the button
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(10 * fem),
+    ),
+    
+    side: const BorderSide(color: Color(0xffffffff)),
+    backgroundColor:Color(0xffffffff), // Set button color to white
+    elevation: 15* fem, // Increase elevation for more shadow effect
+    shadowColor: const Color.fromARGB(109, 5, 5, 5), 
+    minimumSize: Size(150*fem, 40 * fem),
+  ),
+  child: Row(
+    crossAxisAlignment: CrossAxisAlignment.center,
+    children: [
+      Container(
+        margin: EdgeInsets.only(right: 10 * fem), // Adjust right margin
+        padding: EdgeInsets.all(3 * fem), // Add padding to the image
+        width: 50 * fem,
+        height: 50 * fem,
+        child: Image.asset(
+          'assets/images/editSVG.png',
+          width: 40 * fem, // Adjust image width
+          height: 40 * fem, // Adjust image height
+        ),
+      ),
+      Center(
+        child: Container(
+          margin: EdgeInsets.fromLTRB(0 * fem, 1 * fem, 0 * fem, 0 * fem),
+          child: Text(
+            'Edit profile',
+            textAlign: TextAlign.center,
+            style: safeGoogleFont(
+              'Lato',
+              fontSize: 24 * ffem,
+              fontWeight: FontWeight.w600,
+              height: 1.2 * ffem / fem,
+              color: Color(0xb2000000),
+            ),
+          ),
+        ),
+      ),
+    ],
+  ),
+),
+),
+),
+
+
+//Change password
+const SizedBox(height:25,),
+Center(
+child:SizedBox(
+  width:300*fem,
+  height:50*fem,
+child:ElevatedButton(
+  onPressed: () {
+    // Add your logic here for 'Edit profile' button
+  },
+  style: ElevatedButton.styleFrom(
+    padding: EdgeInsets.all(10 * fem), // Add padding to the button
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(10 * fem),
+    ),
+    minimumSize: Size(double.infinity, 50 * fem),
+    side: const BorderSide(color: Color(0xffffffff)),
+    backgroundColor:Color(0xffffffff), // Set button color to white
+    elevation: 15* fem, // Increase elevation for more shadow effect
+    shadowColor: Color.fromARGB(109, 5, 5, 5), // Adjust shadow color
+  ),
+  child: Row(
+    crossAxisAlignment: CrossAxisAlignment.center,
+    children: [
+      Container(
+        margin: EdgeInsets.only(right: 10 * fem), // Adjust right margin
+        padding: EdgeInsets.all(3 * fem), // Add padding to the image
+        width: 50 * fem,
+        height: 50 * fem,
+        child: Image.asset(
+          'assets/images/changepassSVG.png',
+          width: 40 * fem, // Adjust image width
+          height: 40 * fem, // Adjust image height
+        ),
+      ),
+      Center(
+        child: Container(
+          margin: EdgeInsets.fromLTRB(0 * fem, 1 * fem, 0 * fem, 0 * fem),
+          child: Text(
+            'Change password',
+            textAlign: TextAlign.center,
+            style: safeGoogleFont(
+              'Lato',
+              fontSize: 24 * ffem,
+              fontWeight: FontWeight.w600,
+              height: 1.2 * ffem / fem,
+              color: Color(0xb2000000),
+            ),
+          ),
+        ),
+      ),
+    ],
+  ),
+),
+),
+),
+
+
+//MY appointments
+const SizedBox(height:25,),
+Center(
+child:SizedBox(
+  width:300*fem,
+  height:50*fem,
+child:ElevatedButton(
+  onPressed: () {
+    // Add your logic here for 'Edit profile' button
+  },
+  style: ElevatedButton.styleFrom(
+    padding: EdgeInsets.all(10 * fem), // Add padding to the button
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(10 * fem),
+    ),
+    minimumSize: Size(double.infinity, 50 * fem),
+    side: const BorderSide(color: Color(0xffffffff)),
+    backgroundColor:Color(0xffffffff), // Set button color to white
+    elevation: 15* fem, // Increase elevation for more shadow effect
+    shadowColor: Color.fromARGB(109, 5, 5, 5), // Adjust shadow color
+  ),
+  child: Row(
+    crossAxisAlignment: CrossAxisAlignment.center,
+    children: [
+      Container(
+        margin: EdgeInsets.only(right: 10 * fem), // Adjust right margin
+        padding: EdgeInsets.all(3 * fem), // Add padding to the image
+        width: 50 * fem,
+        height: 50 * fem,
+        child: Image.asset(
+          'assets/images/AppointSVG.png',
+          width: 40 * fem, // Adjust image width
+          height: 40 * fem, // Adjust image height
+        ),
+      ),
+      Center(
+        child: Container(
+          margin: EdgeInsets.fromLTRB(0 * fem, 1 * fem, 0 * fem, 0 * fem),
+          child: Text(
+            'My Appointments',
+            textAlign: TextAlign.center,
+            style: safeGoogleFont(
+              'Lato',
+              fontSize: 24 * ffem,
+              fontWeight: FontWeight.w600,
+              height: 1.2 * ffem / fem,
+              color: Color(0xb2000000),
+            ),
+          ),
+        ),
+      ),
+    ],
+  ),
+),
+),
+),
+
+const SizedBox(height:50,),
+Center(               
+child:Container(
+  margin: EdgeInsets.fromLTRB(91.75*fem, 0*fem, 108*fem, 0*fem),
+  width: double.infinity,
+  child: Row(
+  crossAxisAlignment: CrossAxisAlignment.end,
+  children: [
+  Container(
+    margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 3.46*fem, 0.13*fem),
+    width: 25*fem,
+    height: 25*fem,
+    child: Image.asset(
+      'assets/images/signoutSVG.png',
+      width: 25*fem,
+      height: 25*fem,
+    ),
+  ),
+    Center(
+    
+      child: Text(
+        'Sign Out',
+        textAlign: TextAlign.center,
+        style: safeGoogleFont (
+          'Lato',
+          fontSize: 25*ffem,
+          fontWeight: FontWeight.w500,
+          height: 1.2*ffem/fem,
+          color: const Color(0xff000000),
+        ),
+      ),
+    ),
+  ],
+),
+),
+),
+],
+),
+),
+);
+}
+}

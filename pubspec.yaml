@@ -72,6 +72,13 @@ flutter:
      - assets/images/phoneSVG.png
      - assets/images/signupIntro.png
      - assets/images/googleSVG.png
+     - assets/images/AppointSVG.png
+     - assets/images/changepassSVG.png
+     - assets/images/editSVG.png
+     - assets/images/profileIconSVG.png
+     - assets/images/profileIntroImg.png
+     - assets/images/signoutSVG.png
+     
      
 
 

@@ -50,12 +50,6 @@ class _LoginClassState extends State<LoginClass>
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  
-                  
-                  
-                  
-                  
-                  
                   Container(
                       // autogroup3jvtvYC (Vyt5HgapHFNvYNTUc3jvt)
                       margin: EdgeInsets.fromLTRB(5*fem, 0*fem, 4*fem, 32*fem),
@@ -84,18 +78,6 @@ class _LoginClassState extends State<LoginClass>
                               child: SizedBox(
                                 width: 162*fem,
                                 height: double.infinity,
-                                /*decoration: BoxDecoration (
-                                  border: Border.all(color: Color(0xff00b4d8)),
-                                  color: Color(0xffffffff),
-                                  borderRadius: BorderRadius.circular(15*fem),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Color(0x0c000000),
-                                      offset: Offset(0*fem, 1*fem),
-                                      blurRadius: 1*fem,
-                                    ),
-                                  ],
-                                ),*/
                                 child: Center(
                                   child: Text(
                                     'Login',
@@ -131,10 +113,6 @@ class _LoginClassState extends State<LoginClass>
                             // tabbuttonDQp (159:206)
                             width: 162*fem,
                             height: double.infinity,
-                            /*decoration: BoxDecoration (
-                              border: Border.all(color: Color(0xff00b4d8)),
-                              borderRadius: BorderRadius.circular(15*fem),
-                            ),*/
                             child: Center(
                               child: Text(
                                 'Sign up',
@@ -153,15 +131,8 @@ class _LoginClassState extends State<LoginClass>
                       ],
                     ),
                   ),
-
-                  
-                  
-                  
-                  
-                  //email
-                  //Container(
-                    //margin: const EdgeInsets.only(bottom: 25),
-                    //const SizedBox(height:20,),
+                    
+                    //email
                     TextFormField(
                     controller: emailController,
                     decoration: InputDecoration(
@@ -208,12 +179,9 @@ class _LoginClassState extends State<LoginClass>
                     return null;
                   },
                 ),
-              //),
-                  
+              
                   //password
-                  //Container(
-                    //margin: const EdgeInsets.only(bottom:15),
-                    const SizedBox(height:20,),
+                  const SizedBox(height:20,),
                     TextFormField(
                       obscureText: true,
                       controller: passwordController,
@@ -261,7 +229,6 @@ class _LoginClassState extends State<LoginClass>
                     return null;
                   },
                 ),
-               //),
                   const SizedBox(height:15,), 
                   Container(
                     // autogroup1qji8wE (Vyqy1rzEe7FvUhWFr1qji)
@@ -321,78 +288,25 @@ class _LoginClassState extends State<LoginClass>
                     ),
                   ),
                   
-                  
-                  
-                  /*Container(
-                    // autogrouptk5zHr4 (Vyr8BGPT7nMBtgPohTk5z)
-                    margin: EdgeInsets.fromLTRB(90*fem, 0*fem, 94*fem, 25*fem),
-                    width: double.infinity,
-                    height: 36*fem,
-                    decoration: BoxDecoration (
-                      color: Color(0xff00b4d8),
-                      borderRadius: BorderRadius.circular(30*fem),
-                    ),
-                    child: Center(
-                      child: Center(
-                        child: Text(
-                          'Login',
-                          textAlign: TextAlign.center,
-                          style: safeGoogleFont (
-                            'Lato',
-                            fontSize: 20*ffem,
-                            fontWeight: FontWeight.w700,
-                            height: 1.2*ffem/fem,
-                            color: Color(0xffffffff),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),*/
-
-
                   //Login button
                     const SizedBox(height:20,),
+                    
                     ElevatedButton(
                       onPressed: () 
                       {
-                        /*print('Username: ${SignupValidator.validateUsername(fullNameController.text)}');
-                        print('Email: ${SignupValidator.validateEmail(emailController.text)}');
-                        print('Phone Number: ${SignupValidator.validatePhoneNumber(phoneNumberController.text)}');
-                        print('Password: ${SignupValidator.validatePassword(passwordController.text)}');*/
                         if(_formKey.currentState!.validate())
                         print("Success");
                         else
                         print("Not a success");
-
-
-
-
-
-                        /*if (SignupValidator.isSignupFormValid(
-                        username: fullNameController.text,
-                        email: emailController.text,
-                        phoneNumber: phoneNumberController.text,
-                        password: passwordController.text,
-                      )) {
-                  // All validations passed, navigate to login page
-                      //Navigator.pushNamed(context, '/login');
-                      ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                      content:Text('Signup successful!'),
-                      ),
-                      );
-                      }*/
-                        // Add the logic you want to execute when the button is pressed
                       },
                       style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xff00b4d8), // Background color
+                      backgroundColor: const Color(0xff00b4d8), // Background color
                       shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15 * fem),
                     ),
-                      minimumSize: Size(150 * fem, 40* fem),
+                      //minimumSize: Size(20* fem, 20* fem),
                   ),
-                      //child: Padding(
-                      //padding: EdgeInsets.symmetric(vertical: 10 * fem),
+                      
                       child: Text(
                         'Login',
                       style: safeGoogleFont(
@@ -403,14 +317,9 @@ class _LoginClassState extends State<LoginClass>
                     ),
                   ),
                 ),
-              //),
-                  
-                  
-                  
-                  
-                  
-                  Container(
-                    // inputLpL (158:14)
+              
+                    
+                    Container(
                     margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 27*fem),
                     padding: EdgeInsets.fromLTRB(32*fem, 8*fem, 32*fem, 8*fem),
                     width: double.infinity,
