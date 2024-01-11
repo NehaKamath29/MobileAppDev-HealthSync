@@ -25,7 +25,8 @@ class MyApp extends StatelessWidget
     },*/
     home: const Scaffold(
 		body: SingleChildScrollView(
-			child: ProfilePage(),
+		child: ProfilePage(),  //Give the class name of the page you want to be displayed and import the respective file. After navigations,
+                           //only the landing page class name will be given ig.
 		),
 		),
 	);

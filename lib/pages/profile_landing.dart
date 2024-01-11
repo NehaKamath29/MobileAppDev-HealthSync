@@ -11,20 +11,9 @@ class ProfilePage extends StatelessWidget {
     double ffem = fem * 0.97;
     return SizedBox(
       width: double.infinity,
-      //height:double.infinity,
-      child: Container(
-        height:double.infinity,
+      child: SizedBox(
+        
         width: double.infinity,
-        decoration: BoxDecoration (
-          color: Color(0xffffffff),
-          boxShadow: [
-            BoxShadow(
-              color: Color(0x3f000000),
-              offset: Offset(0*fem, 4*fem),
-              blurRadius: 2*fem,
-            ),
-          ],
-        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -90,17 +79,18 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ),
                   ),
+                  
                   Positioned(
                     // abcdef5LQ (169:70)
-                    left: 127.5*fem,
+                    left: 0*fem,
                     top: 279*fem,
                     child: Center(
                       child: Align(
                         child: SizedBox(
-                          width: 106*fem,
-                          height: 20*fem,
-                          /*child: Text(
-                            'ABCDEF',
+                          width: 360*fem,//double.infinity,
+                          height: 60*fem,
+                          child: Text(                   //Name should come from backend
+                            'Name from backend',
                             textAlign: TextAlign.center,
                             style: safeGoogleFont (
                               'Lato',
@@ -109,11 +99,12 @@ class ProfilePage extends StatelessWidget {
                               height: 0.7407407407*ffem/fem,
                               color: Color(0xff000000),
                             ),
-                          ),*/
+                          ),
                         ),
                       ),
                     ),
                   ),
+                  
                   Positioned(
                     // rectangle14895N (169:94)
                     left: 59*fem,
@@ -131,6 +122,7 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ),
                   ),
+                  
                   Positioned(
                     // rectangle1493Re (169:95)
                     left: 59*fem,
@@ -142,35 +134,35 @@ class ProfilePage extends StatelessWidget {
                         child: Container(
                           decoration: BoxDecoration (
                             borderRadius: BorderRadius.circular(50*fem),
-                            color: Color(0xff045d8f),
+                            color: const Color(0xff045d8f),
                           ),
                         ),
                       ),
                     ),
                   ),
                   Positioned(
-                    // completedkax (169:96)
-                    left: 113*fem,
+                    
+                    left: 0*fem,
                     top: 361*fem,
-                    child: Center(
+                    //child: Center(
                       child: Align(
                         child: SizedBox(
-                          width: 129*fem,
-                          height: 23*fem,
-                          child: Text(
-                            '45% completed',
+                          width: 360*fem,
+                          height: 60*fem,
+                          child: Text(                            
+                            'Percentage from backend',
                             textAlign: TextAlign.center,
                             style: safeGoogleFont (
                               'Lato',
-                              fontSize: 19*ffem,
-                              fontWeight: FontWeight.w400,
+                              fontSize: 21*ffem,
+                              fontWeight: FontWeight.w500,
                               height: 1.2*ffem/fem,
                               color: Color(0xff000000),
                             ),
                           ),
                         ),
                       ),
-                    ),
+                    //),
                   ),
                 ],
               ),
@@ -352,8 +344,10 @@ child:ElevatedButton(
 ),
 
 const SizedBox(height:50,),
-Center(               
-child:Container(
+Center(  
+  child:GestureDetector(
+    onTap: (){},
+  child:Container(
   margin: EdgeInsets.fromLTRB(91.75*fem, 0*fem, 108*fem, 0*fem),
   width: double.infinity,
   child: Row(
@@ -361,29 +355,25 @@ child:Container(
   children: [
   Container(
     margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 3.46*fem, 0.13*fem),
-    width: 25*fem,
-    height: 25*fem,
+    width: 30*fem,
+    height: 30*fem,
     child: Image.asset(
       'assets/images/signoutSVG.png',
-      width: 25*fem,
-      height: 25*fem,
     ),
   ),
-    Center(
-    
-      child: Text(
+    Text(
         'Sign Out',
         textAlign: TextAlign.center,
         style: safeGoogleFont (
           'Lato',
-          fontSize: 25*ffem,
+          fontSize: 28*ffem,
           fontWeight: FontWeight.w500,
           height: 1.2*ffem/fem,
           color: const Color(0xff000000),
         ),
       ),
-    ),
   ],
+),
 ),
 ),
 ),
