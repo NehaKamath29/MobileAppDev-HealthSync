@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:vertical_card_pager/vertical_card_pager.dart';
 
 class HomeClass extends StatelessWidget {
-  const HomeClass({super.key});
-
+  const HomeClass({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
@@ -39,7 +38,7 @@ class _VerticalPagesState extends State<VerticalPages> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return Container(
       child: Row(
         children: [
           // Left 30% for the image with some padding
@@ -51,7 +50,7 @@ class _VerticalPagesState extends State<VerticalPages> {
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 image: DecorationImage(
-                  fit: BoxFit.cover,
+                  //fit: BoxFit.cover,
                   image: NetworkImage(imageList[
                       0]), // You can choose any image from the list here
                 ),
@@ -85,7 +84,7 @@ class _VerticalPagesState extends State<VerticalPages> {
     );
   }
 
-  VerticalCardPager(
+  verticalCardPager(
       {required List<String> titles,
       required List<Container> images,
       required TextStyle textStyle}) {}
