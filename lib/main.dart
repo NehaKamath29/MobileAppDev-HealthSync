@@ -4,6 +4,7 @@ import 'package:healthsync_app/utils/utils.dart';
 //import 'package:healthsync_app/pages/signup.dart';
 //import 'package:healthsync_app/pages/profile_landing.dart';
 import 'package:healthsync_app/pages/home.dart';
+//import 'package:healthsync_app/pages/personal_profile.dart';
 
 void main() => runApp(const MyApp());
 
