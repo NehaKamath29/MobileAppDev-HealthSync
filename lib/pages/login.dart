@@ -302,16 +302,15 @@ class _LoginClassState extends State<LoginClass>
                       style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff00b4d8), // Background color
                       shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15 * fem),
+                      borderRadius: BorderRadius.circular(20 * fem),
                     ),
                       //minimumSize: Size(20* fem, 20* fem),
                   ),
-                      
-                      child: Text(
+                  child: Text(
                         'Login',
                       style: safeGoogleFont(
                       'Lato',
-                      fontSize: 20 * ffem,
+                      fontSize: 30* ffem,
                       fontWeight: FontWeight.w700,
                       color: Color(0xffffffff),
                     ),

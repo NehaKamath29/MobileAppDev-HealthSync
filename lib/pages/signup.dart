@@ -296,7 +296,7 @@ class _FormScreenState extends State<FormScreen>
                     if(phno==null || phno.isEmpty){
                       return 'Phone number required';
                     }
-                    else if(phno.length<10){
+                    else if(phno.length<10 || phno.length>10){
                       return 'Phone number must contain 10 digits';
                     }
                     else if(!regExp.hasMatch(phno)){
