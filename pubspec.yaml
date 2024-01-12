@@ -39,6 +39,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^6.1.0
   email_validator: '^2.1.16'
+  auto_size_text_field: ^2.2.2
+  
 
 dev_dependencies:
   flutter_test:
@@ -78,6 +80,13 @@ flutter:
      - assets/images/profileIconSVG.png
      - assets/images/profileIntroImg.png
      - assets/images/signoutSVG.png
+     - assets/images/editLightSVG.png
+     - assets/images/calendarSVG.png
+     - assets/images/genderSVG.png
+     - assets/images/occupationSVG.png
+     - assets/images/addressSVG.png
+     
+
      
      
 
