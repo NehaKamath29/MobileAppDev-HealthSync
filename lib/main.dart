@@ -3,8 +3,10 @@ import 'package:healthsync_app/utils/utils.dart';
 //import 'package:healthsync_app/pages/login.dart';
 //import 'package:healthsync_app/pages/signup.dart';
 //import 'package:healthsync_app/pages/profile_landing.dart';
-import 'package:healthsync_app/pages/home.dart';
+//import 'package:healthsync_app/pages/home.dart';
 //import 'package:healthsync_app/pages/personal_profile.dart';
+import 'package:healthsync_app/pages/forgetpass_landing.dart';
+
 
 void main() => runApp(const MyApp());
 
@@ -27,7 +29,7 @@ class MyApp extends StatelessWidget {
     },*/
       home: const Scaffold(
         body: SingleChildScrollView(
-          child:HomeClass(), //Give the class name of the page you want to be displayed and import the respective file. After navigations,
+          child:PasswordClass(), //Give the class name of the page you want to be displayed and import the respective file. After navigations,
           //only the landing page class name will be given ig.
         ),
       ),
