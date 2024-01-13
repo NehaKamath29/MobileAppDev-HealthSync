@@ -381,27 +381,44 @@ class _FormScreenState extends State<FormScreen> {
                         ElevatedButton(
                           onPressed: () {
                             if (_formKey.currentState!.validate()) {
-
                               String name = fullNameController.value.text;
                               String email = emailController.value.text;
-                              String phoneNumber = phoneNumberController.value.text;
+                              String phoneNumber =
+                                  phoneNumberController.value.text;
                               String password = passwordController.value.text;
                               // Storing values obtained from frontend using .value.text
-
 
                               // initialising firebase
                               FirebaseFirestore db = FirebaseFirestore.instance;
                               // userdata goes to db
-                              final userdata = <String, String>{
-                                "username": name,
-                                "email": email,
-                                "phone number": phoneNumber,
-                                "password" : password
-                              };
-                              db.collection("signup").doc(email).set(userdata);
+                              final docRef = db.collection("signup").doc(email);
+                              docRef.get().then((DocumentSnapshot doc) {
+                                if (doc.exists) {
+                                  // Email already exists, show warning
+                                  print("Email already exists");
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: Text("Email already exists."),
+                                      duration: Duration(seconds: 3),
+                                    ),
+                                  );
+                                } else {
+                                  final userdata = <String, String>{
+                                    "username": name,
+                                    "email": email,
+                                    "phone number": phoneNumber,
+                                    "password": password
+                                  };
+                                  db
+                                      .collection("signup")
+                                      .doc(email)
+                                      .set(userdata);
 
-                      
-                              print("Success");
+                                  print("Success");
+
+                                  print("Signup successful");
+                                }
+                              });
                             } else
                               print("Not a success");
                             // Add the logic you want to execute when the button is pressed
