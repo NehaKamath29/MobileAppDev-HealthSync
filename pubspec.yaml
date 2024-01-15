@@ -41,6 +41,7 @@ dependencies:
   email_validator: '^2.1.16'
   vertical_card_pager: ^1.5.0
   auto_size_text_field: ^2.2.2
+  #google_fonts: ^2.1.0
 
 dev_dependencies:
   flutter_test:
@@ -85,6 +86,68 @@ flutter:
      - assets/images/genderSVG.png
      - assets/images/occupationSVG.png
      - assets/images/addressSVG.png
+     - assets/images/backpain.jpg
+     - assets/images/bone.jpg
+     - assets/images/cardio.jpg
+     - assets/images/cold.jpg
+     - assets/images/dentist.jpg 
+     - assets/images/depression.jpg
+     - assets/images/ent.jpg 
+     - assets/images/eyeissues.jpg
+     - assets/images/genphy.jpg 
+     - assets/images/gynic.jpg
+     - assets/images/headache.jpg
+     - assets/images/highbp.jpg
+     - assets/images/neuro.jpg
+     - assets/images/ortho.jpg
+     - assets/images/pediatrician.jpg
+     - assets/images/psychiatrist.jpg 
+     - assets/images/rephealth.jpg
+     - assets/images/respiratory.jpg     
+     - assets/images/skinallergy.jpg
+     - assets/images/sleepdis.jpg 
+     - assets/images/stomachpain.jpg       
+     - assets/images/search_icon.png
+     - assets/images/reminder_bell.png
+     - assets/images/vector.png
+     - assets/images/docphoto.png
+     - assets/images/auto-group-tnya.png
+     - assets/images/star.png
+     - assets/images/star3.png
+     - assets/images/line.png
+     - assets/images/rectangle-27.png
+     - assets/images/rectangle-31.png
+     - assets/images/rectangle-32.png
+     - assets/images/rectangle-33.png
+     - assets/images/rectangle-34.png
+     - assets/images/ri-arrow-drop-down-line.png
+     - assets/images/location.png
+     - assets/images/group.png
+     - assets/images/component-nav-bar-nM2.png
+     - assets/images/ellipse-53-bg-3Br.png
+     - assets/images/vector-Fh6.png
+     - assets/images/ellipse-54-bg.png
+     - assets/images/clarity-users-line.png
+     - assets/images/healthicons-ambulatory-clinic.png
+     - assets/images/healthicons-city.png
+     - assets/images/vector-vip.png
+     - assets/images/vector-LTv.png
+     - assets/images/left-circle-RaU.png
+     - assets/images/vector-y8g.png
+     - assets/images/vector-neY.png
+     - assets/images/component-nav-bar.png
+     - assets/images/component-nav-bar-8NG.png
+     - assets/images/blood-test-1.png
+     - assets/images/blood-tube-cXe.png
+     - assets/images/blood-tube.png
+     - assets/images/blood-tube-eKN.png
+     - assets/images/frame-7.png
+     - assets/images/frame-8.png
+     - assets/images/navhome.png
+     - assets/images/navprescription.png
+     - assets/images/navbill.png
+     - assets/images/navhistory.png
+     - assets/images/navothers.png
      
 
      
