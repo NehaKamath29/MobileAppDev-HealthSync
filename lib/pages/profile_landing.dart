@@ -1,11 +1,28 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:healthsync_app/utils/utils.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+     get_details: ()async{
+      FirebaseFirestore db = FirebaseFirestore.instance;
+      final SharedPreferences prefs =
+                        await SharedPreferences.getInstance();
+    final String? user_email = prefs.getString('user_email');
+    print(db.collection('signup').parameters);
+    // final data = <String, String>{
+    //                     "username": db.collection('signup').parameters['username'],
+    //                     "percentage" :
+
+                        
+    //                   };
+    
+     }                   
+
     double baseWidth = 360;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
@@ -149,7 +166,7 @@ class ProfilePage extends StatelessWidget {
                         child: SizedBox(
                           width: 360*fem,
                           height: 60*fem,
-                          child: Text(                            
+                          child: Text(        
                             'Percentage from backend',
                             textAlign: TextAlign.center,
                             style: safeGoogleFont (

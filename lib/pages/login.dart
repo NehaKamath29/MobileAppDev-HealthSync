@@ -1,9 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:healthsync_app/pages/personal_profile.dart';
+// import 'package:shared_preferences/shared_preferences.dart';
 //import 'package:healthsync_app/pages/signup.dart';
 
 import 'package:healthsync_app/utils/utils.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginClass extends StatefulWidget {
   const LoginClass({Key? key}) : super(key: key);
@@ -305,7 +308,10 @@ class _LoginClassState extends State<LoginClass> {
                     ),
 
                     ElevatedButton(
-                      onPressed: () {
+                      onPressed: () async {
+                        final SharedPreferences prefs =
+                            await SharedPreferences.getInstance();
+
                         if (_formKey.currentState!.validate()) {
                           FirebaseFirestore db = FirebaseFirestore.instance;
                           // initialise the firebasefirestore client
@@ -314,18 +320,33 @@ class _LoginClassState extends State<LoginClass> {
 
                           final docRef = db.collection("signup").doc(email);
                           // check if a document with that email exists
-                          docRef.get().then((DocumentSnapshot doc) {
+                          docRef.get().then((DocumentSnapshot doc) async {
                             if (doc.exists) {
                               // User with the provided email exists
                               final data = doc.data() as Map<String, dynamic>;
-                              String storedPassword = data["password"]; // Assuming "password" is the key for the password in your Firestore document
+                              String storedPassword = data[
+                                  "password"]; // Assuming "password" is the key for the password in your Firestore document
 
                               // Now check if the entered password matches the stored password
-                              String enteredPassword = passwordController.value.text;
+                              String enteredPassword =
+                                  passwordController.value.text;
 
                               if (storedPassword == enteredPassword) {
+                                // store user email using shared preferences.
+                                await prefs.setString('user_email', email);
+
                                 // Passwords match, allow login
+
+// Save an integer value to 'counter' key.
+
                                 print("Login successful");
+                                // navigation
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const PersonalProfile()),
+                                );
                               } else {
                                 // Passwords don't match
                                 print("Incorrect password");
