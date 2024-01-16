@@ -1,10 +1,28 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:healthsync_app/utils/utils.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+     get_details: ()async{
+      FirebaseFirestore db = FirebaseFirestore.instance;
+      final SharedPreferences prefs =
+                        await SharedPreferences.getInstance();
+    final String? user_email = prefs.getString('user_email');
+    print(db.collection('signup').parameters);
+    // final data = <String, String>{
+    //                     "username": db.collection('signup').parameters['username'],
+    //                     "percentage" :
+
+                        
+    //                   };
+    
+     }                   
+
     double baseWidth = 360;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
@@ -138,23 +156,23 @@ class ProfilePage extends StatelessWidget {
                     left: 0 * fem,
                     top: 361 * fem,
                     //child: Center(
-                    child: Align(
-                      child: SizedBox(
-                        width: 360 * fem,
-                        height: 60 * fem,
-                        child: Text(
-                          'Percentage from backend',
-                          textAlign: TextAlign.center,
-                          style: safeGoogleFont(
-                            'Lato',
-                            fontSize: 21 * ffem,
-                            fontWeight: FontWeight.w500,
-                            height: 1.2 * ffem / fem,
-                            color: Color(0xff000000),
+                      child: Align(
+                        child: SizedBox(
+                          width: 360*fem,
+                          height: 60*fem,
+                          child: Text(        
+                            'Percentage from backend',
+                            textAlign: TextAlign.center,
+                            style: safeGoogleFont (
+                              'Lato',
+                              fontSize: 21*ffem,
+                              fontWeight: FontWeight.w500,
+                              height: 1.2*ffem/fem,
+                              color: Color(0xff000000),
+                            ),
                           ),
                         ),
                       ),
-                    ),
                     //),
                   ),
                 ],
