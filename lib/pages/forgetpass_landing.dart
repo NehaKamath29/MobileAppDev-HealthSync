@@ -93,7 +93,7 @@ class _PasswordClassState extends State<PasswordClass>{
                       style: const TextStyle(
                       fontSize: 20,
                       color: Colors.black,
-                      fontWeight: FontWeight.w500 // Set the desired text color
+                      fontWeight: FontWeight.w500 
                       ),
                     
                       decoration: InputDecoration(

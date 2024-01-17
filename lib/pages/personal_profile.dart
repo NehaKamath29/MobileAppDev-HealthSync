@@ -1,6 +1,6 @@
-import 'package:auto_size_text_field/auto_size_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:healthsync_app/utils/utils.dart';
+import 'package:auto_size_text_field/auto_size_text_field.dart';
 
 
 class PersonalProfile extends StatefulWidget {
@@ -60,7 +60,7 @@ class _PersonalProfileState extends State<PersonalProfile>
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              // autogroupuvbaode (7Nih5epACqMq2k83xzUVBa)
+              
               margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 2*fem, 75*fem),
               padding: EdgeInsets.fromLTRB(14*fem, 14*fem, 13*fem, 0*fem),
               width: 358*fem,
@@ -443,30 +443,7 @@ class _PersonalProfileState extends State<PersonalProfile>
   ),
 
 
-
-
-
-
-            
-         
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            const SizedBox(height:90,),  
+          const SizedBox(height:90,),  
             ElevatedButton(
                       onPressed: () 
                       {

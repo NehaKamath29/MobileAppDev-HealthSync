@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 //import 'package:healthsync_app/pages/signup.dart';
-
 import 'package:healthsync_app/utils/utils.dart';
 
 class LoginClass extends StatefulWidget {

@@ -85,6 +85,16 @@ flutter:
      - assets/images/genderSVG.png
      - assets/images/occupationSVG.png
      - assets/images/addressSVG.png
+     - assets/images/clockImg.png
+     - assets/images/periodsTrackimg.png
+     - assets/images/reportsTrackImg.png
+     - assets/images/line-graph-1.png
+     - assets/images/timeSVG.png
+     - assets/images/addButtonSVG.png
+     - assets/images/tabletSVG.png
+     - assets/images/waterBottleSVG.png
+     
+
      
 
      
