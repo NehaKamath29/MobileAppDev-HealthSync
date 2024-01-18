@@ -1,8 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:healthsync_app/pages/personal_profile.dart';
 import 'package:healthsync_app/utils/utils.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class FormScreen extends StatefulWidget {
   const FormScreen({Key? key}) : super(key: key);
@@ -379,20 +381,24 @@ class _FormScreenState extends State<FormScreen> {
                           height: 20,
                         ),
                         ElevatedButton(
-                          onPressed: () {
+                          onPressed: () async {
+                            final SharedPreferences prefs =
+                                await SharedPreferences.getInstance();
+
                             if (_formKey.currentState!.validate()) {
                               String name = fullNameController.value.text;
                               String email = emailController.value.text;
                               String phoneNumber =
                                   phoneNumberController.value.text;
                               String password = passwordController.value.text;
+
                               // Storing values obtained from frontend using .value.text
 
                               // initialising firebase
                               FirebaseFirestore db = FirebaseFirestore.instance;
                               // userdata goes to db
                               final docRef = db.collection("signup").doc(email);
-                              docRef.get().then((DocumentSnapshot doc) {
+                              docRef.get().then((DocumentSnapshot doc) async {
                                 if (doc.exists) {
                                   // Email already exists, show warning
                                   print("Email already exists");
@@ -402,6 +408,8 @@ class _FormScreenState extends State<FormScreen> {
                                       duration: Duration(seconds: 3),
                                     ),
                                   );
+                                  
+
                                 } else {
                                   final userdata = <String, String>{
                                     "username": name,
@@ -413,8 +421,14 @@ class _FormScreenState extends State<FormScreen> {
                                       .collection("signup")
                                       .doc(email)
                                       .set(userdata);
-
                                   print("Success");
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const PersonalProfile()),
+                                  );
+                            await prefs.setString('user_email', email);
 
                                   print("Signup successful");
                                 }
