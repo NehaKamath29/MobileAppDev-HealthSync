@@ -49,6 +49,7 @@ dependencies:
   vertical_card_pager: ^1.5.0
   auto_size_text_field: ^2.2.2
   #google_fonts: ^2.1.0
+  loading_animation_widget: ^1.2.0+4
 
 dev_dependencies:
   flutter_test:
@@ -94,6 +95,16 @@ flutter:
      - assets/images/genderSVG.png
      - assets/images/occupationSVG.png
      - assets/images/addressSVG.png
+     - assets/images/clockImg.png
+     - assets/images/periodsTrackimg.png
+     - assets/images/reportsTrackImg.png
+     - assets/images/line-graph-1.png
+     - assets/images/timeSVG.png
+     - assets/images/addButtonSVG.png
+     - assets/images/tabletSVG.png
+     - assets/images/waterBottleSVG.png
+     
+
      - assets/images/backpain.jpg
      - assets/images/bone.jpg
      - assets/images/cardio.jpg

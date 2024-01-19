@@ -41,3 +41,34 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+
+../# - name Build and Push Docker Imag.txt
+        ../AppDev/
+        ../BMSCE SEM 3/
+        ../BMSCE SEM 4/
+        ../CRP AAT/
+        ../Cisco Packet Tracer.lnk
+        ../Docker Desktop.lnk
+        ../Donation Tracker/
+        ../Formal profile photo.jpg
+        ../GRE Materials/
+        ../Harshitha R- Photo.jpeg
+        ../IMDB Dataset.csv
+        ../Icarus Verilog.lnk
+        ../Internship Sem3/
+        ../Jupyter/
+        ../LMS SEM 3(without backend)/
+        ../LMS SEM 4 (with nodejs)/
+        ../Microsoft Edge.lnk
+        ../MinGW Installer.lnk
+        ../NodeJS/
+        ../OS_Lab_1BM21CS075/
+        ../PremiumReceipt_67725415_09932708.pdf
+        ../Zoom.lnk
+        ../css/
+        ../desktop.ini
+        ../gitws/
+        ../icons/
+        ../images/
+        ../lms-node-copy/
