@@ -4,11 +4,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:healthsync_app/pages/home.dart';
 import 'package:healthsync_app/utils/utils.dart';
 import 'package:healthsync_app/pages/navbar.dart';
 
-class MedBillApp extends StatelessWidget {
-  const MedBillApp({super.key});
+class MedBillApp extends StatefulWidget {
+  const MedBillApp({Key? key}) : super(key: key);
+
+  @override
+  _MedBillAppState createState() => _MedBillAppState();
+}
+
+class _MedBillAppState extends State<MedBillApp> {
+  int _currentIndex = 0;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +30,11 @@ class MedBillApp extends StatelessWidget {
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
     return Scaffold(
-      body: Container(
+        body: IndexedStack(index: _currentIndex, children: [
+      // Your pages go here, e.g., HomePage(), SearchPage(), SettingsPage()
+      HomeClass(),
+
+      Container(
         // medicalbillappointmentNKE (2315:113)
         padding: EdgeInsets.fromLTRB(2 * fem, 11.47 * fem, 0 * fem, 2 * fem),
         width: double.infinity,
@@ -767,6 +785,32 @@ class MedBillApp extends StatelessWidget {
           ],
         ),
       ),
-    );
+      BottomNavigationBar(
+        currentIndex: _currentIndex,
+        onTap: _onItemTapped,
+        items: [
+          BottomNavigationBarItem(
+            icon:
+                Image.asset('assets/images/navhome.png', width: 30, height: 30),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/images/navprescription.png',
+                width: 30, height: 30),
+          ),
+          BottomNavigationBarItem(
+            icon:
+                Image.asset('assets/images/navbill.png', width: 30, height: 30),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/images/navhistory.png',
+                width: 30, height: 30),
+          ),
+          BottomNavigationBarItem(
+            icon:
+                Image.asset('assets/images/navbill.png', width: 30, height: 30),
+          ),
+        ],
+      ),
+    ]));
   }
 }
