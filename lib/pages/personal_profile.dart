@@ -1,8 +1,30 @@
 import 'package:auto_size_text_field/auto_size_text_field.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:healthsync_app/pages/health_profile.dart';
 import 'package:healthsync_app/utils/utils.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+Future<void> navigateToHealthProfile(BuildContext context) async {
+  // Capture the context before entering the asynchronous operation
+  BuildContext currentContext = context;
+
+  // Perform asynchronous operation
+  // For example, you might be fetching some data or performing other async tasks
+  // ...
+
+  // Use the captured context to navigate after the async operation
+  Navigator.push(
+    currentContext,
+    MaterialPageRoute(
+      builder: (context) => const HealthProfile(),
+    ),
+  );
+}
+
+// Call the function from within a widget
+// Example:
+// await navigateToHealthProfile(context);
 
 class PersonalProfile extends StatefulWidget {
   const PersonalProfile({Key? key}) : super(key: key);
@@ -479,13 +501,17 @@ class _PersonalProfileState extends State<PersonalProfile> {
                             "phone number": emergencyContact,
                             "gender": gender
                           };
-                          db
+                          await db
                               .collection('signup')
                               .doc(user_email)
                               .collection('personal_info')
                               .doc(user_email)
                               .set(userdata);
-
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const HealthProfile()),
+                          );
                           print("Success");
                         } else
                           print("Not a success");
