@@ -1,9 +1,10 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
-// ignore: unused_import
 import 'package:google_fonts/google_fonts.dart';
-import 'package:healthsync_app/utils/utils.dart';
+//import 'package:healthsync_app/utils/utils.dart';
 import 'package:healthsync_app/pages/ba_general_physician.dart';
 import 'package:healthsync_app/pages/ba_slot.dart';
 
@@ -163,7 +164,7 @@ class BaDocInfoClass extends StatelessWidget {
                   fontSize: 14 * ffem,
                   fontWeight: FontWeight.w400,
                   height: 1.2 * ffem / fem,
-                  fontStyle: FontStyle.italic,
+                  // fontStyle: FontStyle.italic,
                   color: Color(0xff000000),
                 ),
               ),
@@ -405,7 +406,7 @@ class BaDocInfoClass extends StatelessWidget {
                   fontSize: 12 * ffem,
                   fontWeight: FontWeight.w400,
                   height: 1.2 * ffem / fem,
-                  fontStyle: FontStyle.italic,
+                  // fontStyle: FontStyle.italic,
                   color: Color(0xff000000),
                 ),
               ),
@@ -415,7 +416,7 @@ class BaDocInfoClass extends StatelessWidget {
                 onTap: () {
                   // Handle the click event. You can replace the below line with your desired action.
                   print('Book Appointment Clicked!');
-                  // Navigate to another page here using Navigator
+                  //Navigate to another page here using Navigator
                   Navigator.push(
                     context,
                     MaterialPageRoute(

@@ -271,175 +271,175 @@ class BaGenPhyClass extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
-              // doctor6zx (2313:23)
-              margin:
-                  EdgeInsets.fromLTRB(15 * fem, 0 * fem, 26 * fem, 17 * fem),
-              width: double.infinity,
-              height: 91 * fem,
-              decoration: BoxDecoration(
-                border: Border.all(color: Color(0xffd9d9d9)),
-                color: Color(0xffffffff),
-                borderRadius: BorderRadius.circular(19 * fem),
-                boxShadow: [
-                  BoxShadow(
-                    color: Color(0x3f000000),
-                    offset: Offset(0 * fem, 4 * fem),
-                    blurRadius: 2 * fem,
-                  ),
-                ],
-              ),
-              child: Stack(
-                children: [
-                  Positioned(
-                    // rectangle19m5W (2313:25)
-                    left: 18 * fem,
-                    top: 16 * fem,
-                    child: Align(
-                      child: SizedBox(
-                        width: 47 * fem,
-                        height: 57 * fem,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Color(0xffd9d9d9),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    // autogroupa1heSxL (NTe5XBdznQA75zUFaUA1He)
-                    left: 82 * fem,
-                    top: 12 * fem,
-                    child: Container(
-                      width: 99 * fem,
-                      height: 64.98 * fem,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            // draaravsharmaMJc (2313:26)
-                            margin: EdgeInsets.fromLTRB(
-                                0 * fem, 0 * fem, 0 * fem, 3 * fem),
-                            child: Text(
-                              'Dr. Aarav Sharma',
-                              style: safeGoogleFont(
-                                'Lato',
-                                fontSize: 13 * ffem,
-                                fontWeight: FontWeight.w400,
-                                height: 1.2 * ffem / fem,
-                                color: Color(0xff000000),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            // generalphysiciang5z (2313:27)
-                            margin: EdgeInsets.fromLTRB(
-                                0 * fem, 0 * fem, 0 * fem, 4 * fem),
-                            child: Text(
-                              'General Physician',
-                              style: safeGoogleFont(
-                                'Inter',
-                                fontSize: 9 * ffem,
-                                fontWeight: FontWeight.w400,
-                                height: 1.2125 * ffem / fem,
-                                fontStyle: FontStyle.italic,
-                                color: Color(0xff000000),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            // experience14yearsPFJ (2313:28)
-                            margin: EdgeInsets.fromLTRB(
-                                0 * fem, 0 * fem, 0 * fem, 5.98 * fem),
-                            child: Text(
-                              'Experience: 14 years',
-                              style: safeGoogleFont(
-                                'Inter',
-                                fontSize: 9 * ffem,
-                                fontWeight: FontWeight.w400,
-                                height: 1.2125 * ffem / fem,
-                                color: Color(0xff000000),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            // autogroupajny69i (NTe5gRsbHLSswpPy3sAJnY)
-                            margin: EdgeInsets.fromLTRB(
-                                15.87 * fem, 0 * fem, 0 * fem, 0 * fem),
-                            width: 46.33 * fem,
-                            height: 14 * fem,
-                            child: Image.asset(
-                              'assets/page-1/images/auto-group-ajny.png',
-                              width: 46.33 * fem,
-                              height: 14 * fem,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    // icroundstaryUQ (2313:29)
-                    left: 0,
-                    top: 60 * fem,
-                    child: Align(
-                      child: SizedBox(
-                        width: 20 * fem,
-                        height: 20 * fem,
-                        child: Image.asset(
-                          'assets/images/star.png',
-                          width: 20 * fem,
-                          height: 20 * fem,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    // autogroup8azxVSk (NTe5skt3sk7idxxLbs8azx)
-                    left: 0,
-                    top: 32 * fem,
-                    child: Container(
-                      padding: EdgeInsets.fromLTRB(
-                          7.5 * fem, 1 * fem, 5.5 * fem, 2 * fem),
-                      width: 60 * fem,
-                      height: 23 * fem,
-                      decoration: BoxDecoration(
-                        color: Color(0xff5fc5ff),
-                      ),
-                      child: Center(
-                        // bookappointmentaDJ (2313:35)
-                        child: SizedBox(
-                          child: GestureDetector(
-                            onTap: () {
-                              print(
-                                  'Text Clicked! Navigating to Another Page...');
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => BaDocInfoClass(),
-                                ),
-                              );
-                            },
-                            child: Text(
-                              'Book\n Appointment',
-                              textAlign: TextAlign.center,
-                              style: safeGoogleFont(
-                                'Lato',
-                                fontSize: 8 * ffem,
-                                fontWeight: FontWeight.w400,
-                                height: 1.2 * ffem / fem,
-                                color: Color(0xff000000),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            // Container(
+            //   // doctor6zx (2313:23)
+            //   margin:
+            //       EdgeInsets.fromLTRB(15 * fem, 0 * fem, 26 * fem, 17 * fem),
+            //   width: double.infinity,
+            //   height: 91 * fem,
+            //   decoration: BoxDecoration(
+            //     border: Border.all(color: Color(0xffd9d9d9)),
+            //     color: Color(0xffffffff),
+            //     borderRadius: BorderRadius.circular(19 * fem),
+            //     boxShadow: [
+            //       BoxShadow(
+            //         color: Color(0x3f000000),
+            //         offset: Offset(0 * fem, 4 * fem),
+            //         blurRadius: 2 * fem,
+            //       ),
+            //     ],
+            //   ),
+            //   child: Stack(
+            //     children: [
+            //       Positioned(
+            //         // rectangle19m5W (2313:25)
+            //         left: 18 * fem,
+            //         top: 16 * fem,
+            //         child: Align(
+            //           child: SizedBox(
+            //             width: 47 * fem,
+            //             height: 57 * fem,
+            //             child: Container(
+            //               decoration: BoxDecoration(
+            //                 color: Color(0xffd9d9d9),
+            //               ),
+            //             ),
+            //           ),
+            //         ),
+            //       ),
+            //       Positioned(
+            //         // autogroupa1heSxL (NTe5XBdznQA75zUFaUA1He)
+            //         left: 82 * fem,
+            //         top: 12 * fem,
+            //         child: Container(
+            //           width: 99 * fem,
+            //           height: 64.98 * fem,
+            //           child: Column(
+            //             crossAxisAlignment: CrossAxisAlignment.start,
+            //             children: [
+            //               Container(
+            //                 // draaravsharmaMJc (2313:26)
+            //                 margin: EdgeInsets.fromLTRB(
+            //                     0 * fem, 0 * fem, 0 * fem, 3 * fem),
+            //                 child: Text(
+            //                   'Dr. Aarav Sharma',
+            //                   style: safeGoogleFont(
+            //                     'Lato',
+            //                     fontSize: 13 * ffem,
+            //                     fontWeight: FontWeight.w400,
+            //                     height: 1.2 * ffem / fem,
+            //                     color: Color(0xff000000),
+            //                   ),
+            //                 ),
+            //               ),
+            //               Container(
+            //                 // generalphysiciang5z (2313:27)
+            //                 margin: EdgeInsets.fromLTRB(
+            //                     0 * fem, 0 * fem, 0 * fem, 4 * fem),
+            //                 child: Text(
+            //                   'General Physician',
+            //                   style: safeGoogleFont(
+            //                     'Inter',
+            //                     fontSize: 9 * ffem,
+            //                     fontWeight: FontWeight.w400,
+            //                     height: 1.2125 * ffem / fem,
+            //                     fontStyle: FontStyle.italic,
+            //                     color: Color(0xff000000),
+            //                   ),
+            //                 ),
+            //               ),
+            //               Container(
+            //                 // experience14yearsPFJ (2313:28)
+            //                 margin: EdgeInsets.fromLTRB(
+            //                     0 * fem, 0 * fem, 0 * fem, 5.98 * fem),
+            //                 child: Text(
+            //                   'Experience: 14 years',
+            //                   style: safeGoogleFont(
+            //                     'Inter',
+            //                     fontSize: 9 * ffem,
+            //                     fontWeight: FontWeight.w400,
+            //                     height: 1.2125 * ffem / fem,
+            //                     color: Color(0xff000000),
+            //                   ),
+            //                 ),
+            //               ),
+            //               Container(
+            //                 // autogroupajny69i (NTe5gRsbHLSswpPy3sAJnY)
+            //                 margin: EdgeInsets.fromLTRB(
+            //                     15.87 * fem, 0 * fem, 0 * fem, 0 * fem),
+            //                 width: 46.33 * fem,
+            //                 height: 14 * fem,
+            //                 child: Image.asset(
+            //                   'assets/page-1/images/auto-group-ajny.png',
+            //                   width: 46.33 * fem,
+            //                   height: 14 * fem,
+            //                 ),
+            //               ),
+            //             ],
+            //           ),
+            //         ),
+            //       ),
+            //       Positioned(
+            //         // icroundstaryUQ (2313:29)
+            //         left: 0,
+            //         top: 60 * fem,
+            //         child: Align(
+            //           child: SizedBox(
+            //             width: 20 * fem,
+            //             height: 20 * fem,
+            //             child: Image.asset(
+            //               'assets/images/star.png',
+            //               width: 20 * fem,
+            //               height: 20 * fem,
+            //             ),
+            //           ),
+            //         ),
+            //       ),
+            //       Positioned(
+            //         // autogroup8azxVSk (NTe5skt3sk7idxxLbs8azx)
+            //         left: 0,
+            //         top: 32 * fem,
+            //         child: Container(
+            //           padding: EdgeInsets.fromLTRB(
+            //               7.5 * fem, 1 * fem, 5.5 * fem, 2 * fem),
+            //           width: 60 * fem,
+            //           height: 23 * fem,
+            //           decoration: BoxDecoration(
+            //             color: Color(0xff5fc5ff),
+            //           ),
+            //           child: Center(
+            //             // bookappointmentaDJ (2313:35)
+            //             child: SizedBox(
+            //               child: GestureDetector(
+            //                 onTap: () {
+            //                   print(
+            //                       'Text Clicked! Navigating to Another Page...');
+            //                   Navigator.push(
+            //                     context,
+            //                     MaterialPageRoute(
+            //                       builder: (context) => BaDocInfoClass(),
+            //                     ),
+            //                   );
+            //                 },
+            //                 child: Text(
+            //                   'Book\n Appointment',
+            //                   textAlign: TextAlign.center,
+            //                   style: safeGoogleFont(
+            //                     'Lato',
+            //                     fontSize: 8 * ffem,
+            //                     fontWeight: FontWeight.w400,
+            //                     height: 1.2 * ffem / fem,
+            //                     color: Color(0xff000000),
+            //                   ),
+            //                 ),
+            //               ),
+            //             ),
+            //           ),
+            //         ),
+            //       ),
+            //     ],
+            //   ),
+            // ),
             Container(
               // doctorpNY (2313:84)
               margin:
@@ -486,7 +486,7 @@ class BaGenPhyClass extends StatelessWidget {
                           margin: EdgeInsets.fromLTRB(
                               0.13 * fem, 0 * fem, 0 * fem, 3 * fem),
                           child: Text(
-                            'Dr. Meera Kapoor',
+                            'Dr. Aarav Sharma',
                             style: safeGoogleFont(
                               'Lato',
                               fontSize: 13 * ffem,
@@ -517,7 +517,7 @@ class BaGenPhyClass extends StatelessWidget {
                           margin: EdgeInsets.fromLTRB(
                               0.13 * fem, 0 * fem, 0 * fem, 5.98 * fem),
                           child: Text(
-                            'Experience: 10 years',
+                            'Experience: 14 years',
                             style: safeGoogleFont(
                               'Inter',
                               fontSize: 9 * ffem,
@@ -607,10 +607,14 @@ class BaGenPhyClass extends StatelessWidget {
                                 // Replace the below line with the navigation code to the other page.
                                 print(
                                     'Text Clicked! Navigating to Another Page...');
-                                // Navigator.push(context, MaterialPageRoute(builder: (context) => YourNextPage()));
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            BaDocInfoClass()));
                               },
                               child: Text(
-                                'Book\n Appointment',
+                                'Book Appointment',
                                 textAlign: TextAlign.center,
                                 style: safeGoogleFont(
                                   'Lato',
@@ -627,734 +631,198 @@ class BaGenPhyClass extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
-              // doctor5me (2313:72)
-              margin:
-                  EdgeInsets.fromLTRB(15 * fem, 0 * fem, 26 * fem, 17 * fem),
-              padding: EdgeInsets.fromLTRB(
-                  18 * fem, 12 * fem, 17 * fem, 14.02 * fem),
-              width: double.infinity,
-              height: 91 * fem,
-              decoration: BoxDecoration(
-                border: Border.all(color: Color(0xffd9d9d9)),
-                color: Color(0xffffffff),
-                borderRadius: BorderRadius.circular(19 * fem),
-                boxShadow: [
-                  BoxShadow(
-                    color: Color(0x3f000000),
-                    offset: Offset(0 * fem, 4 * fem),
-                    blurRadius: 2 * fem,
-                  ),
-                ],
-              ),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    // rectangle19JeQ (2313:74)
-                    margin: EdgeInsets.fromLTRB(
-                        0 * fem, 0.02 * fem, 16.5 * fem, 0 * fem),
-                    width: 47 * fem,
-                    height: 57 * fem,
-                    decoration: BoxDecoration(
-                      color: Color(0xffd9d9d9),
-                    ),
-                  ),
-                  Container(
-                    // autogroup45ba3M6 (NTe9HugsyRijA8n1qK45ba)
-                    margin: EdgeInsets.fromLTRB(
-                        0 * fem, 0 * fem, 53 * fem, 0 * fem),
-                    width: 86.5 * fem,
-                    height: double.infinity,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          // drarjunsinghaM2 (2313:75)
-                          margin: EdgeInsets.fromLTRB(
-                              0.5 * fem, 0 * fem, 0 * fem, 3 * fem),
-                          child: Text(
-                            'Dr. Arjun Singh',
-                            style: safeGoogleFont(
-                              'Lato',
-                              fontSize: 13 * ffem,
-                              fontWeight: FontWeight.w400,
-                              height: 1.2 * ffem / fem,
-                              color: Color(0xff000000),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          // generalphysicianJH2 (2313:76)
-                          margin: EdgeInsets.fromLTRB(
-                              0 * fem, 0 * fem, 0 * fem, 4 * fem),
-                          width: double.infinity,
-                          child: Text(
-                            'General Physician',
-                            textAlign: TextAlign.center,
-                            style: safeGoogleFont(
-                              'Inter',
-                              fontSize: 9 * ffem,
-                              fontWeight: FontWeight.w400,
-                              height: 1.2125 * ffem / fem,
-                              fontStyle: FontStyle.italic,
-                              color: Color(0xff000000),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          // experience6yearszvY (2313:83)
-                          margin: EdgeInsets.fromLTRB(
-                              0.5 * fem, 0 * fem, 0 * fem, 5.98 * fem),
-                          child: Text(
-                            'Experience: 6 years',
-                            style: safeGoogleFont(
-                              'Inter',
-                              fontSize: 9 * ffem,
-                              fontWeight: FontWeight.w400,
-                              height: 1.2125 * ffem / fem,
-                              color: Color(0xff000000),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          // autogrouppnvz8G4 (NTe9SpbhLXYmeJvRcXpnVz)
-                          margin: EdgeInsets.fromLTRB(
-                              0.37 * fem, 0 * fem, 0 * fem, 0 * fem),
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Container(
-                                // icroundstar3P2 (2313:77)
-                                margin: EdgeInsets.fromLTRB(
-                                    0 * fem, 0 * fem, 2.67 * fem, 0 * fem),
-                                width: 13.33 * fem,
-                                height: 14 * fem,
-                                child: Image.asset(
-                                  'assets/images/star.png',
-                                  width: 13.33 * fem,
-                                  height: 14 * fem,
-                                ),
-                              ),
-                              Container(
-                                // icroundstarNgC (2313:79)
-                                margin: EdgeInsets.fromLTRB(
-                                    0 * fem, 0 * fem, 3.67 * fem, 0 * fem),
-                                width: 13.33 * fem,
-                                height: 14 * fem,
-                                child: Image.asset(
-                                  'assets/images/star.png',
-                                  width: 13.33 * fem,
-                                  height: 14 * fem,
-                                ),
-                              ),
-                              Container(
-                                // icroundstarH2U (2313:80)
-                                margin: EdgeInsets.fromLTRB(
-                                    0 * fem, 0 * fem, 2.67 * fem, 0 * fem),
-                                width: 13.33 * fem,
-                                height: 14 * fem,
-                                child: Image.asset(
-                                  'assets/images/star.png',
-                                  width: 13.33 * fem,
-                                  height: 14 * fem,
-                                ),
-                              ),
-                              Container(
-                                // icroundstarBde (2313:78)
-                                width: 13.33 * fem,
-                                height: 14 * fem,
-                                child: Image.asset(
-                                  'assets/images/star.png',
-                                  width: 13.33 * fem,
-                                  height: 14 * fem,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    // autogroupwtmejQG (NTe9f4kJ3yz7rzstKWwTME)
-                    margin: EdgeInsets.fromLTRB(
-                        0 * fem, 20 * fem, 0 * fem, 21.98 * fem),
-                    padding: EdgeInsets.fromLTRB(
-                        7.5 * fem, 1 * fem, 5.5 * fem, 2 * fem),
-                    width: 60 * fem,
-                    height: double.infinity,
-                    decoration: BoxDecoration(
-                      color: Color(0xc95fc5ff),
-                    ),
-                    child: Center(
-                      // bookappointmentSpU (2313:82)
-                      child: SizedBox(
-                        child: Container(
-                            constraints: BoxConstraints(
-                              maxWidth: 47 * fem,
-                            ),
-                            child: GestureDetector(
-                              onTap: () {
-                                // Replace the below line with the navigation code to the other page.
-                                print(
-                                    'Text Clicked! Navigating to Another Page...');
-                                // Navigator.push(context, MaterialPageRoute(builder: (context) => YourNextPage()));
-                              },
-                              child: Text(
-                                'Book\n Appointment',
-                                textAlign: TextAlign.center,
-                                style: safeGoogleFont(
-                                  'Lato',
-                                  fontSize: 8 * ffem,
-                                  fontWeight: FontWeight.w400,
-                                  height: 1.2 * ffem / fem,
-                                  color: Color(0xff000000),
-                                ),
-                              ),
-                            )),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              // doctorYcc (2313:36)
-              margin: EdgeInsets.fromLTRB(16 * fem, 0 * fem, 25 * fem, 0 * fem),
-              width: double.infinity,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    // autogroup5svgtRa (NTe6Rf8ZZVkAt5zoBG5Svg)
-                    margin: EdgeInsets.fromLTRB(
-                        0 * fem, 0 * fem, 0 * fem, 23 * fem),
-                    padding: EdgeInsets.fromLTRB(
-                        18 * fem, 12 * fem, 17 * fem, 14.02 * fem),
-                    width: double.infinity,
-                    height: 91 * fem,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Color(0xffd9d9d9)),
-                      color: Color(0xffffffff),
-                      borderRadius: BorderRadius.circular(19 * fem),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Color(0x3f000000),
-                          offset: Offset(0 * fem, 4 * fem),
-                          blurRadius: 2 * fem,
-                        ),
-                      ],
-                    ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          // rectangle19LYU (2313:38)
-                          margin: EdgeInsets.fromLTRB(
-                              0 * fem, 0.02 * fem, 16.87 * fem, 0 * fem),
-                          width: 47 * fem,
-                          height: 57 * fem,
-                          decoration: BoxDecoration(
-                            color: Color(0xffd9d9d9),
-                          ),
-                        ),
-                        Container(
-                          // autogroupive4soJ (NTe6g4tDetBGXWXjtPiVe4)
-                          margin: EdgeInsets.fromLTRB(
-                              0 * fem, 0 * fem, 44 * fem, 0 * fem),
-                          height: double.infinity,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                // drananyajoshiNk4 (2313:39)
-                                margin: EdgeInsets.fromLTRB(
-                                    0.13 * fem, 0 * fem, 0 * fem, 3 * fem),
-                                child: Text(
-                                  'Dr. Ananya Joshi',
-                                  style: safeGoogleFont(
-                                    'Lato',
-                                    fontSize: 13 * ffem,
-                                    fontWeight: FontWeight.w400,
-                                    height: 1.2 * ffem / fem,
-                                    color: Color(0xff000000),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                // generalphysicianpc4 (2313:40)
-                                margin: EdgeInsets.fromLTRB(
-                                    0.13 * fem, 0 * fem, 0 * fem, 4 * fem),
-                                child: Text(
-                                  'General Physician',
-                                  style: safeGoogleFont(
-                                    'Inter',
-                                    fontSize: 9 * ffem,
-                                    fontWeight: FontWeight.w400,
-                                    height: 1.2125 * ffem / fem,
-                                    fontStyle: FontStyle.italic,
-                                    color: Color(0xff000000),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                // experience25yearsLaQ (2313:41)
-                                margin: EdgeInsets.fromLTRB(
-                                    0.13 * fem, 0 * fem, 0 * fem, 5.98 * fem),
-                                child: Text(
-                                  'Experience: 25 years',
-                                  style: safeGoogleFont(
-                                    'Inter',
-                                    fontSize: 9 * ffem,
-                                    fontWeight: FontWeight.w400,
-                                    height: 1.2125 * ffem / fem,
-                                    color: Color(0xff000000),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                // autogroupmyp8Tf2 (NTe6rp5KG5YL4mUKyamyp8)
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      // icroundstar1gY (2313:42)
-                                      margin: EdgeInsets.fromLTRB(0 * fem,
-                                          0 * fem, 2.67 * fem, 0 * fem),
-                                      width: 13.33 * fem,
-                                      height: 14 * fem,
-                                      child: Image.asset(
-                                        'assets/images/star.png',
-                                        width: 13.33 * fem,
-                                        height: 14 * fem,
-                                      ),
-                                    ),
-                                    Container(
-                                      // icroundstariqr (2313:45)
-                                      margin: EdgeInsets.fromLTRB(0 * fem,
-                                          0 * fem, 3.67 * fem, 0 * fem),
-                                      width: 13.33 * fem,
-                                      height: 14 * fem,
-                                      child: Image.asset(
-                                        'assets/images/star.png',
-                                        width: 13.33 * fem,
-                                        height: 14 * fem,
-                                      ),
-                                    ),
-                                    Container(
-                                      // icroundstarrBN (2313:46)
-                                      margin: EdgeInsets.fromLTRB(0 * fem,
-                                          0 * fem, 2.67 * fem, 0 * fem),
-                                      width: 13.33 * fem,
-                                      height: 14 * fem,
-                                      child: Image.asset(
-                                        'assets/images/star.png',
-                                        width: 13.33 * fem,
-                                        height: 14 * fem,
-                                      ),
-                                    ),
-                                    Container(
-                                      // icroundstarMP2 (2313:43)
-                                      margin: EdgeInsets.fromLTRB(0 * fem,
-                                          0 * fem, 2.67 * fem, 0 * fem),
-                                      width: 13.33 * fem,
-                                      height: 14 * fem,
-                                      child: Image.asset(
-                                        'assets/images/star.png',
-                                        width: 13.33 * fem,
-                                        height: 14 * fem,
-                                      ),
-                                    ),
-                                    Container(
-                                      // icroundstarHGg (2313:44)
-                                      width: 13.33 * fem,
-                                      height: 14 * fem,
-                                      child: Image.asset(
-                                        'assets/images/star.png',
-                                        width: 13.33 * fem,
-                                        height: 14 * fem,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          // autogroupb1vvPac (NTe78tSs2eH5aSuo9bb1Vv)
-                          margin: EdgeInsets.fromLTRB(
-                              0 * fem, 20 * fem, 0 * fem, 21.98 * fem),
-                          padding: EdgeInsets.fromLTRB(
-                              7.5 * fem, 1 * fem, 5.5 * fem, 2 * fem),
-                          width: 60 * fem,
-                          height: double.infinity,
-                          decoration: BoxDecoration(
-                            color: Color(0xc95fc5ff),
-                          ),
-                          child: Center(
-                            // bookappointmenth5W (2313:48)
-                            child: SizedBox(
-                              child: Container(
-                                  constraints: BoxConstraints(
-                                    maxWidth: 47 * fem,
-                                  ),
-                                  child: GestureDetector(
-                                    onTap: () {
-                                      // Replace the below line with the navigation code to the other page.
-                                      print(
-                                          'Text Clicked! Navigating to Another Page...');
-                                      // Navigator.push(context, MaterialPageRoute(builder: (context) => YourNextPage()));
-                                    },
-                                    child: Text(
-                                      'Book\n Appointment',
-                                      textAlign: TextAlign.center,
-                                      style: safeGoogleFont(
-                                        'Lato',
-                                        fontSize: 8 * ffem,
-                                        fontWeight: FontWeight.w400,
-                                        height: 1.2 * ffem / fem,
-                                        color: Color(0xff000000),
-                                      ),
-                                    ),
-                                  )),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    // doctoryoi (2313:49)
-                    margin: EdgeInsets.fromLTRB(
-                        0 * fem, 0 * fem, 0 * fem, 17 * fem),
-                    padding: EdgeInsets.fromLTRB(
-                        18 * fem, 6 * fem, 17 * fem, 6 * fem),
-                    width: double.infinity,
-                    height: 91 * fem,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Color(0xffd9d9d9)),
-                      color: Color(0xffffffff),
-                      borderRadius: BorderRadius.circular(19 * fem),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Color(0x3f000000),
-                          offset: Offset(0 * fem, 4 * fem),
-                          blurRadius: 2 * fem,
-                        ),
-                      ],
-                    ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          // rectangle194KN (2313:51)
-                          margin: EdgeInsets.fromLTRB(
-                              0 * fem, 0 * fem, 16.87 * fem, 14 * fem),
-                          width: 47 * fem,
-                          height: 57 * fem,
-                          decoration: BoxDecoration(
-                            color: Color(0xffd9d9d9),
-                          ),
-                        ),
-                        Container(
-                          // autogroup8bmezyi (NTe7p2zJQKRvSVC93L8bMe)
-                          margin: EdgeInsets.fromLTRB(
-                              0 * fem, 0 * fem, 51 * fem, 14.02 * fem),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                // drrohanpateliep (2313:52)
-                                margin: EdgeInsets.fromLTRB(
-                                    0.13 * fem, 0 * fem, 0 * fem, 3 * fem),
-                                child: Text(
-                                  'Dr. Rohan Patel',
-                                  style: safeGoogleFont(
-                                    'Lato',
-                                    fontSize: 13 * ffem,
-                                    fontWeight: FontWeight.w400,
-                                    height: 1.2 * ffem / fem,
-                                    color: Color(0xff000000),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                // generalphysicianoRN (2313:53)
-                                margin: EdgeInsets.fromLTRB(
-                                    0.13 * fem, 0 * fem, 0 * fem, 4 * fem),
-                                child: Text(
-                                  'General Physician',
-                                  style: safeGoogleFont(
-                                    'Inter',
-                                    fontSize: 9 * ffem,
-                                    fontWeight: FontWeight.w400,
-                                    height: 1.2125 * ffem / fem,
-                                    fontStyle: FontStyle.italic,
-                                    color: Color(0xff000000),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                // experience14yearshme (2313:54)
-                                margin: EdgeInsets.fromLTRB(
-                                    0.13 * fem, 0 * fem, 0 * fem, 5.98 * fem),
-                                child: Text(
-                                  'Experience: 14 years',
-                                  style: safeGoogleFont(
-                                    'Inter',
-                                    fontSize: 9 * ffem,
-                                    fontWeight: FontWeight.w400,
-                                    height: 1.2125 * ffem / fem,
-                                    color: Color(0xff000000),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                // autogroupkuded9W (NTe7x2kyeNVTQ7wTfZkudE)
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      // icroundstarBRv (2313:55)
-                                      margin: EdgeInsets.fromLTRB(0 * fem,
-                                          0 * fem, 2.67 * fem, 0 * fem),
-                                      width: 13.33 * fem,
-                                      height: 14 * fem,
-                                      child: Image.asset(
-                                        'assets/page-1/images/ic-round-star-43N.png',
-                                        width: 13.33 * fem,
-                                        height: 14 * fem,
-                                      ),
-                                    ),
-                                    Container(
-                                      // icroundstarh9N (2313:57)
-                                      margin: EdgeInsets.fromLTRB(0 * fem,
-                                          0 * fem, 3.67 * fem, 0 * fem),
-                                      width: 13.33 * fem,
-                                      height: 14 * fem,
-                                      child: Image.asset(
-                                        'assets/images/star.png',
-                                        width: 13.33 * fem,
-                                        height: 14 * fem,
-                                      ),
-                                    ),
-                                    Container(
-                                      // icroundstaroTJ (2313:58)
-                                      margin: EdgeInsets.fromLTRB(0 * fem,
-                                          0 * fem, 2.67 * fem, 0 * fem),
-                                      width: 13.33 * fem,
-                                      height: 14 * fem,
-                                      child: Image.asset(
-                                        'assets/images/star.png',
-                                        width: 13.33 * fem,
-                                        height: 14 * fem,
-                                      ),
-                                    ),
-                                    Container(
-                                      // icroundstarKRe (2313:56)
-                                      width: 13.33 * fem,
-                                      height: 14 * fem,
-                                      child: Image.asset(
-                                        'assets/images/star.png',
-                                        width: 13.33 * fem,
-                                        height: 14 * fem,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          // autogroupfzhneyi (NTe8BXNVciA3X15KDiFZhn)
-                          margin: EdgeInsets.fromLTRB(
-                              0 * fem, 20 * fem, 0 * fem, 36 * fem),
-                          padding: EdgeInsets.fromLTRB(
-                              7.5 * fem, 1 * fem, 5.5 * fem, 2 * fem),
-                          width: 60 * fem,
-                          height: double.infinity,
-                          decoration: BoxDecoration(
-                            color: Color(0xc95fc5ff),
-                          ),
-                          child: Center(
-                            // bookappointmentyWC (2313:60)
-                            child: SizedBox(
-                              child: Container(
-                                  constraints: BoxConstraints(
-                                    maxWidth: 47 * fem,
-                                  ),
-                                  child: GestureDetector(
-                                    onTap: () {
-                                      // Replace the below line with the navigation code to the other page.
-                                      print(
-                                          'Text Clicked! Navigating to Another Page...');
-                                      // Navigator.push(context, MaterialPageRoute(builder: (context) => YourNextPage()));
-                                    },
-                                    child: Text(
-                                      'Book\n Appointment',
-                                      textAlign: TextAlign.center,
-                                      style: safeGoogleFont(
-                                        'Lato',
-                                        fontSize: 8 * ffem,
-                                        fontWeight: FontWeight.w400,
-                                        height: 1.2 * ffem / fem,
-                                        color: Color(0xff000000),
-                                      ),
-                                    ),
-                                  )),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    // doctor4nY (2313:61)
-                    padding: EdgeInsets.fromLTRB(
-                        18 * fem, 12 * fem, 17 * fem, 14.02 * fem),
-                    width: double.infinity,
-                    height: 91 * fem,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Color(0xffd9d9d9)),
-                      color: Color(0xffffffff),
-                      borderRadius: BorderRadius.circular(19 * fem),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Color(0x3f000000),
-                          offset: Offset(0 * fem, 4 * fem),
-                          blurRadius: 2 * fem,
-                        ),
-                      ],
-                    ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          // rectangle19mBA (2313:63)
-                          margin: EdgeInsets.fromLTRB(
-                              0 * fem, 0.02 * fem, 16.87 * fem, 0 * fem),
-                          width: 47 * fem,
-                          height: 57 * fem,
-                          decoration: BoxDecoration(
-                            color: Color(0xffd9d9d9),
-                          ),
-                        ),
-                        Container(
-                          // autogroupyx2l5he (NTe8agNaWHBpTms1ryYX2L)
-                          margin: EdgeInsets.fromLTRB(
-                              0 * fem, 0 * fem, 49 * fem, 0 * fem),
-                          height: double.infinity,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                // drnishagupta2Mz (2313:64)
-                                margin: EdgeInsets.fromLTRB(
-                                    0.13 * fem, 0 * fem, 0 * fem, 3 * fem),
-                                child: Text(
-                                  'Dr. Nisha Gupta',
-                                  style: safeGoogleFont(
-                                    'Lato',
-                                    fontSize: 13 * ffem,
-                                    fontWeight: FontWeight.w400,
-                                    height: 1.2 * ffem / fem,
-                                    color: Color(0xff000000),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                // generalphysicianwE4 (2313:65)
-                                margin: EdgeInsets.fromLTRB(
-                                    0.13 * fem, 0 * fem, 0 * fem, 4 * fem),
-                                child: Text(
-                                  'General Physician',
-                                  style: safeGoogleFont(
-                                    'Inter',
-                                    fontSize: 9 * ffem,
-                                    fontWeight: FontWeight.w400,
-                                    height: 1.2125 * ffem / fem,
-                                    fontStyle: FontStyle.italic,
-                                    color: Color(0xff000000),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                // experience4years32C (2313:66)
-                                margin: EdgeInsets.fromLTRB(
-                                    0.13 * fem, 0 * fem, 0 * fem, 5.98 * fem),
-                                child: Text(
-                                  'Experience: 4 years',
-                                  style: safeGoogleFont(
-                                    'Inter',
-                                    fontSize: 9 * ffem,
-                                    fontWeight: FontWeight.w400,
-                                    height: 1.2125 * ffem / fem,
-                                    color: Color(0xff000000),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                // autogrouphdbaZWL (NTe8iqoeKFUicEVzLJHdbA)
-                                width: 46.33 * fem,
-                                height: 14 * fem,
-                                child: Image.asset(
-                                  'assets/images/star3.png',
-                                  width: 46.33 * fem,
-                                  height: 14 * fem,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          // autogroupfvkntoW (NTe8uLWA54zjNFc6erfvKN)
-                          margin: EdgeInsets.fromLTRB(
-                              0 * fem, 20 * fem, 0 * fem, 21.98 * fem),
-                          padding: EdgeInsets.fromLTRB(
-                              7.5 * fem, 1 * fem, 5.5 * fem, 2 * fem),
-                          width: 60 * fem,
-                          height: double.infinity,
-                          decoration: BoxDecoration(
-                            color: Color(0xc95fc5ff),
-                          ),
-                          child: Center(
-                            // bookappointmento9n (2313:71)
-                            child: SizedBox(
-                              child: Container(
-                                  constraints: BoxConstraints(
-                                    maxWidth: 47 * fem,
-                                  ),
-                                  child: GestureDetector(
-                                    onTap: () {
-                                      // Replace the below line with the navigation code to the other page.
-                                      print(
-                                          'Text Clicked! Navigating to Another Page...');
-                                      // Navigator.push(context, MaterialPageRoute(builder: (context) => YourNextPage()));
-                                    },
-                                    child: Text(
-                                      'Book\n Appointment',
-                                      textAlign: TextAlign.center,
-                                      style: safeGoogleFont(
-                                        'Lato',
-                                        fontSize: 8 * ffem,
-                                        fontWeight: FontWeight.w400,
-                                        height: 1.2 * ffem / fem,
-                                        color: Color(0xff000000),
-                                      ),
-                                    ),
-                                  )),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            // Container(
+            //   // doctor5me (2313:72)
+            //   margin:
+            //       EdgeInsets.fromLTRB(15 * fem, 0 * fem, 26 * fem, 17 * fem),
+            //   padding: EdgeInsets.fromLTRB(
+            //       18 * fem, 12 * fem, 17 * fem, 14.02 * fem),
+            //   width: double.infinity,
+            //   height: 91 * fem,
+            //   decoration: BoxDecoration(
+            //     border: Border.all(color: Color(0xffd9d9d9)),
+            //     color: Color(0xffffffff),
+            //     borderRadius: BorderRadius.circular(19 * fem),
+            //     boxShadow: [
+            //       BoxShadow(
+            //         color: Color(0x3f000000),
+            //         offset: Offset(0 * fem, 4 * fem),
+            //         blurRadius: 2 * fem,
+            //       ),
+            //     ],
+            //   ),
+            //   child: Row(
+            //     crossAxisAlignment: CrossAxisAlignment.center,
+            //     children: [
+            //       Container(
+            //         // rectangle19JeQ (2313:74)
+            //         margin: EdgeInsets.fromLTRB(
+            //             0 * fem, 0.02 * fem, 16.5 * fem, 0 * fem),
+            //         width: 47 * fem,
+            //         height: 57 * fem,
+            //         decoration: BoxDecoration(
+            //           color: Color(0xffd9d9d9),
+            //         ),
+            //       ),
+            //       Container(
+            //         // autogroup45ba3M6 (NTe9HugsyRijA8n1qK45ba)
+            //         margin: EdgeInsets.fromLTRB(
+            //             0 * fem, 0 * fem, 53 * fem, 0 * fem),
+            //         width: 86.5 * fem,
+            //         height: double.infinity,
+            //         child: Column(
+            //           crossAxisAlignment: CrossAxisAlignment.start,
+            //           children: [
+            //             Container(
+            //               // drarjunsinghaM2 (2313:75)
+            //               margin: EdgeInsets.fromLTRB(
+            //                   0.5 * fem, 0 * fem, 0 * fem, 3 * fem),
+            //               child: Text(
+            //                 'Dr. Arjun Singh',
+            //                 style: safeGoogleFont(
+            //                   'Lato',
+            //                   fontSize: 13 * ffem,
+            //                   fontWeight: FontWeight.w400,
+            //                   height: 1.2 * ffem / fem,
+            //                   color: Color(0xff000000),
+            //                 ),
+            //               ),
+            //             ),
+            //             Container(
+            //               // generalphysicianJH2 (2313:76)
+            //               margin: EdgeInsets.fromLTRB(
+            //                   0 * fem, 0 * fem, 0 * fem, 4 * fem),
+            //               width: double.infinity,
+            //               child: Text(
+            //                 'General Physician',
+            //                 textAlign: TextAlign.center,
+            //                 style: safeGoogleFont(
+            //                   'Inter',
+            //                   fontSize: 9 * ffem,
+            //                   fontWeight: FontWeight.w400,
+            //                   height: 1.2125 * ffem / fem,
+            //                   fontStyle: FontStyle.italic,
+            //                   color: Color(0xff000000),
+            //                 ),
+            //               ),
+            //             ),
+            //             Container(
+            //               // experience6yearszvY (2313:83)
+            //               margin: EdgeInsets.fromLTRB(
+            //                   0.5 * fem, 0 * fem, 0 * fem, 5.98 * fem),
+            //               child: Text(
+            //                 'Experience: 6 years',
+            //                 style: safeGoogleFont(
+            //                   'Inter',
+            //                   fontSize: 9 * ffem,
+            //                   fontWeight: FontWeight.w400,
+            //                   height: 1.2125 * ffem / fem,
+            //                   color: Color(0xff000000),
+            //                 ),
+            //               ),
+            //             ),
+            //             Container(
+            //               // autogrouppnvz8G4 (NTe9SpbhLXYmeJvRcXpnVz)
+            //               margin: EdgeInsets.fromLTRB(
+            //                   0.37 * fem, 0 * fem, 0 * fem, 0 * fem),
+            //               child: Row(
+            //                 crossAxisAlignment: CrossAxisAlignment.center,
+            //                 children: [
+            //                   Container(
+            //                     // icroundstar3P2 (2313:77)
+            //                     margin: EdgeInsets.fromLTRB(
+            //                         0 * fem, 0 * fem, 2.67 * fem, 0 * fem),
+            //                     width: 13.33 * fem,
+            //                     height: 14 * fem,
+            //                     child: Image.asset(
+            //                       'assets/images/star.png',
+            //                       width: 13.33 * fem,
+            //                       height: 14 * fem,
+            //                     ),
+            //                   ),
+            //                   Container(
+            //                     // icroundstarNgC (2313:79)
+            //                     margin: EdgeInsets.fromLTRB(
+            //                         0 * fem, 0 * fem, 3.67 * fem, 0 * fem),
+            //                     width: 13.33 * fem,
+            //                     height: 14 * fem,
+            //                     child: Image.asset(
+            //                       'assets/images/star.png',
+            //                       width: 13.33 * fem,
+            //                       height: 14 * fem,
+            //                     ),
+            //                   ),
+            //                   Container(
+            //                     // icroundstarH2U (2313:80)
+            //                     margin: EdgeInsets.fromLTRB(
+            //                         0 * fem, 0 * fem, 2.67 * fem, 0 * fem),
+            //                     width: 13.33 * fem,
+            //                     height: 14 * fem,
+            //                     child: Image.asset(
+            //                       'assets/images/star.png',
+            //                       width: 13.33 * fem,
+            //                       height: 14 * fem,
+            //                     ),
+            //                   ),
+            //                   Container(
+            //                     // icroundstarBde (2313:78)
+            //                     width: 13.33 * fem,
+            //                     height: 14 * fem,
+            //                     child: Image.asset(
+            //                       'assets/images/star.png',
+            //                       width: 13.33 * fem,
+            //                       height: 14 * fem,
+            //                     ),
+            //                   ),
+            //                 ],
+            //               ),
+            //             ),
+            //           ],
+            //         ),
+            //       ),
+            //       Container(
+            //         // autogroupwtmejQG (NTe9f4kJ3yz7rzstKWwTME)
+            //         margin: EdgeInsets.fromLTRB(
+            //             0 * fem, 20 * fem, 0 * fem, 21.98 * fem),
+            //         padding: EdgeInsets.fromLTRB(
+            //             7.5 * fem, 1 * fem, 5.5 * fem, 2 * fem),
+            //         width: 60 * fem,
+            //         height: double.infinity,
+            //         decoration: BoxDecoration(
+            //           color: Color(0xc95fc5ff),
+            //         ),
+            //         child: Center(
+            //           // bookappointmentSpU (2313:82)
+            //           child: SizedBox(
+            //             child: Container(
+            //                 constraints: BoxConstraints(
+            //                   maxWidth: 47 * fem,
+            //                 ),
+            //                 child: GestureDetector(
+            //                   onTap: () {
+            //                     // Replace the below line with the navigation code to the other page.
+            //                     print(
+            //                         'Text Clicked! Navigating to Another Page...');
+            //                     // Navigator.push(context, MaterialPageRoute(builder: (context) => YourNextPage()));
+            //                   },
+            //                   child: Text(
+            //                     'Book Appointment',
+            //                     textAlign: TextAlign.center,
+            //                     style: safeGoogleFont(
+            //                       'Lato',
+            //                       fontSize: 8 * ffem,
+            //                       fontWeight: FontWeight.w400,
+            //                       height: 1.2 * ffem / fem,
+            //                       color: Color(0xff000000),
+            //                     ),
+            //                   ),
+            //                 )),
+            //           ),
+            //         ),
+            //       ),
+            //     ],
+            //   ),
+            // ),
           ],
         ),
       ),
