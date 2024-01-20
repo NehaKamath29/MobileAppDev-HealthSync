@@ -29,12 +29,6 @@ Future<Map<String, dynamic>> get_details() async {
         final data2 = doc2.data() as Map<String, dynamic>;
         final username = data2['username'];
         print(data2);
-        final userdata = <String, dynamic>{
-          "username": username,
-          "percentage": ((count / 16) * 100).toString(),
-        };
-
-        return userdata;
       }
     }
   } catch (e) {
