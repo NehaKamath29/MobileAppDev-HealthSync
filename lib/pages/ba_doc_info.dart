@@ -1,5 +1,4 @@
-// ignore_for_file: unused_import
-
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
@@ -7,9 +6,69 @@ import 'package:google_fonts/google_fonts.dart';
 //import 'package:healthsync_app/utils/utils.dart';
 import 'package:healthsync_app/pages/ba_general_physician.dart';
 import 'package:healthsync_app/pages/ba_slot.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
+
+Future<Map<String, dynamic>> get_details() async {
+  FirebaseFirestore db = FirebaseFirestore.instance;
+  final docRef = db.collection("doctor_table").doc("Aarav Sharma");
+  print(docRef);
+
+  try {
+    DocumentSnapshot doc = await docRef.get();
+    if (doc.exists) {
+      final data = doc.data() as Map<String, dynamic>;
+      final doctorName = data['Name'];
+      final speciality = data['speciality'];
+      final Degree = data['Degree'];
+      final Experience = data['Experience'];
+      final patientsCount = data['patients_count'];
+      final Ratings = data['Ratings'];
+      final About = data['About'];
+      final fees = data['feesr'];
+
+      print(data);
+      return data;
+    }
+  } catch (e) {
+    print("Error: $e");
+  }
+
+  return {}; // Return a default value in case of failure
+}
 
 class BaDocInfoClass extends StatelessWidget {
   const BaDocInfoClass({super.key});
+  // const ProfilePage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<Map<String, dynamic>>(
+      future: get_details(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.done) {
+          if (snapshot.hasError) {
+            return Text("Error: ${snapshot.error}");
+          } else {
+            Map<String, dynamic> userData = snapshot.data!;
+            print(userData);
+            // Use userData to build your UI
+            return YourWidget(userData: userData);
+          }
+        } else {
+          return LoadingAnimationWidget.hexagonDots(
+            color: Colors.white,
+            size: 200,
+          );
+        }
+      },
+    );
+  }
+}
+
+class YourWidget extends StatelessWidget {
+  final Map<String, dynamic> userData;
+
+  const YourWidget({Key? key, required this.userData}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -83,7 +142,7 @@ class BaDocInfoClass extends StatelessWidget {
                                   margin: EdgeInsets.fromLTRB(0 * fem,
                                       2.73 * fem, 94.26 * fem, 0 * fem),
                                   child: Text(
-                                    'Dr. Aarav Sharma',
+                                    userData['Name'] as String,
                                     style: safeGoogleFont(
                                       'Lato',
                                       fontSize: 14 * ffem,
@@ -144,7 +203,7 @@ class BaDocInfoClass extends StatelessWidget {
               // generalphysicianyJt (2313:132)
               margin: EdgeInsets.fromLTRB(14 * fem, 0 * fem, 0 * fem, 7 * fem),
               child: Text(
-                'General Physician ',
+                userData['speciality'],
                 style: safeGoogleFont(
                   'Lato',
                   fontSize: 14 * ffem,
@@ -158,7 +217,7 @@ class BaDocInfoClass extends StatelessWidget {
               // mbbsmdTzk (2313:133)
               margin: EdgeInsets.fromLTRB(15 * fem, 0 * fem, 0 * fem, 21 * fem),
               child: Text(
-                'MBBS, MD ',
+                userData['Degree'],
                 style: safeGoogleFont(
                   'Lato',
                   fontSize: 14 * ffem,
@@ -218,7 +277,7 @@ class BaDocInfoClass extends StatelessWidget {
                                   text: 'Experience\n',
                                 ),
                                 TextSpan(
-                                  text: '14 years',
+                                  text: userData['Experience'],
                                   style: safeGoogleFont(
                                     'Inter',
                                     fontSize: 15 * ffem,
@@ -277,7 +336,7 @@ class BaDocInfoClass extends StatelessWidget {
                                   text: 'Patients\n',
                                 ),
                                 TextSpan(
-                                  text: '2.4K',
+                                  text: userData['patients_count'],
                                   style: safeGoogleFont(
                                     'Inter',
                                     fontSize: 15 * ffem,
@@ -336,7 +395,7 @@ class BaDocInfoClass extends StatelessWidget {
                                   text: 'Reviews\n',
                                 ),
                                 TextSpan(
-                                  text: '4/5',
+                                  text: userData['Ratings'],
                                   style: safeGoogleFont(
                                     'Inter',
                                     fontSize: 15 * ffem,
@@ -382,8 +441,7 @@ class BaDocInfoClass extends StatelessWidget {
                       ),
                     ),
                     TextSpan(
-                      text:
-                          'Dr. Aarav Sharma is a highly skilled General Physician dedicated to providing comprehensive healthcare. With a Doctor of Medicine (MD) degree, Dr. Sharma brings a wealth of knowledge and expertise to his practice. Patients value his attentive care and commitment to addressing a wide range of medical concerns. Driven by a passion for promoting well-being, Dr. Aarav Sharma is a trusted healthcare partner, earning a commendable rating of 4.0 from satisfied patients.\n',
+                      text: userData['About'],
                       style: safeGoogleFont(
                         'Lato',
                         fontSize: 11 * ffem,
@@ -400,7 +458,7 @@ class BaDocInfoClass extends StatelessWidget {
               // consultationfees800Uy2 (2313:141)
               margin: EdgeInsets.fromLTRB(23 * fem, 0 * fem, 0 * fem, 20 * fem),
               child: Text(
-                'Consultation Fees: ₹800',
+                userData['fees'],
                 style: safeGoogleFont(
                   'Lato',
                   fontSize: 12 * ffem,
