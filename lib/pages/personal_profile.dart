@@ -26,7 +26,6 @@ Future<void> navigateToHealthProfile(BuildContext context) async {
 // Example:
 // await navigateToHealthProfile(context);
 
-
 class PersonalProfile extends StatefulWidget {
   const PersonalProfile({Key? key}) : super(key: key);
   @override

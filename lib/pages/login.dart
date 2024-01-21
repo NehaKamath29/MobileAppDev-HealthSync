@@ -309,7 +309,8 @@ class _LoginClassState extends State<LoginClass> {
 
                     ElevatedButton(
                       onPressed: () async {
-                        final SharedPreferences prefs =await SharedPreferences.getInstance();
+                        final SharedPreferences prefs =
+                            await SharedPreferences.getInstance();
 
                         if (_formKey.currentState!.validate()) {
                           FirebaseFirestore db = FirebaseFirestore.instance;
@@ -340,7 +341,6 @@ class _LoginClassState extends State<LoginClass> {
 
                                 print("Login successful");
                                 // navigation
-                                
                               } else {
                                 // Passwords don't match
                                 print("Incorrect password");

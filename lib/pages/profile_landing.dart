@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:healthsync_app/utils/utils.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
+
 Future<Map<String, dynamic>> get_details() async {
   FirebaseFirestore db = FirebaseFirestore.instance;
   final SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -26,14 +27,8 @@ Future<Map<String, dynamic>> get_details() async {
 
       if (doc2.exists) {
         final data2 = doc2.data() as Map<String, dynamic>;
-      final username = data2['username'];
+        final username = data2['username'];
         print(data2);
-        final userdata = <String, dynamic>{
-          "username": username,
-          "percentage": ((count / 16)*100).toString(),
-        };
-
-        return userdata;
       }
     }
   } catch (e) {
@@ -42,7 +37,6 @@ Future<Map<String, dynamic>> get_details() async {
 
   return {}; // Return a default value in case of failure
 }
-
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -62,10 +56,10 @@ class ProfilePage extends StatelessWidget {
             return YourWidget(userData: userData);
           }
         } else {
-          return  LoadingAnimationWidget.hexagonDots(
-        color: Colors.white,
-        size: 200,
-      );
+          return LoadingAnimationWidget.hexagonDots(
+            color: Colors.white,
+            size: 200,
+          );
         }
       },
     );
