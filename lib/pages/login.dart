@@ -266,12 +266,16 @@ class _LoginClassState extends State<LoginClass> {
                                   width: 15 * fem,
                                   height: 15 * fem,
                                   child: Image.asset(
-                                    'assets/images/fi8924271.png',
-                                    width: 15 * fem,
-                                    height: 15 * fem,
+                                    'assets/images/tickMe.png',
+                                    width: 30 * fem,
+                                    height: 30 * fem,
                                   ),
                                 ),
-                                Text(
+                                GestureDetector(
+                                  onTap:(){
+                                    print("Ticked!");
+                                  },
+                                child:Text(
                                   // rememberme3B2 (158:13)
                                   'Remember me',
                                   textAlign: TextAlign.center,
@@ -283,22 +287,32 @@ class _LoginClassState extends State<LoginClass> {
                                     color: Color(0xff64748b),
                                   ),
                                 ),
+                            ),
                               ],
                             ),
                           ),
-                          Text(
-                            // forgetpasswordMxQ (158:20)
-                            'Forget Password?',
-                            textAlign: TextAlign.center,
-                            style: safeGoogleFont(
-                              'Inter',
-                              fontSize: 16 * ffem,
-                              fontWeight: FontWeight.w600,
-                              height: 1 * ffem / fem,
-                              color: Color(0xff00b4d8),
-                            ),
+                          
+                          
+                          GestureDetector(
+                          onTap: () {
+                            print("Success");
+                            // Navigate to another page here
+                            // You can use Navigator.push() or any other navigation method
+                            // Example: Navigator.push(context, MaterialPageRoute(builder: (context) => YourNextPage()));
+                                },
+                           child: Text(
+                          'Forget Password?',
+                          textAlign: TextAlign.center,
+                          style: safeGoogleFont(
+                          'Lato',
+                          fontSize: 16 * ffem,
+                          fontWeight: FontWeight.w600,
+                          height: 1 * ffem / fem,
+                          color: Color(0xff00b4d8),
                           ),
-                        ],
+                        ),
+                      ),
+                      ],
                       ),
                     ),
 
@@ -424,7 +438,7 @@ class _LoginClassState extends State<LoginClass> {
                             textAlign: TextAlign.center,
                             style: safeGoogleFont(
                               'Lato',
-                              fontSize: 14 * ffem,
+                              fontSize: 13 * ffem,
                               fontWeight: FontWeight.w600,
                               height: 1.1428571429 * ffem / fem,
                               color: Color(0xff4c4d4f),
