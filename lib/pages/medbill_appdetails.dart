@@ -5,6 +5,7 @@ import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:healthsync_app/utils/utils.dart';
+import 'package:healthsync_app/pages/medbill_app.dart';
 
 class MedBillAppDet extends StatelessWidget {
   const MedBillAppDet({super.key});
@@ -27,16 +28,27 @@ class MedBillAppDet extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              // icons8back242LAQ (2315:217)
-              margin:
-                  EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 35.17 * fem),
-              width: 12.95 * fem,
-              height: 22.36 * fem,
-              child: Image.asset(
-                'assets/images/vector.png',
+            GestureDetector(
+              onTap: () {
+                print('Image Clicked! Navigating to Another Page...');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => MedBillApp(),
+                  ),
+                );
+              },
+              child: Container(
+                // icons8back242LAQ (2315:217)
+                margin:
+                    EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 35.17 * fem),
                 width: 12.95 * fem,
                 height: 22.36 * fem,
+                child: Image.asset(
+                  'assets/images/vector.png',
+                  width: 12.95 * fem,
+                  height: 22.36 * fem,
+                ),
               ),
             ),
             Container(
