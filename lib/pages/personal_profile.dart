@@ -532,7 +532,7 @@ class _PersonalProfileState extends State<PersonalProfile> {
                           'Lato',
                           fontSize: 28 * ffem,
                           fontWeight: FontWeight.w700,
-                          color: Color(0xffffffff),
+                          color: const Color(0xffffffff),
                         ),
                       ),
                     ),
