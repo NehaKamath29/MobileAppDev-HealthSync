@@ -7,7 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:healthsync_app/pages/medbill_app.dart';
 import 'package:healthsync_app/pages/medbill_labdetails.dart';
 import 'package:healthsync_app/utils/utils.dart';
-import 'package:healthsync_app/pages/medbill_app.dart';
+//import 'package:healthsync_app/pages/medbill_app.dart';
 
 class MedBillLab extends StatelessWidget {
   const MedBillLab({super.key});

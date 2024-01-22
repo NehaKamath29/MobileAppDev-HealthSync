@@ -112,6 +112,10 @@ flutter:
      - assets/images/tickMe.png
      - assets/images/logo_bg.png
      - assets/images/logo.png
+     - assets/images/rectangle-102.png
+     - assets/images/AddAlarm.png
+     - assets/images/deleteSVG.png
+     
 
      
 
