@@ -5,8 +5,10 @@ import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:healthsync_app/pages/home.dart';
+import 'package:healthsync_app/pages/medbill_appdetails.dart';
 import 'package:healthsync_app/utils/utils.dart';
 import 'package:healthsync_app/pages/navbar.dart';
+import 'package:healthsync_app/pages/medbill_lab.dart';
 
 class MedBillApp extends StatelessWidget {
   const MedBillApp({Key? key}) : super(key: key);
@@ -347,19 +349,30 @@ class MedBillApp extends StatelessWidget {
                   // viewJWx (2315:130)
                   left: 273 * fem,
                   top: 171 * fem,
-                  child: Align(
-                    child: SizedBox(
-                      width: 41 * fem,
-                      height: 26 * fem,
-                      child: Text(
-                        'View',
-                        style: safeGoogleFont(
-                          'Raleway',
-                          fontSize: 18 * ffem,
-                          fontWeight: FontWeight.w700,
-                          height: 1.4444444444 * ffem / fem,
-                          letterSpacing: -0.5 * fem,
-                          color: Color(0xff000000),
+                  child: GestureDetector(
+                    onTap: () {
+                      print('View Clicked! Navigating to Another Page...');
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const MedBillAppDet(),
+                        ),
+                      );
+                    },
+                    child: Align(
+                      child: SizedBox(
+                        width: 41 * fem,
+                        height: 26 * fem,
+                        child: Text(
+                          'View',
+                          style: safeGoogleFont(
+                            'Raleway',
+                            fontSize: 18 * ffem,
+                            fontWeight: FontWeight.w700,
+                            height: 1.4444444444 * ffem / fem,
+                            letterSpacing: -0.5 * fem,
+                            color: Color(0xff000000),
+                          ),
                         ),
                       ),
                     ),
@@ -369,19 +382,24 @@ class MedBillApp extends StatelessWidget {
                   // viewaUU (2315:131)
                   left: 273 * fem,
                   top: 278 * fem,
-                  child: Align(
-                    child: SizedBox(
-                      width: 41 * fem,
-                      height: 26 * fem,
-                      child: Text(
-                        'View',
-                        style: safeGoogleFont(
-                          'Raleway',
-                          fontSize: 18 * ffem,
-                          fontWeight: FontWeight.w700,
-                          height: 1.4444444444 * ffem / fem,
-                          letterSpacing: -0.5 * fem,
-                          color: Color(0xff000000),
+                  child: GestureDetector(
+                    onTap: () {
+                      print('Image Clicked! Navigating to Another Page...');
+                    },
+                    child: Align(
+                      child: SizedBox(
+                        width: 41 * fem,
+                        height: 26 * fem,
+                        child: Text(
+                          'View',
+                          style: safeGoogleFont(
+                            'Raleway',
+                            fontSize: 18 * ffem,
+                            fontWeight: FontWeight.w700,
+                            height: 1.4444444444 * ffem / fem,
+                            letterSpacing: -0.5 * fem,
+                            color: Color(0xff000000),
+                          ),
                         ),
                       ),
                     ),
@@ -391,19 +409,24 @@ class MedBillApp extends StatelessWidget {
                   // view5g8 (2315:132)
                   left: 273 * fem,
                   top: 382 * fem,
-                  child: Align(
-                    child: SizedBox(
-                      width: 41 * fem,
-                      height: 26 * fem,
-                      child: Text(
-                        'View',
-                        style: safeGoogleFont(
-                          'Raleway',
-                          fontSize: 18 * ffem,
-                          fontWeight: FontWeight.w700,
-                          height: 1.4444444444 * ffem / fem,
-                          letterSpacing: -0.5 * fem,
-                          color: Color(0xff000000),
+                  child: GestureDetector(
+                    onTap: () {
+                      print('Image Clicked! Navigating to Another Page...');
+                    },
+                    child: Align(
+                      child: SizedBox(
+                        width: 41 * fem,
+                        height: 26 * fem,
+                        child: Text(
+                          'View',
+                          style: safeGoogleFont(
+                            'Raleway',
+                            fontSize: 18 * ffem,
+                            fontWeight: FontWeight.w700,
+                            height: 1.4444444444 * ffem / fem,
+                            letterSpacing: -0.5 * fem,
+                            color: Color(0xff000000),
+                          ),
                         ),
                       ),
                     ),
@@ -413,19 +436,24 @@ class MedBillApp extends StatelessWidget {
                   // viewxV2 (2315:133)
                   left: 275 * fem,
                   top: 490 * fem,
-                  child: Align(
-                    child: SizedBox(
-                      width: 41 * fem,
-                      height: 26 * fem,
-                      child: Text(
-                        'View',
-                        style: safeGoogleFont(
-                          'Raleway',
-                          fontSize: 18 * ffem,
-                          fontWeight: FontWeight.w700,
-                          height: 1.4444444444 * ffem / fem,
-                          letterSpacing: -0.5 * fem,
-                          color: Color(0xff000000),
+                  child: GestureDetector(
+                    onTap: () {
+                      print('Image Clicked! Navigating to Another Page...');
+                    },
+                    child: Align(
+                      child: SizedBox(
+                        width: 41 * fem,
+                        height: 26 * fem,
+                        child: Text(
+                          'View',
+                          style: safeGoogleFont(
+                            'Raleway',
+                            fontSize: 18 * ffem,
+                            fontWeight: FontWeight.w700,
+                            height: 1.4444444444 * ffem / fem,
+                            letterSpacing: -0.5 * fem,
+                            color: Color(0xff000000),
+                          ),
                         ),
                       ),
                     ),
@@ -735,18 +763,29 @@ class MedBillApp extends StatelessWidget {
                   // tests2m2 (2315:147)
                   left: 228 * fem,
                   top: 23 * fem,
-                  child: Align(
-                    child: SizedBox(
-                      width: 45 * fem,
-                      height: 22 * fem,
-                      child: Text(
-                        'Tests',
-                        style: safeGoogleFont(
-                          'Raleway',
-                          fontSize: 18 * ffem,
-                          fontWeight: FontWeight.w600,
-                          height: 1.175 * ffem / fem,
-                          color: Color(0xff000000),
+                  child: GestureDetector(
+                    onTap: () {
+                      print('Image Clicked! Navigating to Another Page...');
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => MedBillLab(),
+                        ),
+                      );
+                    },
+                    child: Align(
+                      child: SizedBox(
+                        width: 45 * fem,
+                        height: 22 * fem,
+                        child: Text(
+                          'Tests',
+                          style: safeGoogleFont(
+                            'Raleway',
+                            fontSize: 18 * ffem,
+                            fontWeight: FontWeight.w600,
+                            height: 1.175 * ffem / fem,
+                            color: Color(0xff000000),
+                          ),
                         ),
                       ),
                     ),
