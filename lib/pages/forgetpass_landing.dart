@@ -4,7 +4,8 @@ import 'package:healthsync_app/utils/utils.dart';
 
 
 class PasswordClass extends StatefulWidget {
-  const PasswordClass({Key? key}) : super(key: key);
+  //const PasswordClass({Key? key}) : super(key: key);
+  const PasswordClass({super.key});
   @override
   State<PasswordClass> createState() => _PasswordClassState();
 }

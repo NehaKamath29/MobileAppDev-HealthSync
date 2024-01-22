@@ -22,7 +22,10 @@ import 'package:healthsync_app/pages/medbill_appdetails.dart';
 import 'package:healthsync_app/pages/navbar.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:healthsync_app/firebase_options.dart';
-// import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:healthsync_app/pages/logo_reveal.dart';
+import 'package:healthsync_app/pages/auto_image_slider.dart';
+
 
 // ...
 
@@ -54,7 +57,7 @@ class MyApp extends StatelessWidget {
       home: const Scaffold(
         body: SingleChildScrollView(
           child:
-              LoginClass(), //Give the class name of the page you want to be displayed and import the respective file. After navigations,
+              LogoReveal(), //Give the class name of the page you want to be displayed and import the respective file. After navigations,
           //only the landing page class name will be given ig.
         ),
       ),
