@@ -11,11 +11,10 @@ import 'package:healthsync_app/pages/signup.dart';
 //import 'package:healthsync_app/pages/profile_landing.dart';
 //import 'package:healthsync_app/pages/home.dart';
 import 'package:healthsync_app/pages/book_appointment.dart';
-//import 'package:healthsync_app/pages/personal_profile.dart';
+import 'package:healthsync_app/pages/personal_profile.dart';
 //import 'package:healthsync_app/pages/ba_doc_info.dart';
 import 'package:healthsync_app/pages/ba_general_physician.dart';
 import 'package:healthsync_app/pages/ba_slot.dart';
-//import 'package:healthsync_app/pages/home.dart';
 //import 'package:healthsync_app/pages/notifications.dart';
 import 'package:healthsync_app/pages/medbill_app.dart';
 import 'package:healthsync_app/pages/medbill_lab.dart';
@@ -65,7 +64,7 @@ class MyApp extends StatelessWidget {
       home: const Scaffold(
         body: SingleChildScrollView(
           child:
-              BaSlotClass(), //Give the class name of the page you want to be displayed and import the respective file. After navigations,
+              PersonalProfile(), //Give the class name of the page you want to be displayed and import the respective file. After navigations,
           //only the landing page class name will be given ig.
         ),
       ),

@@ -4,6 +4,7 @@ import 'package:healthsync_app/pages/profile_landing.dart';
 import 'package:healthsync_app/utils/utils.dart';
 import 'package:auto_size_text_field/auto_size_text_field.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:healthsync_app/pages/personal_profile.dart';
 // import 'dart:ffi';
 
 class HealthProfile extends StatefulWidget {
@@ -19,14 +20,14 @@ class _HealthProfileState extends State<HealthProfile> {
     'What is your weight(in kgs)?',
     'What is your height(in cms)?',
     'What is your blood group?',
-    'What are your food \npreferences?',
-    'How frequently do you \nexercise?',
-    'What type of exercise do you\nenjoy the most?',
-    'Do you have any allergies?\nIf yes, mention.',
-    'Do you have any genetic\ndisorders?If yes, mention.',
-    'Do you smoke?\nIf yes,how many cigarettes\ndo you smoke per day?',
-    'Do you consume alcohol?\nIf yes, how frequently?',
-    'Have you consumed drugs?\nIf yes, name them.',
+    'What are your food preferences?',
+    'How frequently do you exercise?',
+    'What type of exercise do you enjoy the most?',
+    'Do you have any allergies? If yes, mention them.',
+    'Do you have any genetic disorders? If yes, mention them.',
+    'Do you smoke?If yes,how many cigarettes per day?',
+    'Do you consume alcohol? If yes, how frequently?',
+    'Have you consumed drugs? If yes, name them.',
   ];
 
   @override
@@ -40,8 +41,9 @@ class _HealthProfileState extends State<HealthProfile> {
       (index) => TextEditingController(),
     );
 
-
-    return SizedBox(
+    return Material(
+      child:SingleChildScrollView(
+    child:SizedBox(
       width: double.infinity,
       child: Form(
         key: _formKey,
@@ -90,59 +92,96 @@ class _HealthProfileState extends State<HealthProfile> {
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Container(
-                            margin: EdgeInsets.fromLTRB(
-                                0 * fem, 0 * fem, 38 * fem, 0 * fem),
-                            child: Text(
-                              'Personal profile',
-                              style: safeGoogleFont(
-                                'Lato',
-                                fontSize: 23 * ffem,
-                                fontWeight: FontWeight.w500,
-                                height: 1.2 * ffem / fem,
-                                color: const Color(0xff000000),
-                              ),
-                            ),
-                          ),
-                          Center(
-                            child: Text(
-                              'Health profile',
-                              textAlign: TextAlign.center,
-                              style: safeGoogleFont(
-                                'Lato',
-                                fontSize: 23 * ffem,
-                                fontWeight: FontWeight.w500,
-                                height: 1.2 * ffem / fem,
-                                color: const Color(0xff000000),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.fromLTRB(
-                          0 * fem, 0 * fem, 1 * fem, 0 * fem),
-                      width: 136 * fem,
-                      height: 2 * fem,
-                      decoration: const BoxDecoration(
-                        color: Color(0xff000000),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+                          
+  GestureDetector(
+  onTap: () {
+    // Add navigation logic here
+    Navigator.of(context).pushReplacement(
+    PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) => const PersonalProfile(),
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        const begin = Offset(-1.0, 0.0); // Start the page from the left
+        const end = Offset.zero; // End at the center
+        const curve = Curves.easeInOut;
+        var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+        var offsetAnimation = animation.drive(tween);
+
+        return SlideTransition(
+          position: offsetAnimation,
+          child: child,
+        );
+      },
+      transitionDuration: const Duration(milliseconds:800),
+    ),
+  );
+  },
+  child: Container(
+    margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 38 * fem, 0 * fem),
+    child: Text(
+      'Personal profile',
+      style: safeGoogleFont(
+        'Lato',
+        fontSize: 23 * ffem,
+        fontWeight: FontWeight.w500,
+        //height: 1.2 * ffem / fem,
+        color: const Color(0xff000000),
+      ),
+    ),
+  ),
+),
+
+
+
+  GestureDetector(
+  onTap: () {
+    // Add navigation logic here
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const HealthProfile()),
+    );
+  },
+  child: Center(
+    child: Text(
+      'Health profile',
+      textAlign: TextAlign.center,
+      style: safeGoogleFont(
+        'Lato',
+        fontSize: 23 * ffem,
+        fontWeight: FontWeight.w600,
+        //height: 1.2 * ffem / fem,
+        color: const Color(0xff000000),
+      ),
+    ),
+  ),
+),
+
+],
+),
+),
+Container(
+margin: EdgeInsets.fromLTRB(
+  0 * fem, 0 * fem, 1 * fem, 0 * fem),
+  width: 136 * fem,
+  height: 2 * fem,
+  decoration: const BoxDecoration(
+  color: Color(0xff000000),
+),
+),
+],
+),
+),
 
               //Buttons
               
               SizedBox(
-                // height: 700,
+                height: 700,
                 child: SingleChildScrollView(
                   padding:
                       EdgeInsets.fromLTRB(30.0 * fem, 50 * fem, 30.0 * fem, 0),
                   child: Column(
                     children: [
-                      for (int index = 0; index < buttonTexts.length; index++)
+                      /*for (int index = 0; index < buttonTexts.length; index++)
                         Column(
                           children: [
                             FractionallySizedBox(
@@ -165,12 +204,12 @@ class _HealthProfileState extends State<HealthProfile> {
                                           BorderRadius.circular(10 * fem),
                                       borderSide: const BorderSide(
                                         color: Color(0xff00b4d8),
-                                        width: 3,
+                                        width: 2,
                                       ),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderSide: const BorderSide(
-                                          width: 4, color: Color(0xff00b4d8)),
+                                          width: 3.5, color: Color(0xff00b4d8)),
                                       borderRadius:
                                           BorderRadius.circular(10 * fem),
                                     ),
@@ -178,8 +217,8 @@ class _HealthProfileState extends State<HealthProfile> {
                                     fillColor: const Color(0xfffffcfc),
                                     labelText: buttonTexts[index],
                                     labelStyle: const TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w500,
+                                      fontSize: 22,
+                                      fontWeight: FontWeight.w600,
                                       fontFamily: 'Lato',
                                       color: Color(0xb2000000),
                                     ),
@@ -192,7 +231,69 @@ class _HealthProfileState extends State<HealthProfile> {
                             ),
                             const SizedBox(height: 45),
                           ],
-                        ),
+                        ),*/
+  for (int index = 0; index < buttonTexts.length; index++)
+  Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Container(
+        margin: EdgeInsets.only(bottom: 10 * fem),
+        child: Text(
+          buttonTexts[index],
+          style: const TextStyle(
+            fontSize: 22,
+            fontWeight: FontWeight.w600,
+            fontFamily: 'Lato',
+            color: Color(0xb2000000),
+          ),
+          textAlign: TextAlign.left, // Align text to the left
+        ),
+      ),
+      FractionallySizedBox(
+        widthFactor: 1.10,
+        child: Container(
+          padding: EdgeInsets.only(bottom: 10 * fem),
+          child: Material(
+            child: AutoSizeTextField(
+              controller: controllers[index],
+              style: const TextStyle(
+                fontSize: 21,
+                fontWeight: FontWeight.w400,
+              ),
+              minFontSize: 15,
+              maxLines: 2,
+              decoration: InputDecoration(
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10 * fem),
+                  borderSide: const BorderSide(
+                    color: Color(0xff00b4d8),
+                    width: 2,
+                  ),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: const BorderSide(
+                      width: 3.5, color: Color(0xff00b4d8)),
+                  borderRadius: BorderRadius.circular(10 * fem),
+                ),
+                filled: true,
+                fillColor: const Color(0xfffffcfc),
+                contentPadding: EdgeInsets.symmetric(
+                    vertical: 10 * fem, horizontal: 10 * fem),
+              ),
+            ),
+          ),
+        ),
+      ),
+      const SizedBox(height: 45),
+    ],
+  ),
+
+                      
+                      
+                      
+                      
+                      
+                      
                       ElevatedButton(
                         onPressed: () async {
                           final SharedPreferences prefs =
@@ -235,13 +336,16 @@ class _HealthProfileState extends State<HealthProfile> {
                                 .doc(user_email)
                                 .set(userdata, SetOptions(merge: true));
 
-                            print("Success");
+                            //print("Success");
                              Navigator.push(
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
                                             const ProfilePage()),
                                   );
+
+
+    
                             
                           } else {
                             print("Not a success");
@@ -275,6 +379,8 @@ class _HealthProfileState extends State<HealthProfile> {
           ),
         ),
       ),
+    ),
+    ),
     );
   }
 }

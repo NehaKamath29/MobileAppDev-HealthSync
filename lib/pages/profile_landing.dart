@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:healthsync_app/pages/personal_profile.dart';
 import 'package:healthsync_app/utils/utils.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
@@ -241,6 +242,11 @@ class YourWidget extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () {
                     // Add your logic here for 'Edit profile' button
+
+                    Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const PersonalProfile()),
+    );
                   },
                   style: ElevatedButton.styleFrom(
                     padding:

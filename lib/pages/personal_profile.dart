@@ -64,11 +64,9 @@ class _PersonalProfileState extends State<PersonalProfile> {
     double baseWidth = 360;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
-    return Scaffold(
-        appBar: AppBar(
-            // title: Text('Home Page'),
-            ),
-        body: SingleChildScrollView(
+    return Material(
+        
+        child: SingleChildScrollView(
           child: Form(
             key: _formKey,
             child: SizedBox(
@@ -104,6 +102,9 @@ class _PersonalProfileState extends State<PersonalProfile> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
+                          
+                          
+                          
                           Container(
                             // frame4pU (169:168)
                             margin: EdgeInsets.fromLTRB(
@@ -116,6 +117,14 @@ class _PersonalProfileState extends State<PersonalProfile> {
                               height: 40 * fem,
                             ),
                           ),
+
+  
+
+                          
+                          
+                          
+                          
+                          
                           Container(
                             // autogrouptcltBeC (7NihE9a19e7TYrYL8VTCLt)
                             margin: EdgeInsets.fromLTRB(
@@ -124,7 +133,9 @@ class _PersonalProfileState extends State<PersonalProfile> {
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Container(
+                                
+                                
+                                /*Container(
                                   // personalprofilev5z (169:173)
                                   margin: EdgeInsets.fromLTRB(
                                       0 * fem, 0 * fem, 35 * fem, 0 * fem),
@@ -138,21 +149,69 @@ class _PersonalProfileState extends State<PersonalProfile> {
                                       color: Color(0xff000000),
                                     ),
                                   ),
-                                ),
-                                Center(
-                                  // healthprofileRYY (169:174)
-                                  child: Text(
-                                    'Health profile',
-                                    textAlign: TextAlign.center,
-                                    style: safeGoogleFont(
-                                      'Lato',
-                                      fontSize: 23 * ffem,
-                                      fontWeight: FontWeight.w500,
-                                      height: 1.2 * ffem / fem,
-                                      color: Color(0xff000000),
-                                    ),
-                                  ),
-                                ),
+                                ),*/
+
+
+  GestureDetector(
+  onTap: () {
+  },
+  child: Container(
+    margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 35 * fem, 0 * fem),
+    child: Text(
+      'Personal profile',
+      style: safeGoogleFont(
+        'Lato',
+        fontSize: 23 * ffem,
+        fontWeight: FontWeight.w600,
+        //height: 1.2 * ffem / fem,
+        color: Color(0xff000000),
+      ),
+    ),
+  ),
+),
+
+GestureDetector(
+  onTap: () {
+    // Add navigation logic here
+    Navigator.of(context).pushReplacement(
+      PageRouteBuilder(
+        pageBuilder: (context, animation, secondaryAnimation) => const HealthProfile(),
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          const begin = Offset(1.0, 0.0);
+          const end = Offset.zero;
+          const curve = Curves.easeInOut;
+          var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+          var offsetAnimation = animation.drive(tween);
+
+          return SlideTransition(
+            position: offsetAnimation,
+            child: child,
+          );
+        },
+        transitionDuration: const Duration(milliseconds:800),
+      ),
+    );
+  },
+  child: Center(
+    child: Text(
+      'Health profile',
+      textAlign: TextAlign.center,
+      style: safeGoogleFont(
+        'Lato',
+        fontSize: 23 * ffem,
+        fontWeight: FontWeight.w500,
+        //height: 1.2 * ffem / fem,
+        color: Color(0xff000000),
+      ),
+    ),
+  ),
+)
+
+
+
+
+
                               ],
                             ),
                           ),
@@ -180,21 +239,21 @@ class _PersonalProfileState extends State<PersonalProfile> {
                             filled: true,
                             fillColor: const Color(0xfffffcfc),
                             labelStyle: const TextStyle(
-                              fontSize: 24,
+                              fontSize: 22,
                               fontFamily: 'Lato',
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               color: Color(0xb2000000),
                             ),
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10 * fem),
                               borderSide: const BorderSide(
                                 color: Color(0xff00b4d8),
-                                width: 3,
+                                width: 2,
                               ),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: const BorderSide(
-                                  width: 2, color: Color(0xff00b4d8)),
+                                  width: 3.5, color: Color(0xff00b4d8)),
                               borderRadius: BorderRadius.circular(10 * fem),
                             ),
                             prefixIcon: SizedBox(
@@ -235,12 +294,12 @@ class _PersonalProfileState extends State<PersonalProfile> {
                             borderRadius: BorderRadius.circular(10 * fem),
                             borderSide: const BorderSide(
                               color: Color(0xff00b4d8),
-                              width: 3,
+                              width: 2,
                             ),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderSide: const BorderSide(
-                                width: 2, color: Color(0xff00b4d8)),
+                                width: 3.5, color: Color(0xff00b4d8)),
                             borderRadius: BorderRadius.circular(10 * fem),
                           ),
                           filled: true,
@@ -260,8 +319,8 @@ class _PersonalProfileState extends State<PersonalProfile> {
                           ),
                           labelText: 'Address',
                           labelStyle: const TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.w500,
+                            fontSize: 22,
+                            fontWeight: FontWeight.w600,
                             fontFamily: 'Lato',
                             color: Color(0xb2000000),
                           ),
@@ -287,12 +346,12 @@ class _PersonalProfileState extends State<PersonalProfile> {
                             borderRadius: BorderRadius.circular(10 * fem),
                             borderSide: const BorderSide(
                               color: Color(0xff00b4d8),
-                              width: 3,
+                              width: 2,
                             ),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderSide: const BorderSide(
-                                width: 2, color: Color(0xff00b4d8)),
+                                width: 3.5, color: Color(0xff00b4d8)),
                             borderRadius: BorderRadius.circular(10 * fem),
                           ),
                           filled: true,
@@ -312,8 +371,8 @@ class _PersonalProfileState extends State<PersonalProfile> {
                           ),
                           labelText: 'Occupation',
                           labelStyle: const TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.w500,
+                            fontSize: 22,
+                            fontWeight: FontWeight.w600,
                             fontFamily: 'Lato',
                             color: Color(0xb2000000),
                           ),
@@ -339,12 +398,12 @@ class _PersonalProfileState extends State<PersonalProfile> {
                             borderRadius: BorderRadius.circular(10 * fem),
                             borderSide: const BorderSide(
                               color: Color(0xff00b4d8),
-                              width: 3,
+                              width: 2,
                             ),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderSide: const BorderSide(
-                                width: 2, color: Color(0xff00b4d8)),
+                                width: 3.5, color: Color(0xff00b4d8)),
                             borderRadius: BorderRadius.circular(10 * fem),
                           ),
                           filled: true,
@@ -364,8 +423,9 @@ class _PersonalProfileState extends State<PersonalProfile> {
                           ),
                           labelText: 'Emergency contact',
                           labelStyle: const TextStyle(
-                            fontSize: 24,
+                            fontSize: 22,
                             fontFamily: 'Lato',
+                            fontWeight: FontWeight.w600,
                             color: Color(0xb2000000),
                           ),
                           contentPadding: EdgeInsets.symmetric(
@@ -441,12 +501,12 @@ class _PersonalProfileState extends State<PersonalProfile> {
                             borderRadius: BorderRadius.circular(10 * fem),
                             borderSide: const BorderSide(
                               color: Color(0xff00b4d8),
-                              width: 3,
+                              width: 2,
                             ),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderSide: const BorderSide(
-                                width: 2, color: Color(0xff00b4d8)),
+                                width: 3.5, color: Color(0xff00b4d8)),
                             borderRadius: BorderRadius.circular(10 * fem),
                           ),
                           filled: true,
@@ -466,8 +526,8 @@ class _PersonalProfileState extends State<PersonalProfile> {
                           ),
                           labelText: 'Gender',
                           labelStyle: const TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.w500,
+                            fontSize: 22,
+                            fontWeight: FontWeight.w600,
                             fontFamily: 'Lato',
                             color: Color(0xb2000000),
                           ),
@@ -521,16 +581,16 @@ class _PersonalProfileState extends State<PersonalProfile> {
                         backgroundColor:
                             const Color(0xff00b4d8), // Background color
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15 * fem),
+                          borderRadius: BorderRadius.circular(28 * fem),
                         ),
-                        //minimumSize: Size(20* fem, 20* fem),
+                        minimumSize: Size(150* fem, 50 * fem),
                       ),
                       child: Text(
                         'Submit',
                         style: safeGoogleFont(
                           'Lato',
-                          fontSize: 28 * ffem,
-                          fontWeight: FontWeight.w700,
+                          fontSize: 24 * ffem,
+                          fontWeight: FontWeight.w400,
                           color: const Color(0xffffffff),
                         ),
                       ),

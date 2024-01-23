@@ -25,23 +25,23 @@ class _FormScreenState extends State<FormScreen> {
     double baseWidth = 360;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
-    return
-    //  Scaffold(
+    return SingleChildScrollView(
+    
     // body:
-    SingleChildScrollView(
+    child:Material(
       child: Form(
         key: _formKey,
         child: SizedBox(
           width: double.infinity,
           child: Container(
             width: double.infinity,
-            height: 800 * fem,
+            //height: 800 * fem,
             decoration: const BoxDecoration(
               color: Color(0xffffffff),
             ),
             child: SizedBox(
               width: double.infinity,
-              height: 769 * fem,
+              //height: 769 * fem,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -110,7 +110,7 @@ ElevatedButton(
         textAlign: TextAlign.center,
         style: safeGoogleFont(
           'Lato',
-          fontSize: 23 * ffem,
+          fontSize: 24 * ffem,
           fontWeight: FontWeight.w700,
           height: 1.1764705882 * ffem / fem,
           color: Color(0xff4c4d4f),
@@ -157,7 +157,7 @@ ElevatedButton(
                                       textAlign: TextAlign.center,
                                       style: safeGoogleFont(
                                         'Lato',
-                                        fontSize: 23 * ffem,
+                                        fontSize: 24 * ffem,
                                         fontWeight: FontWeight.w500,
                                         height: 1.1764705882 * ffem / fem,
                                         color: Color(0xff000000),
@@ -183,7 +183,7 @@ ElevatedButton(
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: const BorderSide(
-                                  width: 2, color: Color(0xff00b4d8)),
+                                  width: 3.5, color: Color(0xff00b4d8)),
                               borderRadius: BorderRadius.circular(10 * fem),
                             ),
                             filled: true,
@@ -203,8 +203,9 @@ ElevatedButton(
                             ),
                             labelText: 'User Name',
                             labelStyle: const TextStyle(
-                              fontSize: 24,
+                              fontSize: 20,
                               fontFamily: 'Lato',
+                              fontWeight: FontWeight.w600,
                               color: Color(0xb2000000),
                             ),
                             contentPadding: EdgeInsets.symmetric(
@@ -220,7 +221,7 @@ ElevatedButton(
 
                         //Email
                         const SizedBox(
-                          height: 20,
+                          height: 24,
                         ),
                         TextFormField(
                           keyboardType: TextInputType.emailAddress,
@@ -235,7 +236,7 @@ ElevatedButton(
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: const BorderSide(
-                                  width: 2, color: Color(0xff00b4d8)),
+                                  width: 3.5, color: Color(0xff00b4d8)),
                               borderRadius: BorderRadius.circular(10 * fem),
                             ),
                             filled: true,
@@ -255,7 +256,8 @@ ElevatedButton(
                             ),
                             labelText: 'Email',
                             labelStyle: const TextStyle(
-                              fontSize: 24,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
                               fontFamily: 'Lato',
                               color: Color(0xb2000000),
                             ),
@@ -274,7 +276,7 @@ ElevatedButton(
 
                         //Phone number
                         const SizedBox(
-                          height: 20,
+                          height: 24,
                         ),
                         TextFormField(
                           controller: phoneNumberController,
@@ -288,7 +290,7 @@ ElevatedButton(
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: const BorderSide(
-                                  width: 2, color: Color(0xff00b4d8)),
+                                  width: 3.5, color: Color(0xff00b4d8)),
                               borderRadius: BorderRadius.circular(10 * fem),
                             ),
                             filled: true,
@@ -308,7 +310,8 @@ ElevatedButton(
                             ),
                             labelText: 'Phone number',
                             labelStyle: const TextStyle(
-                              fontSize: 24,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
                               fontFamily: 'Lato',
                               color: Color(0xb2000000),
                             ),
@@ -332,7 +335,7 @@ ElevatedButton(
 
                         //password
                         const SizedBox(
-                          height: 20,
+                          height: 24,
                         ),
                         TextFormField(
                           obscureText: true,
@@ -347,7 +350,7 @@ ElevatedButton(
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: const BorderSide(
-                                  width: 2, color: Color(0xff00b4d8)),
+                                  width: 3.5, color: Color(0xff00b4d8)),
                               borderRadius: BorderRadius.circular(10 * fem),
                             ),
                             filled: true,
@@ -367,7 +370,8 @@ ElevatedButton(
                             ),
                             labelText: 'Password',
                             labelStyle: const TextStyle(
-                              fontSize: 24,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
                               fontFamily: 'Lato',
                               color: Color(0xb2000000),
                             ),
@@ -398,7 +402,7 @@ ElevatedButton(
 
                         //Signup button
                         const SizedBox(
-                          height: 20,
+                          height: 50,
                         ),
                         ElevatedButton(
                           onPressed: () async {
@@ -423,7 +427,7 @@ ElevatedButton(
                                   // Email already exists, show warning
                                   print("Email already exists");
                                   ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(
+                                    const SnackBar(
                                       content: Text("Email already exists."),
                                       duration: Duration(seconds: 3),
                                     ),
@@ -450,28 +454,28 @@ ElevatedButton(
                                   );
                             await prefs.setString('user_email', email);
 
-                                  print("Signup successful");
+                                  //print("Signup successful");
                                 }
                               });
-                            } else
-                              print("Not a success");
+                            } //else
+                              //print("Not a success");
                             // Add the logic you want to execute when the button is pressed
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor:
-                                Color(0xff00b4d8), // Background color
+                                const Color(0xff00b4d8), // Background color
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(28 * fem),
                             ),
-                            minimumSize: Size(150 * fem, 40 * fem),
+                            minimumSize: Size(150* fem, 50 * fem),
                           ),
                           child: Text(
                             'Sign up',
                             style: safeGoogleFont(
                               'Lato',
-                              fontSize: 20 * ffem,
+                              fontSize: 24 * ffem,
                               fontWeight: FontWeight.w400,
-                              color: Color(0xffffffff),
+                              color: const Color(0xffffffff),
                             ),
                           ),
                         ),
@@ -481,44 +485,50 @@ ElevatedButton(
                               32 * fem, 8 * fem, 32 * fem, 8 * fem),
                           width: double.infinity,
                           decoration: BoxDecoration(
-                            color: Color(0xffffffff),
+                            color: const Color(0xffffffff),
                             borderRadius: BorderRadius.circular(16 * fem),
                           ),
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
+                              
+                              
                               Container(
                                 // line2KSU (159:209)
                                 margin: EdgeInsets.fromLTRB(
-                                    0 * fem, 1 * fem, 0 * fem, 0 * fem),
+                                    0 * fem, 2 * fem, 0 * fem, 0 * fem),
                                 width: 82.5 * fem,
                                 height: 1 * fem,
                                 decoration: const BoxDecoration(
                                   color: Color(0xffcbd5e1),
                                 ),
                               ),
-                              SizedBox(
+                              /*SizedBox(
                                 width: 8 * fem,
-                              ),
+                              ),*/
+                              
                               Text(
                                 // orsignupusing2bn (159:210)
                                 'Or signup using',
+                                overflow: TextOverflow.ellipsis,
                                 textAlign: TextAlign.center,
                                 style: safeGoogleFont(
                                   'Lato',
-                                  fontSize: 14 * ffem,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.w600,
-                                  height: 1.1428571429 * ffem / fem,
-                                  color: Color(0xff4c4d4f),
+                                  //height: 1.1428571429 * ffem / fem,
+                                  color: const Color(0xff4c4d4f),
                                 ),
                               ),
+                              
+                            
                               SizedBox(
                                 width: 8 * fem,
                               ),
                               Container(
                                 // line1wye (159:211)
                                 margin: EdgeInsets.fromLTRB(
-                                    0 * fem, 1 * fem, 0 * fem, 0 * fem),
+                                    0 * fem, 2 * fem, 0 * fem, 0 * fem),
                                 width: 82.5 * fem,
                                 height: 1 * fem,
                                 decoration: const BoxDecoration(
@@ -528,6 +538,10 @@ ElevatedButton(
                             ],
                           ),
                         ),
+                        
+                        
+                        
+                        
                         SizedBox(
                           // image18ssJ (159:212)
                           width: 48 * fem,
@@ -546,7 +560,7 @@ ElevatedButton(
           ),
         ),
       ),
-    // ),
+    ),
     );
   }
 }
