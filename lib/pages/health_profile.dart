@@ -253,7 +253,7 @@ class _HealthProfileState extends State<HealthProfile> {
                           backgroundColor:
                               const Color(0xff00b4d8), // Background color
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10 * fem),
+                            borderRadius: BorderRadius.circular(30 * fem),
                           ),
                           //minimumSize: Size(20* fem, 20* fem),
                         ),
@@ -262,7 +262,7 @@ class _HealthProfileState extends State<HealthProfile> {
                           style: safeGoogleFont(
                             'Lato',
                             fontSize: 28 * ffem,
-                            fontWeight: FontWeight.w700,
+                            fontWeight: FontWeight.w400,
                             color: const Color(0xffffffff),
                           ),
                         ),

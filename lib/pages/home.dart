@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/gestures.dart';
-import 'dart:ui';
-// ignore: unused_import
-import 'package:google_fonts/google_fonts.dart';
+
 import 'package:healthsync_app/utils/utils.dart';
 
 class HomeClass extends StatelessWidget {

@@ -24,7 +24,16 @@ import 'package:healthsync_app/pages/medbill_appdetails.dart';
 import 'package:healthsync_app/pages/navbar.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:healthsync_app/firebase_options.dart';
-// import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:healthsync_app/pages/logo_reveal.dart';
+import 'package:healthsync_app/pages/auto_image_slider.dart';
+import 'package:healthsync_app/pages/profile_landing.dart';
+import 'package:healthsync_app/pages/health_profile.dart';
+import 'package:healthsync_app/pages/alarm_landing.dart';
+import 'package:healthsync_app/pages/reminder_main.dart';
+import 'package:healthsync_app/pages/tracking_landing.dart';
+
+
 
 // ...
 

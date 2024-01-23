@@ -4,7 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:healthsync_app/pages/medbill_app.dart';
+import 'package:healthsync_app/pages/medbill_labdetails.dart';
 import 'package:healthsync_app/utils/utils.dart';
+//import 'package:healthsync_app/pages/medbill_app.dart';
 
 class MedBillLab extends StatelessWidget {
   const MedBillLab({super.key});
@@ -357,19 +360,30 @@ class MedBillLab extends StatelessWidget {
                     // viewnJ8 (2315:181)
                     left: 269 * fem,
                     top: 173 * fem,
-                    child: Align(
-                      child: SizedBox(
-                        width: 41 * fem,
-                        height: 26 * fem,
-                        child: Text(
-                          'View',
-                          style: safeGoogleFont(
-                            'Raleway',
-                            fontSize: 18 * ffem,
-                            fontWeight: FontWeight.w700,
-                            height: 1.4444444444 * ffem / fem,
-                            letterSpacing: -0.5 * fem,
-                            color: Color(0xff000000),
+                    child: GestureDetector(
+                      onTap: () {
+                        print('Image Clicked! Navigating to Another Page...');
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const MedBillLabDet(),
+                          ),
+                        );
+                      },
+                      child: Align(
+                        child: SizedBox(
+                          width: 41 * fem,
+                          height: 26 * fem,
+                          child: Text(
+                            'View',
+                            style: safeGoogleFont(
+                              'Raleway',
+                              fontSize: 18 * ffem,
+                              fontWeight: FontWeight.w700,
+                              height: 1.4444444444 * ffem / fem,
+                              letterSpacing: -0.5 * fem,
+                              color: Color(0xff000000),
+                            ),
                           ),
                         ),
                       ),
@@ -379,19 +393,24 @@ class MedBillLab extends StatelessWidget {
                     // viewGyz (2315:182)
                     left: 269 * fem,
                     top: 280 * fem,
-                    child: Align(
-                      child: SizedBox(
-                        width: 41 * fem,
-                        height: 26 * fem,
-                        child: Text(
-                          'View',
-                          style: safeGoogleFont(
-                            'Raleway',
-                            fontSize: 18 * ffem,
-                            fontWeight: FontWeight.w700,
-                            height: 1.4444444444 * ffem / fem,
-                            letterSpacing: -0.5 * fem,
-                            color: Color(0xff000000),
+                    child: GestureDetector(
+                      onTap: () {
+                        print('Image Clicked! Navigating to Another Page...');
+                      },
+                      child: Align(
+                        child: SizedBox(
+                          width: 41 * fem,
+                          height: 26 * fem,
+                          child: Text(
+                            'View',
+                            style: safeGoogleFont(
+                              'Raleway',
+                              fontSize: 18 * ffem,
+                              fontWeight: FontWeight.w700,
+                              height: 1.4444444444 * ffem / fem,
+                              letterSpacing: -0.5 * fem,
+                              color: Color(0xff000000),
+                            ),
                           ),
                         ),
                       ),
@@ -401,19 +420,24 @@ class MedBillLab extends StatelessWidget {
                     // viewBbA (2315:183)
                     left: 269 * fem,
                     top: 384 * fem,
-                    child: Align(
-                      child: SizedBox(
-                        width: 41 * fem,
-                        height: 26 * fem,
-                        child: Text(
-                          'View',
-                          style: safeGoogleFont(
-                            'Raleway',
-                            fontSize: 18 * ffem,
-                            fontWeight: FontWeight.w700,
-                            height: 1.4444444444 * ffem / fem,
-                            letterSpacing: -0.5 * fem,
-                            color: Color(0xff000000),
+                    child: GestureDetector(
+                      onTap: () {
+                        print('Image Clicked! Navigating to Another Page...');
+                      },
+                      child: Align(
+                        child: SizedBox(
+                          width: 41 * fem,
+                          height: 26 * fem,
+                          child: Text(
+                            'View',
+                            style: safeGoogleFont(
+                              'Raleway',
+                              fontSize: 18 * ffem,
+                              fontWeight: FontWeight.w700,
+                              height: 1.4444444444 * ffem / fem,
+                              letterSpacing: -0.5 * fem,
+                              color: Color(0xff000000),
+                            ),
                           ),
                         ),
                       ),
@@ -423,19 +447,24 @@ class MedBillLab extends StatelessWidget {
                     // viewH8Q (2315:184)
                     left: 271 * fem,
                     top: 492 * fem,
-                    child: Align(
-                      child: SizedBox(
-                        width: 41 * fem,
-                        height: 26 * fem,
-                        child: Text(
-                          'View',
-                          style: safeGoogleFont(
-                            'Raleway',
-                            fontSize: 18 * ffem,
-                            fontWeight: FontWeight.w700,
-                            height: 1.4444444444 * ffem / fem,
-                            letterSpacing: -0.5 * fem,
-                            color: Color(0xff000000),
+                    child: GestureDetector(
+                      onTap: () {
+                        print('Image Clicked! Navigating to Another Page...');
+                      },
+                      child: Align(
+                        child: SizedBox(
+                          width: 41 * fem,
+                          height: 26 * fem,
+                          child: Text(
+                            'View',
+                            style: safeGoogleFont(
+                              'Raleway',
+                              fontSize: 18 * ffem,
+                              fontWeight: FontWeight.w700,
+                              height: 1.4444444444 * ffem / fem,
+                              letterSpacing: -0.5 * fem,
+                              color: Color(0xff000000),
+                            ),
                           ),
                         ),
                       ),
@@ -700,19 +729,30 @@ class MedBillLab extends StatelessWidget {
                     // appointmentsk1J (2315:197)
                     left: 42 * fem,
                     top: 20 * fem,
-                    child: Align(
-                      child: SizedBox(
-                        width: 115 * fem,
-                        height: 26 * fem,
-                        child: Text(
-                          'Appointments',
-                          style: safeGoogleFont(
-                            'Raleway',
-                            fontSize: 18 * ffem,
-                            fontWeight: FontWeight.w600,
-                            height: 1.4444444444 * ffem / fem,
-                            letterSpacing: -0.5 * fem,
-                            color: Color(0xff000000),
+                    child: GestureDetector(
+                      onTap: () {
+                        print('Image Clicked! Navigating to Another Page...');
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const MedBillApp(),
+                          ),
+                        );
+                      },
+                      child: Align(
+                        child: SizedBox(
+                          width: 115 * fem,
+                          height: 26 * fem,
+                          child: Text(
+                            'Appointments',
+                            style: safeGoogleFont(
+                              'Raleway',
+                              fontSize: 18 * ffem,
+                              fontWeight: FontWeight.w600,
+                              height: 1.4444444444 * ffem / fem,
+                              letterSpacing: -0.5 * fem,
+                              color: Color(0xff000000),
+                            ),
                           ),
                         ),
                       ),
@@ -735,22 +775,6 @@ class MedBillLab extends StatelessWidget {
                             height: 1.175 * ffem / fem,
                             color: Color(0xff000000),
                           ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    // componentnavbar8Gk (2315:199)
-                    left: 0 * fem,
-                    top: 556 * fem,
-                    child: Align(
-                      child: SizedBox(
-                        width: 360 * fem,
-                        height: 96 * fem,
-                        child: Image.asset(
-                          'assets/page-1/images/component-nav-bar-8NG.png',
-                          width: 360 * fem,
-                          height: 96 * fem,
                         ),
                       ),
                     ),

@@ -1,9 +1,5 @@
-// ignore_for_file: unused_import
-
 import 'package:flutter/material.dart';
-import 'package:flutter/gestures.dart';
-import 'dart:ui';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:healthsync_app/pages/medbill_lab.dart';
 import 'package:healthsync_app/utils/utils.dart';
 
 class MedBillLabDet extends StatelessWidget {
@@ -41,16 +37,28 @@ class MedBillLabDet extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
-                          // icons8back242joz (2315:270)
-                          margin: EdgeInsets.fromLTRB(
-                              0 * fem, 0 * fem, 0 * fem, 1.73 * fem),
-                          width: 12.95 * fem,
-                          height: 22.36 * fem,
-                          child: Image.asset(
-                            'assets/images/vector.png',
+                        GestureDetector(
+                          onTap: () {
+                            print(
+                                'Image Clicked! Navigating to Another Page...');
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => MedBillLab(),
+                              ),
+                            );
+                          },
+                          child: Container(
+                            // icons8back242joz (2315:270)
+                            margin: EdgeInsets.fromLTRB(
+                                0 * fem, 0 * fem, 0 * fem, 1.73 * fem),
                             width: 12.95 * fem,
                             height: 22.36 * fem,
+                            child: Image.asset(
+                              'assets/images/vector.png',
+                              width: 12.95 * fem,
+                              height: 22.36 * fem,
+                            ),
                           ),
                         ),
                         Container(
