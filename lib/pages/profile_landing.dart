@@ -154,7 +154,7 @@ class YourWidget extends StatelessWidget {
                           height: 60 * fem,
                           child: Text(
                             //Name should come from backend
-                            userData['username'] as String,
+                             userData['username'] ?? 'Koala',
                             textAlign: TextAlign.center,
                             style: safeGoogleFont(
                               'Lato',
@@ -211,7 +211,7 @@ class YourWidget extends StatelessWidget {
                         width: 360 * fem,
                         height: 60 * fem,
                         child: Text(
-                          userData['percentage'] as String,
+                          userData['percentage'] ?? '0%',
                           textAlign: TextAlign.center,
                           style: safeGoogleFont(
                             'Lato',

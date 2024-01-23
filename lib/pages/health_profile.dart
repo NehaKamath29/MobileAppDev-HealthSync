@@ -40,6 +40,7 @@ class _HealthProfileState extends State<HealthProfile> {
       (index) => TextEditingController(),
     );
 
+
     return SizedBox(
       width: double.infinity,
       child: Form(
@@ -133,8 +134,9 @@ class _HealthProfileState extends State<HealthProfile> {
               ),
 
               //Buttons
+              
               SizedBox(
-                height: 700,
+                // height: 700,
                 child: SingleChildScrollView(
                   padding:
                       EdgeInsets.fromLTRB(30.0 * fem, 50 * fem, 30.0 * fem, 0),
