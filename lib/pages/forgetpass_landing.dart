@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:healthsync_app/utils/utils.dart';
-import 'package:mailer/mailer.dart';
+// import 'package:mailer/mailer.dart';
 // import 'package:sendgrid_mailer/sendgrid_mailer.dart';
 
 
@@ -162,21 +162,21 @@ class _PasswordClassState extends State<PasswordClass> {
                       child: ElevatedButton(
                         onPressed: ()async {
                           if (_formKey.currentState!.validate()) {
-                            final message = Message()
-                            ..from = Address(username, 'HealthSync Support')
-                            ..recipients.add(emailController.value.text)
-                            ..subject = 'Test mail :: 😀 :: ${DateTime.now()}'
-                            ..text = 'This is the plain text.\nThis is line 2 of the text part.'
-                            ..html = "<h1>Test</h1>\n<p>Hey! Here's some HTML content</p>";
-try {
-    // final sendReport = await send(message, smtpServer);
-    // print('Message sent: ' + sendReport.toString());
-  } on MailerException catch (e) {
-    print('Message not sent.');
-    for (var p in e.problems) {
-      print('Problem: ${p.code}: ${p.msg}');
-    }
-  }
+//                             final message = Message()
+//                             ..from = Address(username, 'HealthSync Support')
+//                             ..recipients.add(emailController.value.text)
+//                             ..subject = 'Test mail :: 😀 :: ${DateTime.now()}'
+//                             ..text = 'This is the plain text.\nThis is line 2 of the text part.'
+//                             ..html = "<h1>Test</h1>\n<p>Hey! Here's some HTML content</p>";
+// try {
+//     // final sendReport = await send(message, smtpServer);
+//     // print('Message sent: ' + sendReport.toString());
+//   } on MailerException catch (e) {
+//     print('Message not sent.');
+//     for (var p in e.problems) {
+//       print('Problem: ${p.code}: ${p.msg}');
+//     }
+//   }
 
 
                             print("Success");
