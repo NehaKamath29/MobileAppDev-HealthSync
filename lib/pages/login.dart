@@ -272,47 +272,45 @@ class _LoginClassState extends State<LoginClass> {
                                   ),
                                 ),
                                 GestureDetector(
-                                  onTap:(){
+                                  onTap: () {
                                     print("Ticked!");
                                   },
-                                child:Text(
-                                  // rememberme3B2 (158:13)
-                                  'Remember me',
-                                  textAlign: TextAlign.center,
-                                  style: safeGoogleFont(
-                                    'Lato',
-                                    fontSize: 16 * ffem,
-                                    fontWeight: FontWeight.w600,
-                                    height: 1 * ffem / fem,
-                                    color: Color(0xff64748b),
+                                  child: Text(
+                                    // rememberme3B2 (158:13)
+                                    'Remember me',
+                                    textAlign: TextAlign.center,
+                                    style: safeGoogleFont(
+                                      'Lato',
+                                      fontSize: 16 * ffem,
+                                      fontWeight: FontWeight.w600,
+                                      height: 1 * ffem / fem,
+                                      color: Color(0xff64748b),
+                                    ),
                                   ),
                                 ),
-                            ),
                               ],
                             ),
                           ),
-                          
-                          
                           GestureDetector(
-                          onTap: () {
-                            print("Success");
-                            // Navigate to another page here
-                            // You can use Navigator.push() or any other navigation method
-                            // Example: Navigator.push(context, MaterialPageRoute(builder: (context) => YourNextPage()));
-                                },
-                           child: Text(
-                          'Forget Password?',
-                          textAlign: TextAlign.center,
-                          style: safeGoogleFont(
-                          'Lato',
-                          fontSize: 16 * ffem,
-                          fontWeight: FontWeight.w600,
-                          height: 1 * ffem / fem,
-                          color: Color(0xff00b4d8),
+                            onTap: () {
+                              print("Success");
+                              // Navigate to another page here
+                              // You can use Navigator.push() or any other navigation method
+                              // Example: Navigator.push(context, MaterialPageRoute(builder: (context) => YourNextPage()));
+                            },
+                            child: Text(
+                              'Forget Password?',
+                              textAlign: TextAlign.center,
+                              style: safeGoogleFont(
+                                'Lato',
+                                fontSize: 16 * ffem,
+                                fontWeight: FontWeight.w600,
+                                height: 1 * ffem / fem,
+                                color: Color(0xff00b4d8),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      ],
+                        ],
                       ),
                     ),
 

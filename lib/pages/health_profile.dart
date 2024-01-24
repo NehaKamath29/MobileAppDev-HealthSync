@@ -234,13 +234,11 @@ class _HealthProfileState extends State<HealthProfile> {
                                 .set(userdata, SetOptions(merge: true));
 
                             print("Success");
-                             Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const ProfilePage()),
-                                  );
-                            
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const ProfilePage()),
+                            );
                           } else {
                             print("Not a success");
                           }

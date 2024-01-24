@@ -408,8 +408,6 @@ class _FormScreenState extends State<FormScreen> {
                                       duration: Duration(seconds: 3),
                                     ),
                                   );
-                                  
-
                                 } else {
                                   final userdata = <String, String>{
                                     "username": name,
@@ -428,7 +426,7 @@ class _FormScreenState extends State<FormScreen> {
                                         builder: (context) =>
                                             const PersonalProfile()),
                                   );
-                            await prefs.setString('user_email', email);
+                                  await prefs.setString('user_email', email);
 
                                   print("Signup successful");
                                 }
