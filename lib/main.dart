@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:healthsync_app/pages/ba_doc_info.dart';
+import 'package:healthsync_app/pages/forgetpass_landing.dart';
+import 'package:healthsync_app/pages/health_profile.dart';
 import 'package:healthsync_app/pages/profile_landing.dart';
 import 'package:healthsync_app/utils/utils.dart';
 import 'package:healthsync_app/pages/login.dart';
@@ -9,7 +11,7 @@ import 'package:healthsync_app/pages/signup.dart';
 //import 'package:healthsync_app/pages/profile_landing.dart';
 //import 'package:healthsync_app/pages/home.dart';
 import 'package:healthsync_app/pages/book_appointment.dart';
-//import 'package:healthsync_app/pages/personal_profile.dart';
+import 'package:healthsync_app/pages/personal_profile.dart';
 //import 'package:healthsync_app/pages/ba_doc_info.dart';
 import 'package:healthsync_app/pages/ba_general_physician.dart';
 import 'package:healthsync_app/pages/ba_slot.dart';
@@ -23,7 +25,14 @@ import 'package:healthsync_app/pages/navbar.dart';
 import 'package:healthsync_app/pages/labtest.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:healthsync_app/firebase_options.dart';
-// import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:healthsync_app/pages/logo_reveal.dart';
+import 'package:healthsync_app/pages/auto_image_slider.dart';
+import 'package:healthsync_app/pages/profile_landing.dart';
+import 'package:healthsync_app/pages/health_profile.dart';
+import 'package:healthsync_app/pages/alarm_landing.dart';
+import 'package:healthsync_app/pages/reminder_main.dart';
+import 'package:healthsync_app/pages/tracking_landing.dart';
 
 // ...
 
@@ -55,7 +64,7 @@ class MyApp extends StatelessWidget {
       home: const Scaffold(
         body: SingleChildScrollView(
           child:
-              LabTestClass(), //Give the class name of the page you want to be displayed and import the respective file. After navigations,
+              BookClass(), //Give the class name of the page you want to be displayed and import the respective file. After navigations,
           //only the landing page class name will be given ig.
         ),
       ),

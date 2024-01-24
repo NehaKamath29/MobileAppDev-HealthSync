@@ -5,6 +5,7 @@ import 'package:healthsync_app/utils/utils.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:healthsync_app/pages/login.dart';
 
 class FormScreen extends StatefulWidget {
   const FormScreen({Key? key}) : super(key: key);
@@ -24,21 +25,23 @@ class _FormScreenState extends State<FormScreen> {
     double baseWidth = 360;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
-
     return SingleChildScrollView(
+    
+    // body:
+    child:Material(
       child: Form(
         key: _formKey,
         child: SizedBox(
           width: double.infinity,
           child: Container(
             width: double.infinity,
-            height: 800 * fem,
+            //height: 800 * fem,
             decoration: const BoxDecoration(
               color: Color(0xffffffff),
             ),
             child: SizedBox(
               width: double.infinity,
-              height: 769 * fem,
+              //height: 769 * fem,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -66,44 +69,61 @@ class _FormScreenState extends State<FormScreen> {
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              ElevatedButton(
-                                //child:const Text("Login"),
-                                onPressed: () {
-                                  //navigate to login page
-                                  //Navigator.push(context,MaterialPageRoute(builder:(context)=>const LoginClass(),));
-                                },
+ElevatedButton(
+  onPressed: () {
+  Navigator.of(context).pushReplacement(
+    PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) => const LoginClass(),
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        const begin = Offset(-1.0, 0.0); // Start the page from the left
+        const end = Offset.zero; // End at the center
+        const curve = Curves.easeInOut;
+        var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
 
-                                style: ElevatedButton.styleFrom(
-                                  padding: EdgeInsets.zero,
-                                  backgroundColor: Color(0xffffffff),
-                                  foregroundColor: Color(0xff4c4d4f),
-                                  side: const BorderSide(
-                                      width: 4, color: Color(0xff00b4d8)),
-                                  elevation: 5 * fem,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius:
-                                        BorderRadius.circular(15 * fem),
-                                  ),
-                                ),
-                                child: SizedBox(
-                                  width: 162 * fem,
-                                  height: double.infinity,
-                                  child: Center(
-                                    child: Text(
-                                      'Login',
-                                      textAlign: TextAlign.center,
-                                      style: safeGoogleFont(
-                                        'Lato',
-                                        fontSize: 23 * ffem,
-                                        fontWeight: FontWeight.w800,
-                                        height: 1.1764705882 * ffem / fem,
-                                        color: Color(0xff4c4d4f),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
+        var offsetAnimation = animation.drive(tween);
 
+        return SlideTransition(
+          position: offsetAnimation,
+          child: child,
+        );
+      },
+      transitionDuration: const Duration(milliseconds:800),
+    ),
+  );
+},
+  style: ElevatedButton.styleFrom(
+    padding: EdgeInsets.zero,
+    backgroundColor: const Color(0xffffffff),
+    foregroundColor: const Color(0xff4c4d4f),
+    side: const BorderSide(width: 4, color: Color(0xff00b4d8)),
+    elevation: 5 * fem,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(15 * fem),
+    ),
+  ),
+  child: SizedBox(
+    width: 162 * fem,
+    height: double.infinity,
+    child: Center(
+      child: Text(
+        'Login',
+        textAlign: TextAlign.center,
+        style: safeGoogleFont(
+          'Lato',
+          fontSize: 24 * ffem,
+          fontWeight: FontWeight.w700,
+          height: 1.1764705882 * ffem / fem,
+          color: Color(0xff4c4d4f),
+        ),
+      ),
+    ),
+  ),
+),
+
+
+                              
+                              
+                              
                               SizedBox(
                                   width:
                                       9 * fem), // Add spacing between buttons
@@ -137,7 +157,7 @@ class _FormScreenState extends State<FormScreen> {
                                       textAlign: TextAlign.center,
                                       style: safeGoogleFont(
                                         'Lato',
-                                        fontSize: 23 * ffem,
+                                        fontSize: 24 * ffem,
                                         fontWeight: FontWeight.w500,
                                         height: 1.1764705882 * ffem / fem,
                                         color: Color(0xff000000),
@@ -163,7 +183,7 @@ class _FormScreenState extends State<FormScreen> {
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: const BorderSide(
-                                  width: 2, color: Color(0xff00b4d8)),
+                                  width: 3.5, color: Color(0xff00b4d8)),
                               borderRadius: BorderRadius.circular(10 * fem),
                             ),
                             filled: true,
@@ -183,8 +203,9 @@ class _FormScreenState extends State<FormScreen> {
                             ),
                             labelText: 'User Name',
                             labelStyle: const TextStyle(
-                              fontSize: 24,
+                              fontSize: 20,
                               fontFamily: 'Lato',
+                              fontWeight: FontWeight.w600,
                               color: Color(0xb2000000),
                             ),
                             contentPadding: EdgeInsets.symmetric(
@@ -200,7 +221,7 @@ class _FormScreenState extends State<FormScreen> {
 
                         //Email
                         const SizedBox(
-                          height: 20,
+                          height: 24,
                         ),
                         TextFormField(
                           keyboardType: TextInputType.emailAddress,
@@ -215,7 +236,7 @@ class _FormScreenState extends State<FormScreen> {
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: const BorderSide(
-                                  width: 2, color: Color(0xff00b4d8)),
+                                  width: 3.5, color: Color(0xff00b4d8)),
                               borderRadius: BorderRadius.circular(10 * fem),
                             ),
                             filled: true,
@@ -235,7 +256,8 @@ class _FormScreenState extends State<FormScreen> {
                             ),
                             labelText: 'Email',
                             labelStyle: const TextStyle(
-                              fontSize: 24,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
                               fontFamily: 'Lato',
                               color: Color(0xb2000000),
                             ),
@@ -254,7 +276,7 @@ class _FormScreenState extends State<FormScreen> {
 
                         //Phone number
                         const SizedBox(
-                          height: 20,
+                          height: 24,
                         ),
                         TextFormField(
                           controller: phoneNumberController,
@@ -268,7 +290,7 @@ class _FormScreenState extends State<FormScreen> {
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: const BorderSide(
-                                  width: 2, color: Color(0xff00b4d8)),
+                                  width: 3.5, color: Color(0xff00b4d8)),
                               borderRadius: BorderRadius.circular(10 * fem),
                             ),
                             filled: true,
@@ -288,7 +310,8 @@ class _FormScreenState extends State<FormScreen> {
                             ),
                             labelText: 'Phone number',
                             labelStyle: const TextStyle(
-                              fontSize: 24,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
                               fontFamily: 'Lato',
                               color: Color(0xb2000000),
                             ),
@@ -312,7 +335,7 @@ class _FormScreenState extends State<FormScreen> {
 
                         //password
                         const SizedBox(
-                          height: 20,
+                          height: 24,
                         ),
                         TextFormField(
                           obscureText: true,
@@ -327,7 +350,7 @@ class _FormScreenState extends State<FormScreen> {
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: const BorderSide(
-                                  width: 2, color: Color(0xff00b4d8)),
+                                  width: 3.5, color: Color(0xff00b4d8)),
                               borderRadius: BorderRadius.circular(10 * fem),
                             ),
                             filled: true,
@@ -347,7 +370,8 @@ class _FormScreenState extends State<FormScreen> {
                             ),
                             labelText: 'Password',
                             labelStyle: const TextStyle(
-                              fontSize: 24,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
                               fontFamily: 'Lato',
                               color: Color(0xb2000000),
                             ),
@@ -378,7 +402,7 @@ class _FormScreenState extends State<FormScreen> {
 
                         //Signup button
                         const SizedBox(
-                          height: 20,
+                          height: 50,
                         ),
                         ElevatedButton(
                           onPressed: () async {
@@ -403,7 +427,7 @@ class _FormScreenState extends State<FormScreen> {
                                   // Email already exists, show warning
                                   print("Email already exists");
                                   ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(
+                                    const SnackBar(
                                       content: Text("Email already exists."),
                                       duration: Duration(seconds: 3),
                                     ),
@@ -428,28 +452,28 @@ class _FormScreenState extends State<FormScreen> {
                                   );
                                   await prefs.setString('user_email', email);
 
-                                  print("Signup successful");
+                                  //print("Signup successful");
                                 }
                               });
-                            } else
-                              print("Not a success");
+                            } //else
+                              //print("Not a success");
                             // Add the logic you want to execute when the button is pressed
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor:
-                                Color(0xff00b4d8), // Background color
+                                const Color(0xff00b4d8), // Background color
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15 * fem),
+                              borderRadius: BorderRadius.circular(28 * fem),
                             ),
-                            minimumSize: Size(150 * fem, 40 * fem),
+                            minimumSize: Size(150* fem, 50 * fem),
                           ),
                           child: Text(
                             'Sign up',
                             style: safeGoogleFont(
                               'Lato',
-                              fontSize: 20 * ffem,
-                              fontWeight: FontWeight.w700,
-                              color: Color(0xffffffff),
+                              fontSize: 24 * ffem,
+                              fontWeight: FontWeight.w400,
+                              color: const Color(0xffffffff),
                             ),
                           ),
                         ),
@@ -459,44 +483,50 @@ class _FormScreenState extends State<FormScreen> {
                               32 * fem, 8 * fem, 32 * fem, 8 * fem),
                           width: double.infinity,
                           decoration: BoxDecoration(
-                            color: Color(0xffffffff),
+                            color: const Color(0xffffffff),
                             borderRadius: BorderRadius.circular(16 * fem),
                           ),
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
+                              
+                              
                               Container(
                                 // line2KSU (159:209)
                                 margin: EdgeInsets.fromLTRB(
-                                    0 * fem, 1 * fem, 0 * fem, 0 * fem),
+                                    0 * fem, 2 * fem, 0 * fem, 0 * fem),
                                 width: 82.5 * fem,
                                 height: 1 * fem,
                                 decoration: const BoxDecoration(
                                   color: Color(0xffcbd5e1),
                                 ),
                               ),
-                              SizedBox(
+                              /*SizedBox(
                                 width: 8 * fem,
-                              ),
+                              ),*/
+                              
                               Text(
                                 // orsignupusing2bn (159:210)
                                 'Or signup using',
+                                overflow: TextOverflow.ellipsis,
                                 textAlign: TextAlign.center,
                                 style: safeGoogleFont(
                                   'Lato',
-                                  fontSize: 14 * ffem,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.w600,
-                                  height: 1.1428571429 * ffem / fem,
-                                  color: Color(0xff4c4d4f),
+                                  //height: 1.1428571429 * ffem / fem,
+                                  color: const Color(0xff4c4d4f),
                                 ),
                               ),
+                              
+                            
                               SizedBox(
                                 width: 8 * fem,
                               ),
                               Container(
                                 // line1wye (159:211)
                                 margin: EdgeInsets.fromLTRB(
-                                    0 * fem, 1 * fem, 0 * fem, 0 * fem),
+                                    0 * fem, 2 * fem, 0 * fem, 0 * fem),
                                 width: 82.5 * fem,
                                 height: 1 * fem,
                                 decoration: const BoxDecoration(
@@ -506,6 +536,10 @@ class _FormScreenState extends State<FormScreen> {
                             ],
                           ),
                         ),
+                        
+                        
+                        
+                        
                         SizedBox(
                           // image18ssJ (159:212)
                           width: 48 * fem,
@@ -524,6 +558,7 @@ class _FormScreenState extends State<FormScreen> {
           ),
         ),
       ),
+    ),
     );
   }
 }

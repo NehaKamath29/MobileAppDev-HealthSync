@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 // import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:healthsync_app/pages/signup.dart';
 //import 'package:healthsync_app/pages/personal_profile.dart';
 // import 'package:shared_preferences/shared_preferences.dart';
 //import 'package:healthsync_app/pages/signup.dart';
@@ -24,7 +25,8 @@ class _LoginClassState extends State<LoginClass> {
     double baseWidth = 360;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
-    return SingleChildScrollView(
+    return Scaffold(
+    body:SingleChildScrollView(
       child: Form(
         key: _formKey,
         child: Container(
@@ -88,7 +90,7 @@ class _LoginClassState extends State<LoginClass> {
                                   textAlign: TextAlign.center,
                                   style: safeGoogleFont(
                                     'Lato',
-                                    fontSize: 17 * ffem,
+                                    fontSize: 23 * ffem,
                                     fontWeight: FontWeight.w500,
                                     height: 1.1764705882 * ffem / fem,
                                     color: Color(0xff4c4d4f),
@@ -100,43 +102,60 @@ class _LoginClassState extends State<LoginClass> {
 
                           SizedBox(
                               width: 9 * fem), // Add spacing between buttons
-                          ElevatedButton(
-                            onPressed: () {
-                              //Navigator.push(context,MaterialPageRoute(builder:(context)=>const SignupClass(),));
-                            },
-                            style: ElevatedButton.styleFrom(
-                              padding: EdgeInsets.zero,
-                              backgroundColor: Color(0xffffffff),
-                              foregroundColor: Color(0xff000000),
-                              side: const BorderSide(
-                                  width: 4, color: Color(0xff00b4d8)),
-                              elevation: 5 * fem,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15 * fem),
-                              ),
-                            ),
-                            child: SizedBox(
-                              // tabbuttonDQp (159:206)
-                              width: 162 * fem,
-                              height: double.infinity,
-                              child: Center(
-                                child: Text(
-                                  'Sign up',
-                                  textAlign: TextAlign.center,
-                                  style: safeGoogleFont(
-                                    'Lato',
-                                    fontSize: 17 * ffem,
-                                    fontWeight: FontWeight.w700,
-                                    height: 1.1764705882 * ffem / fem,
-                                    color: Color(0xff000000),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+  
+  ElevatedButton(
+  onPressed: () {
+    Navigator.of(context).pushReplacement(
+      PageRouteBuilder(
+        pageBuilder: (context, animation, secondaryAnimation) => const FormScreen(),
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          const begin = Offset(1.0, 0.0);
+          const end = Offset.zero;
+          const curve = Curves.easeInOut;
+          var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+          var offsetAnimation = animation.drive(tween);
+
+          return SlideTransition(
+            position: offsetAnimation,
+            child: child,
+          );
+        },
+        transitionDuration: const Duration(milliseconds:800),
+      ),
+    );
+  },
+  style: ElevatedButton.styleFrom(
+    padding: EdgeInsets.zero,
+    backgroundColor: Color(0xffffffff),
+    foregroundColor: Color(0xff000000),
+    side: const BorderSide(width: 4, color: Color(0xff00b4d8)),
+    elevation: 5 * fem,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(15 * fem),
+    ),
+  ),
+  child: SizedBox(
+    width: 162 * fem,
+    height: double.infinity,
+    child: Center(
+      child: Text(
+        'Sign up',
+        textAlign: TextAlign.center,
+        style: safeGoogleFont(
+          'Lato',
+          fontSize: 23 * ffem,
+          fontWeight: FontWeight.w700,
+          height: 1.1764705882 * ffem / fem,
+          color: Color(0xff000000),
+        ),
+      ),
+    ),
+  ),
+),
+],
+),
+),
 
                     //email
                     TextFormField(
@@ -389,16 +408,16 @@ class _LoginClassState extends State<LoginClass> {
                         backgroundColor:
                             const Color(0xff00b4d8), // Background color
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20 * fem),
+                          borderRadius: BorderRadius.circular(28 * fem),
                         ),
-                        //minimumSize: Size(20* fem, 20* fem),
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
                       ),
                       child: Text(
                         'Login',
                         style: safeGoogleFont(
                           'Lato',
-                          fontSize: 30 * ffem,
-                          fontWeight: FontWeight.w700,
+                          fontSize: 28 * ffem,
+                          fontWeight: FontWeight.w400,
                           color: Color(0xffffffff),
                         ),
                       ),
@@ -430,17 +449,21 @@ class _LoginClassState extends State<LoginClass> {
                           SizedBox(
                             width: 8 * fem,
                           ),
-                          Text(
+                          Expanded(
+                          child:Text(
                             // orloginwith7ic (158:16)
                             'Or login with',
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
                             textAlign: TextAlign.center,
                             style: safeGoogleFont(
                               'Lato',
-                              fontSize: 13 * ffem,
-                              fontWeight: FontWeight.w600,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w800,
                               height: 1.1428571429 * ffem / fem,
                               color: Color(0xff4c4d4f),
                             ),
+                          ),
                           ),
                           SizedBox(
                             width: 8 * fem,
@@ -459,7 +482,7 @@ class _LoginClassState extends State<LoginClass> {
                       ),
                     ),
                     Container(
-                      // image17NPe (158:21)
+                      
                       margin: EdgeInsets.fromLTRB(
                           0 * fem, 0 * fem, 4 * fem, 0 * fem),
                       width: 48 * fem,
@@ -476,6 +499,7 @@ class _LoginClassState extends State<LoginClass> {
           ),
         ),
       ),
+    ),
     );
   }
 }

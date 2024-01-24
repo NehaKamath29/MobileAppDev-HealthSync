@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:healthsync_app/pages/personal_profile.dart';
 import 'package:healthsync_app/utils/utils.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
@@ -76,7 +77,8 @@ class YourWidget extends StatelessWidget {
     double baseWidth = 360;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
-    return SizedBox(
+    return Scaffold(
+    body:SizedBox(
       width: double.infinity,
       child: SizedBox(
         width: double.infinity,
@@ -154,7 +156,7 @@ class YourWidget extends StatelessWidget {
                           height: 60 * fem,
                           child: Text(
                             //Name should come from backend
-                            userData['username'] as String,
+                             userData['username'] ?? 'Koala',
                             textAlign: TextAlign.center,
                             style: safeGoogleFont(
                               'Lato',
@@ -211,7 +213,7 @@ class YourWidget extends StatelessWidget {
                         width: 360 * fem,
                         height: 60 * fem,
                         child: Text(
-                          userData['percentage'] as String,
+                          userData['percentage'] ?? '0%',
                           textAlign: TextAlign.center,
                           style: safeGoogleFont(
                             'Lato',
@@ -240,6 +242,11 @@ class YourWidget extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () {
                     // Add your logic here for 'Edit profile' button
+
+                    Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const PersonalProfile()),
+    );
                   },
                   style: ElevatedButton.styleFrom(
                     padding:
@@ -468,6 +475,7 @@ class YourWidget extends StatelessWidget {
           ],
         ),
       ),
+    ),
     );
   }
 }

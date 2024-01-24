@@ -24,7 +24,7 @@ Future<Map<String, dynamic>> get_details() async {
       final patientsCount = data['patients_count'];
       final Ratings = data['Ratings'];
       final About = data['About'];
-      final fees = data['feesr'];
+      final fees = data['fees'];
 
       print(data);
       return data;
@@ -336,7 +336,7 @@ class YourWidget extends StatelessWidget {
                                   text: 'Patients\n',
                                 ),
                                 TextSpan(
-                                  text: userData['patients_count'],
+                                  text: userData['patients_count'].toString(),
                                   style: safeGoogleFont(
                                     'Inter',
                                     fontSize: 15 * ffem,

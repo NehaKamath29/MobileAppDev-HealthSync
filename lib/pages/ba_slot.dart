@@ -1,13 +1,19 @@
 // ignore: duplicate_ignore
 // ignore_for_file: unused_import
 
+// import 'dart:ffi';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+
 // ignore: unnecessary_import
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:healthsync_app/utils/utils.dart';
 import 'package:healthsync_app/pages/ba_doc_info.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 class BaSlotClass extends StatefulWidget {
   const BaSlotClass({Key? key}) : super(key: key);
@@ -16,14 +22,28 @@ class BaSlotClass extends StatefulWidget {
   _BaSlotClassState createState() => _BaSlotClassState();
 }
 
+
 class _BaSlotClassState extends State<BaSlotClass> {
-  String selectedTime = '';
-  @override
+  String selectedTime = '10:00 AM';
+  String date = '22 November 23';
+   @override
   Widget build(BuildContext context) {
     double baseWidth = 360;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
-    return Container(
+    return FutureBuilder<Map<String, dynamic>>(
+      future: get_details(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.done) {
+          if (snapshot.hasError) {
+            return Text("Error: ${snapshot.error}");
+          } else {
+            Map<String, dynamic> userData = snapshot.data!;
+            print(userData);
+            // Use userData to build your UI
+            // return YourWidget(userData: userData);
+            return Container(
+              
       width: double.infinity,
       child: Container(
         // baslotbookingconfirmationNtc (2313:145)
@@ -136,6 +156,10 @@ class _BaSlotClassState extends State<BaSlotClass> {
                             onTap: () {
                               // Handle the tap event here
                               print('Button Clicked 23!');
+                              setState(() {
+                                date = "23 November 2023";
+                                
+                              });
                               // Add navigation or other actions as needed
                             },
                             child: Align(
@@ -184,6 +208,7 @@ class _BaSlotClassState extends State<BaSlotClass> {
                             onTap: () {
                               // Handle the tap event here
                               print('Button Clicked 22!');
+                              date = "22 November 23";
                               // Add navigation or other actions as needed
                             },
                             child: Align(
@@ -231,6 +256,8 @@ class _BaSlotClassState extends State<BaSlotClass> {
                           child: GestureDetector(
                             onTap: () {
                               // Handle the tap event here
+                              date = "28 November 23";
+
                               print('Button Clicked 28!');
                               // Add navigation or other actions as needed
                             },
@@ -280,6 +307,8 @@ class _BaSlotClassState extends State<BaSlotClass> {
                             onTap: () {
                               // Handle the tap event here
                               print('Button Clicked 27!');
+                              date = "27 November 23";
+                              
                               // Add navigation or other actions as needed
                             },
                             child: Align(
@@ -328,6 +357,8 @@ class _BaSlotClassState extends State<BaSlotClass> {
                             onTap: () {
                               // Handle the tap event here
                               print('Button Clicked 26!');
+                              date = "26 November 23";
+
                               // Add navigation or other actions as needed
                             },
                             child: Align(
@@ -376,6 +407,8 @@ class _BaSlotClassState extends State<BaSlotClass> {
                             onTap: () {
                               // Handle the tap event here
                               print('Button Clicked 25!');
+                              date = "25 November 23";
+
                               // Add navigation or other actions as needed
                             },
                             child: Align(
@@ -424,6 +457,8 @@ class _BaSlotClassState extends State<BaSlotClass> {
                             onTap: () {
                               // Handle the tap event here
                               print('Button Clicked 24!');
+                              date = "24 November 23";
+
                               // Add navigation or other actions as needed
                             },
                             child: Align(
@@ -531,7 +566,7 @@ class _BaSlotClassState extends State<BaSlotClass> {
                       maxWidth: 187 * fem,
                     ),
                     child: Text(
-                      'Doctor Name: Dr. Aarav Sharma\n\nSpecialization: General Physician\n\nDate: 22 November 2023\n\nTime: $selectedTime\n\nConsultation Fees: ₹800\n',
+                      'Doctor Name: Dr. ${userData['Name']}\n\nSpecialization: ${userData['speciality']}\n\nDate: $date\n\nTime: $selectedTime\n\n${userData['fees']}\n',
                       style: safeGoogleFont(
                         'Lato',
                         fontSize: 13 * ffem,
@@ -541,6 +576,47 @@ class _BaSlotClassState extends State<BaSlotClass> {
                       ),
                     ),
                   ),
+                  GestureDetector(
+  onTap: () async {
+    // Add your button click logic here
+    print('Button clicked');
+    FirebaseFirestore db = FirebaseFirestore.instance;
+    final docRef = db.collection("doctor_table").doc("Aarav Sharma");
+  
+
+  try {
+    // Get the current data
+    DocumentSnapshot snapshot = await docRef.get();
+    Map<String, dynamic> userData = snapshot.data() as Map<String, dynamic>;
+
+    // Convert the string to an integer (assuming it represents an integer)
+    int currentPatientsCount = userData['patients_count'];
+
+    // Update the data with the incremented value
+    Map<String, dynamic> newData = {
+      'patients_count': (currentPatientsCount + 1),
+      // Add more fields as needed
+    };
+
+    // Update the document with the new data
+    await docRef.update(newData);
+     Fluttertoast.showToast(
+        msg: 'Booking confirmed!',
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.BOTTOM,
+        backgroundColor: Colors.green,
+        textColor: Colors.white,
+        fontSize: 16.0,
+      );
+
+    print('Data updated successfully');
+  } catch (e) {
+    print('Error updating data: $e');
+  }
+
+    
+  },
+  child: 
                   Container(
                     // autogroupxcs6S36 (NTeFaK42V3JHxMNuioxCs6)
                     margin: EdgeInsets.fromLTRB(
@@ -553,6 +629,7 @@ class _BaSlotClassState extends State<BaSlotClass> {
                     child: Center(
                       child: Text(
                         'Confirm Booking',
+
                         style: safeGoogleFont(
                           'Lato',
                           fontSize: 15 * ffem,
@@ -562,13 +639,24 @@ class _BaSlotClassState extends State<BaSlotClass> {
                         ),
                       ),
                     ),
-                  ),
+                  
+                  ),),
                 ],
               ),
             ),
           ],
         ),
       ),
+    );
+            
+          }
+        } else {
+          return LoadingAnimationWidget.hexagonDots(
+            color: Colors.white,
+            size: 200,
+          );
+        }
+      },
     );
   }
 }

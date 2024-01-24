@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:healthsync_app/utils/utils.dart';
+import 'package:healthsync_app/pages/alarm_landing.dart';
 
 class TrackingClass extends StatelessWidget {
   const TrackingClass({Key? key}) : super(key: key);
@@ -179,7 +180,6 @@ class TrackingClass extends StatelessWidget {
               ),
             ),
             Container(
-              // periodstrackingb1n (51:18)
               margin: EdgeInsets.fromLTRB(20 * fem, 0 * fem, 0 * fem, 0 * fem),
               child: Text(
                 'Periods tracking',
@@ -273,6 +273,12 @@ class TrackingClass extends StatelessWidget {
                       child: InkWell(
                         onTap: () {
                           // Add the logic you want to execute when the image is tapped
+                          print("Pressed sleep button");
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const AlarmLanding()),
+                          );
                         },
                         borderRadius: BorderRadius.circular(15 * fem),
                       ),
