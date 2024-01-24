@@ -432,8 +432,6 @@ ElevatedButton(
                                       duration: Duration(seconds: 3),
                                     ),
                                   );
-                                  
-
                                 } else {
                                   final userdata = <String, String>{
                                     "username": name,
@@ -452,7 +450,7 @@ ElevatedButton(
                                         builder: (context) =>
                                             const PersonalProfile()),
                                   );
-                            await prefs.setString('user_email', email);
+                                  await prefs.setString('user_email', email);
 
                                   //print("Signup successful");
                                 }

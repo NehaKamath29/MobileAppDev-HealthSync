@@ -336,7 +336,7 @@ class YourWidget extends StatelessWidget {
                                   text: 'Patients\n',
                                 ),
                                 TextSpan(
-                                  text: userData['patients_count'],
+                                  text: userData['patients_count'].toString(),
                                   style: safeGoogleFont(
                                     'Inter',
                                     fontSize: 15 * ffem,

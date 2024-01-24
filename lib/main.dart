@@ -15,12 +15,14 @@ import 'package:healthsync_app/pages/personal_profile.dart';
 //import 'package:healthsync_app/pages/ba_doc_info.dart';
 import 'package:healthsync_app/pages/ba_general_physician.dart';
 import 'package:healthsync_app/pages/ba_slot.dart';
+import 'package:healthsync_app/pages/home.dart';
 //import 'package:healthsync_app/pages/notifications.dart';
 import 'package:healthsync_app/pages/medbill_app.dart';
 import 'package:healthsync_app/pages/medbill_lab.dart';
 import 'package:healthsync_app/pages/medbill_appdetails.dart';
 //import 'package:healthsync_app/pages/medbill_labdetails.dart';
 import 'package:healthsync_app/pages/navbar.dart';
+import 'package:healthsync_app/pages/labtest.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:healthsync_app/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -31,8 +33,6 @@ import 'package:healthsync_app/pages/health_profile.dart';
 import 'package:healthsync_app/pages/alarm_landing.dart';
 import 'package:healthsync_app/pages/reminder_main.dart';
 import 'package:healthsync_app/pages/tracking_landing.dart';
-
-
 
 // ...
 

@@ -4,24 +4,23 @@ import 'package:healthsync_app/utils/utils.dart';
 // import 'package:mailer/mailer.dart';
 // import 'package:sendgrid_mailer/sendgrid_mailer.dart';
 
-
 class PasswordClass extends StatefulWidget {
   //const PasswordClass({Key? key}) : super(key: key);
   const PasswordClass({super.key});
   @override
   State<PasswordClass> createState() => _PasswordClassState();
 }
+
 class _PasswordClassState extends State<PasswordClass> {
   final _formKey = GlobalKey<FormState>();
   TextEditingController emailController = TextEditingController();
 
-
   @override
   Widget build(BuildContext context) {
-  String username = 'healthsyncapp@gmail.com';
-  String password = 'owsw ltwt mwuv mqzf';
+    String username = 'healthsyncapp@gmail.com';
+    String password = 'owsw ltwt mwuv mqzf';
 
-  // final smtpServer = gmail(username, password);
+    // final smtpServer = gmail(username, password);
     double baseWidth = 360;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
@@ -160,7 +159,7 @@ class _PasswordClassState extends State<PasswordClass> {
                       width: 75 * fem,
                       height: 40 * fem,
                       child: ElevatedButton(
-                        onPressed: ()async {
+                        onPressed: () async {
                           if (_formKey.currentState!.validate()) {
 //                             final message = Message()
 //                             ..from = Address(username, 'HealthSync Support')
@@ -177,7 +176,6 @@ class _PasswordClassState extends State<PasswordClass> {
 //       print('Problem: ${p.code}: ${p.msg}');
 //     }
 //   }
-
 
                             print("Success");
                           } else
