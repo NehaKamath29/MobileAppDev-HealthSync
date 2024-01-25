@@ -9,7 +9,7 @@ import 'package:healthsync_app/utils/utils.dart';
 import 'package:healthsync_app/pages/login.dart';
 import 'package:healthsync_app/pages/signup.dart';
 //import 'package:healthsync_app/pages/profile_landing.dart';
-//import 'package:healthsync_app/pages/home.dart';
+import 'package:healthsync_app/pages/home.dart';
 import 'package:healthsync_app/pages/book_appointment.dart';
 import 'package:healthsync_app/pages/personal_profile.dart';
 //import 'package:healthsync_app/pages/ba_doc_info.dart';

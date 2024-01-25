@@ -6,19 +6,35 @@ import 'package:healthsync_app/pages/book_appointment.dart';
 import 'package:healthsync_app/pages/ba_doc_info.dart';
 import 'package:healthsync_app/pages/reminder_main.dart';
 
-class HomeClass extends StatelessWidget {
-  const HomeClass({super.key});
+class HomeClass extends StatefulWidget {
+  const HomeClass({super.key}); 
+  @override
+  State<HomeClass> createState() => _HomeClassState();
+}
 
+
+class _HomeClassState extends State<HomeClass> {
+ 
   @override
   Widget build(BuildContext context) {
     double baseWidth = 360;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
-    return Material(
+    /*const decorationImage = const DecorationImage(
+      fit: BoxFit.cover,
+      image: AssetImage(
+        'assets/images/docphoto.png',
+      ),
+    );*/
+    return Container(
+      width: double.infinity,
+      child: Container(
+    child:Material(
         child: SingleChildScrollView(
             child: SizedBox(
       //width: double.infinity,
       child: SizedBox(
+
         // homepagenewWAg (2315:1161)
         width: double.infinity,
         // height: 800 * fem,
@@ -1582,6 +1598,10 @@ class HomeClass extends StatelessWidget {
           ),
         ),
       ),
-    )));
+    ),
+    ),
+    ),
+      ),
+    );
   }
 }
