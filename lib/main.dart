@@ -34,6 +34,8 @@ import 'package:healthsync_app/pages/alarm_landing.dart';
 import 'package:healthsync_app/pages/reminder_main.dart';
 import 'package:healthsync_app/pages/tracking_landing.dart';
 
+
+
 // ...
 
 void main() async {
@@ -64,7 +66,7 @@ class MyApp extends StatelessWidget {
       home: const Scaffold(
         body: SingleChildScrollView(
           child:
-              HomeClass(), //Give the class name of the page you want to be displayed and import the respective file. After navigations,
+              LogoReveal(), //Give the class name of the page you want to be displayed and import the respective file. After navigations,
           //only the landing page class name will be given ig.
         ),
       ),
