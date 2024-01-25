@@ -25,17 +25,16 @@ class _HomeClassState extends State<HomeClass> {
         'assets/images/docphoto.png',
       ),
     );*/
-    return Container(
-      width: double.infinity,
-      child: Container(
-    child:Material(
-        child: SingleChildScrollView(
-            child: SizedBox(
+    //return Container(
       //width: double.infinity,
-      child: SizedBox(
-
-        // homepagenewWAg (2315:1161)
-        width: double.infinity,
+      //child: Container(
+        return Material(
+      child:SingleChildScrollView(
+        
+            child: SizedBox(
+      width: double.infinity,
+      //child: SizedBox(
+        //width: double.infinity,
         // height: 800 * fem,
         child: Container(
           // homepageEMa (2315:1162)
@@ -234,12 +233,12 @@ class _HomeClassState extends State<HomeClass> {
                                     left: 0 * fem,
                                     top: 0 * fem,
                                     child: SizedBox(
-                                      width: 302 * fem,
-                                      height: 24 * fem,
+                                      //width: 302 * fem,
+                                      //height: 24 * fem,
                                       child: Stack(
                                         children: [
                                           Positioned(
-                                            // materialsymbolslightsearchzL4 (2315:1178)
+                                            
                                             left: 10.9038085938 * fem,
                                             top: 6.5126647949 * fem,
                                             child: Align(
@@ -301,8 +300,8 @@ class _HomeClassState extends State<HomeClass> {
               ),
               SizedBox(
                 // autogrouptzwyWxc (QM6reSezNXg16upqSCtzWY)
-                width: double.infinity,
-                height: 691 * fem,
+                //width: double.infinity,
+                height: /*double.infinity,*/750 * fem,
                 child: Stack(
                   children: [
                     Positioned(
@@ -311,7 +310,7 @@ class _HomeClassState extends State<HomeClass> {
                       top: 0 * fem,
                       child: SizedBox(
                         width: 357 * fem,
-                        height: 606 * fem,
+                        //height: 606 * fem,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -746,8 +745,9 @@ class _HomeClassState extends State<HomeClass> {
                                     ),
                                   ),
                                   Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                    //crossAxisAlignment:
+                                        //CrossAxisAlignment.start,
+                                        
                                     children: [
                                       const Text(
                                         'Popular doctors',
@@ -1219,14 +1219,16 @@ class _HomeClassState extends State<HomeClass> {
                                       ),
                                     ],
                                   ),
+                                  
+                                  
                                   Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                    /*crossAxisAlignment:
+                                        CrossAxisAlignment.start,*/
                                     children: [
                                       Container(
                                         // autogrouprevg1fa (QM6rtgkFtzsjZWU8JFREvg)
-                                        padding: EdgeInsets.fromLTRB(54 * fem,
-                                            13 * fem, 66 * fem, 6 * fem),
+                                        /*padding: EdgeInsets.fromLTRB(54 * fem,
+                                            13 * fem, 66 * fem, 6 * fem),*/
                                         width: 362 * fem,
                                         height: 265 * fem,
                                         decoration: const BoxDecoration(
@@ -1234,8 +1236,8 @@ class _HomeClassState extends State<HomeClass> {
                                         ),
                                         child: SizedBox(
                                           // frame288VJ (2315:1191)
-                                          width: double.infinity,
-                                          height: double.infinity,
+                                          //width: double.infinity,
+                                          //height: double.infinity,
                                           child: Row(
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.end,
@@ -1263,8 +1265,8 @@ class _HomeClassState extends State<HomeClass> {
                                                       height: 90 * fem,
                                                       child: Image.asset(
                                                         'assets/images/clarity-users-line.png',
-                                                        width: 90 * fem,
-                                                        height: 90 * fem,
+                                                        //width: 90 * fem,
+                                                        //height: 90 * fem,
                                                       ),
                                                     ),
                                                     Container(
@@ -1342,12 +1344,12 @@ class _HomeClassState extends State<HomeClass> {
                                                       top: 160 * fem,
                                                       child: Align(
                                                         child: SizedBox(
-                                                          width: 53.33 * fem,
-                                                          height: 66.67 * fem,
+                                                          //width: 53.33 * fem,
+                                                          //height: 66.67 * fem,
                                                           child: Image.asset(
                                                             'assets/images/healthicons-city.png',
-                                                            width: 53.33 * fem,
-                                                            height: 66.67 * fem,
+                                                            //width: 53.33 * fem,
+                                                            //height: 66.67 * fem,
                                                           ),
                                                         ),
                                                       ),
@@ -1358,8 +1360,8 @@ class _HomeClassState extends State<HomeClass> {
                                                       top: 109 * fem,
                                                       child: Align(
                                                         child: SizedBox(
-                                                          width: 72 * fem,
-                                                          height: 17 * fem,
+                                                          //width: 72 * fem,
+                                                          //height: 17 * fem,
                                                           child: Text(
                                                             '10K+ Users',
                                                             style:
@@ -1385,8 +1387,8 @@ class _HomeClassState extends State<HomeClass> {
                                                       left: 0 * fem,
                                                       top: 0 * fem,
                                                       child: SizedBox(
-                                                        width: 73.22 * fem,
-                                                        height: 246 * fem,
+                                                        //width: 73.22 * fem,
+                                                        //height: 246 * fem,
                                                         child: Column(
                                                           crossAxisAlignment:
                                                               CrossAxisAlignment
@@ -1401,10 +1403,10 @@ class _HomeClassState extends State<HomeClass> {
                                                                       0 * fem,
                                                                       0 * fem,
                                                                       0 * fem),
-                                                              width:
-                                                                  43.23 * fem,
-                                                              height:
-                                                                  53.42 * fem,
+                                                              //width:43.23 * fem,
+                                                                  
+                                                              //height:53.42 * fem,
+                                                                  
                                                               child:
                                                                   Image.asset(
                                                                 'assets/images/vector-vip.png',
@@ -1423,10 +1425,10 @@ class _HomeClassState extends State<HomeClass> {
                                                                       0 * fem,
                                                                       142.94 *
                                                                           fem),
-                                                              width:
-                                                                  73.22 * fem,
-                                                              height:
-                                                                  32.64 * fem,
+                                                              // width:
+                                                              //     73.22 * fem,
+                                                              // height:
+                                                              //     32.64 * fem,
                                                               child:
                                                                   Image.asset(
                                                                 'assets/images/vector-LTv.png',
@@ -1486,8 +1488,8 @@ class _HomeClassState extends State<HomeClass> {
                                               top: 0 * fem,
                                               child: Align(
                                                 child: SizedBox(
-                                                  width: 366 * fem,
-                                                  height: 200 * fem,
+                                                  //width: 366 * fem,
+                                                  //height: 200 * fem,
                                                   child: Container(
                                                     decoration:
                                                         const BoxDecoration(
@@ -1588,9 +1590,9 @@ class _HomeClassState extends State<HomeClass> {
         ),
       ),
     ),
-    ),
-    ),
-      ),
     );
+    //);
+      
+   
   }
 }
