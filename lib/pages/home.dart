@@ -4,6 +4,7 @@ import 'package:healthsync_app/pages/labtest.dart';
 import 'package:healthsync_app/pages/ba_slot.dart';
 import 'package:healthsync_app/pages/book_appointment.dart';
 import 'package:healthsync_app/pages/ba_doc_info.dart';
+import 'package:healthsync_app/pages/reminder_main.dart';
 
 class HomeClass extends StatelessWidget {
   const HomeClass({super.key});
@@ -139,14 +140,24 @@ class HomeClass extends StatelessWidget {
                                     ],
                                   ),
                                 ),
-                                SizedBox(
-                                  // arcticonsreminderjd6 (2315:1164)
-                                  width: 17.48 * fem,
-                                  height: 19.48 * fem,
-                                  child: Image.asset(
-                                    'assets/images/reminder_bell.png',
-                                    width: 17.48 * fem,
-                                    height: 19.48 * fem,
+                                GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const ReminderMainClass()),
+                                    );
+                                  },
+                                  child: SizedBox(
+                                    // arcticonsreminderjd6 (2315:1164)
+                                    width: 20 * fem,
+                                    height: 24 * fem,
+                                    child: Image.asset(
+                                      'assets/images/reminder_bell.png',
+                                      width: 17.48 * fem,
+                                      height: 19.48 * fem,
+                                    ),
                                   ),
                                 ),
                               ],
