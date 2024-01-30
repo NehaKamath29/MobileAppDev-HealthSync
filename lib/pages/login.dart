@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 // import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:healthsync_app/pages/home.dart';
 import 'package:healthsync_app/pages/signup.dart';
 //import 'package:healthsync_app/pages/personal_profile.dart';
 // import 'package:shared_preferences/shared_preferences.dart';
@@ -371,14 +372,31 @@ class _LoginClassState extends State<LoginClass> {
 // Save an integer value to 'counter' key.
 
                                 print("Login successful");
+                                 Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const HomeClass()),
+                                  );
                                 // navigation
                               } else {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(
+                                      content: Text("Wrong Password"),
+                                      duration: Duration(seconds: 3),
+                                    ));
                                 // Passwords don't match
                                 print("Incorrect password");
                               }
                             } else {
+
                               // User with the provided email doesn't exist
                               print("User with this email does not exist");
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(
+                                      content: Text("Email does not exists, Sign up first"),
+                                      duration: Duration(seconds: 3),
+                                    ));
                             }
                           });
                         } else {
