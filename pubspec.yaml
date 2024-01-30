@@ -209,6 +209,9 @@ flutter:
      - assets/images/heartscreening.png
      - assets/images/womenhealth.png
      - assets/images/menhealth.png
+     - assets/images/profileicon.png
+     - assets/images/the-lifesavers-using-computer.png
+     - assets/images/lifesavers-electrocardiogram.png
 
      
      

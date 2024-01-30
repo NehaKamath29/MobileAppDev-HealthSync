@@ -4,7 +4,9 @@ import 'package:healthsync_app/pages/labtest.dart';
 import 'package:healthsync_app/pages/ba_slot.dart';
 import 'package:healthsync_app/pages/book_appointment.dart';
 import 'package:healthsync_app/pages/ba_doc_info.dart';
+import 'package:healthsync_app/pages/profile_landing.dart';
 import 'package:healthsync_app/pages/reminder_main.dart';
+import 'package:healthsync_app/pages/tracking_landing.dart';
 
 class HomeClass extends StatefulWidget {
   const HomeClass({super.key});
@@ -63,14 +65,24 @@ class _HomeClassState extends State<HomeClass> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             SingleChildScrollView(
-                              child: SizedBox(
-                                // groupyCg (2315:1165)
-                                width: 22 * fem,
-                                height: 22 * fem,
-                                child: Image.asset(
-                                  'assets/images/group.png',
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const ProfilePage()),
+                                  );
+                                },
+                                child: SizedBox(
+                                  // groupyCg (2315:1165)
                                   width: 22 * fem,
                                   height: 22 * fem,
+                                  child: Image.asset(
+                                    'assets/images/profileicon.png',
+                                    width: 35 * fem,
+                                    height: 29 * fem,
+                                  ),
                                 ),
                               ),
                             ),
@@ -152,14 +164,24 @@ class _HomeClassState extends State<HomeClass> {
                                       ],
                                     ),
                                   ),
-                                  SizedBox(
-                                    // arcticonsreminderjd6 (2315:1164)
-                                    width: 17.48 * fem,
-                                    height: 19.48 * fem,
-                                    child: Image.asset(
-                                      'assets/images/reminder_bell.png',
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const ReminderMainClass()),
+                                      );
+                                    },
+                                    child: SizedBox(
+                                      // arcticonsreminderjd6 (2315:1164)
                                       width: 17.48 * fem,
                                       height: 19.48 * fem,
+                                      child: Image.asset(
+                                        'assets/images/reminder_bell.png',
+                                        width: 13.48 * fem,
+                                        height: 19.48 * fem,
+                                      ),
                                     ),
                                   ),
                                 ],
@@ -739,20 +761,31 @@ class _HomeClassState extends State<HomeClass> {
                                                           ),
                                                         ),
                                                       ),
-                                                      Container(
-                                                        // vectorktC (I2315:1186;500:556)
-                                                        margin:
-                                                            EdgeInsets.fromLTRB(
-                                                                0 * fem,
-                                                                0 * fem,
-                                                                0 * fem,
-                                                                3.47 * fem),
-                                                        width: 8.49 * fem,
-                                                        height: 13.15 * fem,
-                                                        child: Image.asset(
-                                                          'assets/images/vector-Fh6.png',
-                                                          width: 560 * fem,
+                                                      GestureDetector(
+                                                        onTap: () {
+                                                          Navigator.push(
+                                                            context,
+                                                            MaterialPageRoute(
+                                                                builder:
+                                                                    (context) =>
+                                                                        const TrackingClass()),
+                                                          );
+                                                        },
+                                                        child: Container(
+                                                          // vectorktC (I2315:1186;500:556)
+                                                          margin: EdgeInsets
+                                                              .fromLTRB(
+                                                                  0 * fem,
+                                                                  0 * fem,
+                                                                  0 * fem,
+                                                                  3.47 * fem),
+                                                          width: 8.49 * fem,
                                                           height: 13.15 * fem,
+                                                          child: Image.asset(
+                                                            'assets/images/vector-Fh6.png',
+                                                            width: 560 * fem,
+                                                            height: 13.15 * fem,
+                                                          ),
                                                         ),
                                                       ),
                                                     ],
@@ -1300,12 +1333,12 @@ class _HomeClassState extends State<HomeClass> {
                                                                 0 * fem,
                                                                 4 * fem,
                                                                 11 * fem),
-                                                        width: 90 * fem,
+                                                        width: 140 * fem,
                                                         height: 90 * fem,
                                                         child: Image.asset(
                                                           'assets/images/clarity-users-line.png',
-                                                          //width: 90 * fem,
-                                                          //height: 90 * fem,
+                                                          // width: 200 * fem,
+                                                          height: 90 * fem,
                                                         ),
                                                       ),
                                                       Container(
@@ -1351,7 +1384,7 @@ class _HomeClassState extends State<HomeClass> {
                                                         // khospitalsekU (2315:1212)
                                                         margin:
                                                             EdgeInsets.fromLTRB(
-                                                                2 * fem,
+                                                                6 * fem,
                                                                 0 * fem,
                                                                 0 * fem,
                                                                 0 * fem),
@@ -1375,34 +1408,35 @@ class _HomeClassState extends State<HomeClass> {
                                                 ),
                                                 SizedBox(
                                                   // autogrouprqvumKJ (QM6sDBDStsTHHAKZF3RqvU)
-                                                  width: 82 * fem,
-                                                  height: double.infinity,
+                                                  width: 122 * fem,
+                                                  // height: double.infinity,
                                                   child: Stack(
                                                     children: [
                                                       Positioned(
                                                         // healthiconscityuwJ (2315:1192)
-                                                        left: 10 * fem,
-                                                        top: 160 * fem,
+                                                        left: 25 * fem,
+                                                        top: 140 * fem,
                                                         child: Align(
                                                           child: SizedBox(
-                                                            //width: 53.33 * fem,
-                                                            //height: 66.67 * fem,
+                                                            width: 53.33 * fem,
+                                                            height: 90.67 * fem,
                                                             child: Image.asset(
                                                               'assets/images/healthicons-city.png',
-                                                              //width: 53.33 * fem,
-                                                              //height: 66.67 * fem,
+                                                              width: 3.33 * fem,
+                                                              height:
+                                                                  125.67 * fem,
                                                             ),
                                                           ),
                                                         ),
                                                       ),
                                                       Positioned(
                                                         // kuserspHa (2315:1199)
-                                                        left: 10 * fem,
-                                                        top: 109 * fem,
+                                                        left: 20 * fem,
+                                                        top: 100 * fem,
                                                         child: Align(
                                                           child: SizedBox(
-                                                            //width: 72 * fem,
-                                                            //height: 17 * fem,
+                                                            width: 122 * fem,
+                                                            height: 17 * fem,
                                                             child: Text(
                                                               '10K+ Users',
                                                               style:
@@ -1428,8 +1462,8 @@ class _HomeClassState extends State<HomeClass> {
                                                         left: 0 * fem,
                                                         top: 0 * fem,
                                                         child: SizedBox(
-                                                          //width: 73.22 * fem,
-                                                          //height: 246 * fem,
+                                                          width: 73.22 * fem,
+                                                          height: 246 * fem,
                                                           child: Column(
                                                             crossAxisAlignment:
                                                                 CrossAxisAlignment
@@ -1467,17 +1501,17 @@ class _HomeClassState extends State<HomeClass> {
                                                                         0 * fem,
                                                                         142.94 *
                                                                             fem),
-                                                                // width:
-                                                                //     73.22 * fem,
-                                                                // height:
-                                                                //     32.64 * fem,
+                                                                width:
+                                                                    73.22 * fem,
+                                                                height:
+                                                                    32.64 * fem,
                                                                 child:
                                                                     Image.asset(
                                                                   'assets/images/vector-LTv.png',
-                                                                  width: 73.22 *
+                                                                  width: 60.22 *
                                                                       fem,
                                                                   height:
-                                                                      32.64 *
+                                                                      20.64 *
                                                                           fem,
                                                                 ),
                                                               ),
@@ -1485,7 +1519,7 @@ class _HomeClassState extends State<HomeClass> {
                                                                 // citiesqrt (2315:1211)
                                                                 margin: EdgeInsets
                                                                     .fromLTRB(
-                                                                        9.78 *
+                                                                        7.78 *
                                                                             fem,
                                                                         0 * fem,
                                                                         0 * fem,
@@ -1532,8 +1566,8 @@ class _HomeClassState extends State<HomeClass> {
                                                 top: 0 * fem,
                                                 child: Align(
                                                   child: SizedBox(
-                                                    //width: 366 * fem,
-                                                    //height: 200 * fem,
+                                                    width: 366 * fem,
+                                                    height: 200 * fem,
                                                     child: Container(
                                                       decoration:
                                                           const BoxDecoration(
@@ -1567,7 +1601,7 @@ class _HomeClassState extends State<HomeClass> {
                                               //           children: [
                                               //             TextSpan(
                                               //               text:
-                                              //                   '                                       CONTACT US\n\n',
+                                              //                   'CONTACT US\n\n',
                                               //               style:
                                               //                   safeGoogleFont(
                                               //                 'Lato',
@@ -1601,12 +1635,6 @@ class _HomeClassState extends State<HomeClass> {
                                               //                 height: 1.2 *
                                               //                     ffem /
                                               //                     fem,
-                                              //                 decoration:TextDecoration
-                                              //                         .underline,
-                                              //                 color: Color(
-                                              //                     0xff000000),
-                                              //                 decorationColor:Color(
-                                              //                         0xff000000),
                                               //               ),
                                               //             ),
                                               //           ],
@@ -1616,6 +1644,88 @@ class _HomeClassState extends State<HomeClass> {
                                               //   ),
                                               // ),
                                             ],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Column(
+                                      /*crossAxisAlignment:
+                                        CrossAxisAlignment.start,*/
+                                      children: [
+                                        Container(
+                                          // autogrouprevg1fa (QM6rtgkFtzsjZWU8JFREvg)
+                                          /*padding: EdgeInsets.fromLTRB(54 * fem,
+                                            13 * fem, 66 * fem, 6 * fem),*/
+                                          width: 362 * fem,
+                                          height: 265 * fem,
+                                          decoration: const BoxDecoration(
+                                            color: Color.fromARGB(
+                                                181, 167, 255, 234),
+                                          ),
+                                          child: SizedBox(
+                                            // frame288VJ (2315:1191)
+                                            //width: double.infinity,
+                                            //height: double.infinity,
+                                            child: Row(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.end,
+                                              children: [
+                                                Container(
+                                                  // autogrouppx96sxg (QM6s61kiVQYaFf2VrFPX96)
+                                                  margin: EdgeInsets.fromLTRB(
+                                                      0 * fem,
+                                                      0 * fem,
+                                                      66 * fem,
+                                                      0 * fem),
+                                                  child: Column(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .center,
+                                                    children: [
+                                                      Container(
+                                                        // clarityuserslinebtg (2315:1200)
+                                                        margin:
+                                                            EdgeInsets.fromLTRB(
+                                                                0 * fem,
+                                                                0 * fem,
+                                                                4 * fem,
+                                                                11 * fem),
+                                                        width: 140 * fem,
+                                                        height: 90 * fem,
+                                                        child: Image.asset(
+                                                          'assets/images/clarity-users-line.png',
+                                                          // width: 200 * fem,
+                                                          height: 90 * fem,
+                                                        ),
+                                                      ),
+                                                      Container(
+                                                        // lusersVUG (2315:1198)
+                                                        margin:
+                                                            EdgeInsets.fromLTRB(
+                                                                0 * fem,
+                                                                0 * fem,
+                                                                6 * fem,
+                                                                36 * fem),
+                                                        child: Text(
+                                                          '2L+ Users',
+                                                          style: safeGoogleFont(
+                                                            'Lato',
+                                                            fontSize: 14 * ffem,
+                                                            fontWeight:
+                                                                FontWeight.w400,
+                                                            height: 1.2 *
+                                                                ffem /
+                                                                fem,
+                                                            color: const Color(
+                                                                0xff000000),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
                                           ),
                                         ),
                                       ],
@@ -1636,6 +1746,5 @@ class _HomeClassState extends State<HomeClass> {
         ),
       ),
     );
-    //);
   }
 }
