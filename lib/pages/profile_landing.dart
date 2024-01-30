@@ -30,6 +30,12 @@ Future<Map<String, dynamic>> get_details() async {
         final data2 = doc2.data() as Map<String, dynamic>;
         final username = data2['username'];
         print(data2);
+        final userdata = <String, dynamic>{
+          "username": username,
+          "percentage": ((count / 16) * 100).toString(),
+        };
+
+        return userdata;
       }
     }
   } catch (e) {
@@ -52,6 +58,7 @@ class ProfilePage extends StatelessWidget {
             return Text("Error: ${snapshot.error}");
           } else {
             Map<String, dynamic> userData = snapshot.data!;
+            print("userdata - ");
             print(userData);
             // Use userData to build your UI
             return YourWidget(userData: userData);
@@ -213,7 +220,7 @@ class YourWidget extends StatelessWidget {
                           width: 360 * fem,
                           height: 60 * fem,
                           child: Text(
-                            userData['percentage'] ?? '0%',
+                            userData['percentage'] ?? '45%',
                             textAlign: TextAlign.center,
                             style: safeGoogleFont(
                               'Lato',
