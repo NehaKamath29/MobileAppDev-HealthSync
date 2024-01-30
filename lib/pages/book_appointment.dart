@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_import
+// ignore_for_file: unnecessary_import, duplicate_import
 
 import 'package:flutter/material.dart';
 import 'dart:ui';
