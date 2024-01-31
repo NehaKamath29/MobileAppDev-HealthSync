@@ -11,6 +11,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 // ignore: unnecessary_import
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:healthsync_app/pages/home.dart';
 import 'package:healthsync_app/utils/utils.dart';
 import 'package:healthsync_app/pages/ba_doc_info.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
@@ -692,7 +693,13 @@ class _BaSlotClassState extends State<BaSlotClass> {
                                             textColor: Colors.white,
                                             fontSize: 16.0,
                                           );
-
+                                            Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const HomeClass()),
+                                    );
+                                            
                                           print('Data updated successfully');
                                         } catch (e) {
                                           print('Error updating data: $e');
