@@ -12,6 +12,7 @@ import 'package:healthsync_app/pages/medbill_lab.dart';
 
 class MedBillApp extends StatelessWidget {
   const MedBillApp({Key? key}) : super(key: key);
+  static const String routeName = '/medbill';
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +46,7 @@ class MedBillApp extends StatelessWidget {
                     child: Image.asset(
                       'assets/images/vector.png',
                       width: 12.95 * fem,
-                      height: 22.36 * fem,
+                      // height: 22.36 * fem,
                     ),
                   ),
                   Container(

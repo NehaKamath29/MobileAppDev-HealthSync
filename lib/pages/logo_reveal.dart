@@ -3,6 +3,7 @@ import 'package:healthsync_app/pages/auto_image_slider.dart';
 
 class LogoReveal extends StatefulWidget {
   const LogoReveal({Key? key}); //: super(key: key);
+  static const String routeName = '/logo_reveal';
 
   @override
   _LogoRevealState createState() => _LogoRevealState();
@@ -41,7 +42,8 @@ class _LogoRevealState extends State<LogoReveal>
             PageRouteBuilder(
               pageBuilder: (context, animation, secondaryAnimation) =>
                   const MyImageSlider(), // Replace with your actual home page widget
-              transitionsBuilder: (context, animation, secondaryAnimation, child) {
+              transitionsBuilder:
+                  (context, animation, secondaryAnimation, child) {
                 const begin = Offset(1.0, 0.0);
                 const end = Offset.zero;
                 const curve = Curves.easeInOutQuart;
@@ -57,7 +59,8 @@ class _LogoRevealState extends State<LogoReveal>
                   child: child,
                 );
               },
-              transitionDuration: const Duration(milliseconds: 1000), // Adjust the duration here
+              transitionDuration: const Duration(
+                  milliseconds: 1000), // Adjust the duration here
             ),
           );
         });

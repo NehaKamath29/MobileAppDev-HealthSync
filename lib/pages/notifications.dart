@@ -8,6 +8,7 @@ import 'package:healthsync_app/utils/utils.dart';
 
 class NotifClass extends StatelessWidget {
   const NotifClass({super.key});
+  static const String routeName = '/notif';
 
   @override
   Widget build(BuildContext context) {
