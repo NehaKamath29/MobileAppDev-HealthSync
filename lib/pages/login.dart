@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 // import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:healthsync_app/pages/forgetpass_landing.dart';
 import 'package:healthsync_app/pages/home.dart';
 import 'package:healthsync_app/pages/signup.dart';
 //import 'package:healthsync_app/pages/personal_profile.dart';
@@ -327,9 +328,11 @@ class _LoginClassState extends State<LoginClass> {
                             GestureDetector(
                               onTap: () {
                                 print("Success");
-                                // Navigate to another page here
-                                // You can use Navigator.push() or any other navigation method
-                                // Example: Navigator.push(context, MaterialPageRoute(builder: (context) => YourNextPage()));
+                                Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const PasswordClass()),
+                    );
                               },
                               child: Text(
                                 'Forget Password?',

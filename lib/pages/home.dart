@@ -522,22 +522,21 @@ class _HomeClassState extends State<HomeClass> {
                                                               .fromLTRB(
                                                                   0 * fem,
                                                                   0 * fem,
-                                                                  3.89 * fem,
-                                                                  2.87 * fem),
+                                                                  3 * fem,
+                                                                  2 * fem),
                                                           child: Text(
                                                             'Book an Appointment',
                                                             style:
                                                                 safeGoogleFont(
                                                               'Lato',
                                                               fontSize:
-                                                                  15.1417417526 *
-                                                                      ffem,
+                                                                  17.5,
                                                               fontWeight:
                                                                   FontWeight
-                                                                      .w400,
-                                                              height: 1.2 *
-                                                                  ffem /
-                                                                  fem,
+                                                                      .w600,
+                                                              // height: 1.2 *
+                                                              //     ffem /
+                                                              //     fem,
                                                               color: const Color(
                                                                   0xff000000),
                                                             ),
@@ -682,10 +681,9 @@ class _HomeClassState extends State<HomeClass> {
                                                           style: safeGoogleFont(
                                                             'Lato',
                                                             fontSize:
-                                                                15.1417417526 *
-                                                                    ffem,
+                                                                17.5,
                                                             fontWeight:
-                                                                FontWeight.w400,
+                                                                FontWeight.w600,
                                                             height: 1.2 *
                                                                 ffem /
                                                                 fem,
@@ -837,11 +835,10 @@ class _HomeClassState extends State<HomeClass> {
                                                                 safeGoogleFont(
                                                               'Lato',
                                                               fontSize:
-                                                                  15.1417398453 *
-                                                                      ffem,
+                                                                  17.5,
                                                               fontWeight:
                                                                   FontWeight
-                                                                      .w400,
+                                                                      .w600,
                                                               height: 1.2 *
                                                                   ffem /
                                                                   fem,

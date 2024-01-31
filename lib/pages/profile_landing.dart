@@ -4,6 +4,7 @@ import 'package:healthsync_app/pages/personal_profile.dart';
 import 'package:healthsync_app/utils/utils.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
+import 'package:healthsync_app/pages/forgetpass_landing.dart';
 
 Future<Map<String, dynamic>> get_details() async {
   FirebaseFirestore db = FirebaseFirestore.instance;
@@ -320,6 +321,11 @@ class YourWidget extends StatelessWidget {
                   height: 50 * fem,
                   child: ElevatedButton(
                     onPressed: () {
+                      Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const PasswordClass()),
+                    );
                       // Add your logic here for 'Edit profile' button
                     },
                     style: ElevatedButton.styleFrom(

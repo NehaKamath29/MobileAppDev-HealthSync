@@ -36,6 +36,8 @@ import 'package:healthsync_app/pages/alarm_landing.dart';
 import 'package:healthsync_app/pages/reminder_main.dart';
 import 'package:healthsync_app/pages/tracking_landing.dart';
 import 'package:healthsync_app/pages/medical_history_no_record.dart';
+import 'package:healthsync_app/pages/forgetpass_landing.dart';
+
 
 // ...
 
@@ -57,7 +59,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const LoginClass(),
+      home: const ProfilePage(),
     );
   }
 }

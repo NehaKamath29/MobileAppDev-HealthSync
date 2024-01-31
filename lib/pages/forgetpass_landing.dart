@@ -25,6 +25,7 @@ class _PasswordClassState extends State<PasswordClass> {
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
     return SingleChildScrollView(
+      child:Material(
       child: Form(
         key: _formKey,
         child: SizedBox(
@@ -71,9 +72,11 @@ class _PasswordClassState extends State<PasswordClass> {
                       child: Text(
                         'Please enter your email address.\nYou will receive an email with instructions on how to reset your password.',
                         style: safeGoogleFont(
+                          
                           'Lato',
                           fontSize: 20 * ffem,
                           fontWeight: FontWeight.w600,
+                          decoration: TextDecoration.none,
                           height: 1.2 * ffem / fem,
                           color: Color(0xcc000000),
                         ),
@@ -129,9 +132,9 @@ class _PasswordClassState extends State<PasswordClass> {
                               ),
                               labelText: 'Email',
                               labelStyle: const TextStyle(
-                                fontSize: 24,
+                                fontSize: 20,
                                 fontFamily: 'Lato',
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w600,
                                 color: Color(0xb2000000),
                               ),
                               contentPadding: EdgeInsets.symmetric(
@@ -207,6 +210,7 @@ class _PasswordClassState extends State<PasswordClass> {
           ),
         ),
       ),
+    ),
     );
   }
 }
