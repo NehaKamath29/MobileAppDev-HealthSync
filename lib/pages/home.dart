@@ -12,7 +12,7 @@ import 'package:healthsync_app/pages/tracking_landing.dart';
 
 class HomeClass extends StatefulWidget {
   const HomeClass({super.key});
-
+  static const String routeName = '/home';
   @override
   State<HomeClass> createState() => _HomeClassState();
 }
@@ -220,7 +220,7 @@ class _HomeClassState extends State<HomeClass> {
                                       },
                                       child: SizedBox(
                                         // arcticonsreminderjd6 (2315:1164)
-                                        width: 17.48 * fem,
+                                        width: 14.48 * fem,
                                         height: 19.48 * fem,
                                         child: Image.asset(
                                           'assets/images/reminder_bell.png',

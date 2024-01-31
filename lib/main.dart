@@ -75,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
   static List<Widget> _widgetOptions = <Widget>[
     HomeClass(),
     MedBillApp(),
-    MedHistoryNR(),
+    MedicalHistory(),
     NotifClass(),
   ];
 

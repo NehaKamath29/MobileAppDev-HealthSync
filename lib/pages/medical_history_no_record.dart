@@ -6,6 +6,7 @@ import 'package:healthsync_app/utils/utils.dart';
 
 class MedHistoryNR extends StatelessWidget {
   const MedHistoryNR({super.key});
+  static const String routeName = '/medhistory';
 
   @override
   Widget build(BuildContext context) {
