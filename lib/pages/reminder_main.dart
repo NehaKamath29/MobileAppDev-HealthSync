@@ -10,6 +10,7 @@ class ReminderMainClass extends StatefulWidget {
   final String? startTime;
 
   const ReminderMainClass({
+    super.key,
     required this.medicineName,
     required this.medDose,
     required this.selectedMedicine,
@@ -40,7 +41,8 @@ class _ReminderMainClassState extends State<ReminderMainClass> {
         child: SizedBox(
           width: double.infinity,
           child: Container(
-            padding: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 330.5 * fem),
+            padding:
+                EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 330.5 * fem),
             width: double.infinity,
             decoration: BoxDecoration(
               color: Color(0xffffffff),
@@ -49,8 +51,10 @@ class _ReminderMainClassState extends State<ReminderMainClass> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 8 * fem),
-                  padding: EdgeInsets.fromLTRB(5 * fem, 8 * fem, 14 * fem, 14 * fem),
+                  margin:
+                      EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 8 * fem),
+                  padding:
+                      EdgeInsets.fromLTRB(5 * fem, 8 * fem, 14 * fem, 14 * fem),
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Color(0xffc5edff),
@@ -60,7 +64,8 @@ class _ReminderMainClassState extends State<ReminderMainClass> {
                     children: [
                       Expanded(
                         child: Container(
-                          margin: EdgeInsets.fromLTRB(90 * fem, 5 * fem, 46 * fem, 0 * fem),
+                          margin: EdgeInsets.fromLTRB(
+                              90 * fem, 5 * fem, 46 * fem, 0 * fem),
                           child: Text(
                             'REMINDER',
                             textAlign: TextAlign.center,
@@ -75,7 +80,8 @@ class _ReminderMainClassState extends State<ReminderMainClass> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.fromLTRB(0 * fem, 9 * fem, 0 * fem, 0 * fem),
+                        margin: EdgeInsets.fromLTRB(
+                            0 * fem, 9 * fem, 0 * fem, 0 * fem),
                         width: 52 * fem,
                         height: 52 * fem,
                         child: Image.asset(
@@ -150,14 +156,16 @@ class _ReminderMainClassState extends State<ReminderMainClass> {
                     print("Button pressed!");
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const RemindMedicine()),
+                      MaterialPageRoute(
+                          builder: (context) => const RemindMedicine()),
                     );
                   },
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.zero,
                   ),
                   child: Container(
-                    margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 2 * fem, 0 * fem),
+                    margin:
+                        EdgeInsets.fromLTRB(0 * fem, 0 * fem, 2 * fem, 0 * fem),
                     width: 55 * fem,
                     height: 55 * fem,
                     child: Image.asset(
@@ -229,7 +237,8 @@ class _ReminderMainClassState extends State<ReminderMainClass> {
                         ),
                       ),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.end, // Align switch to right
+                        mainAxisAlignment:
+                            MainAxisAlignment.end, // Align switch to right
                         children: [
                           Switch(
                             value: isSwitched,
@@ -238,7 +247,9 @@ class _ReminderMainClassState extends State<ReminderMainClass> {
                                 isSwitched = value;
                               });
                             },
-                            activeColor: isSwitched ? const Color(0xc95fc5ff) : const Color.fromARGB(255, 198, 196, 196),
+                            activeColor: isSwitched
+                                ? const Color(0xc95fc5ff)
+                                : const Color.fromARGB(255, 198, 196, 196),
                           ),
                         ],
                       ),
@@ -253,15 +264,3 @@ class _ReminderMainClassState extends State<ReminderMainClass> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-

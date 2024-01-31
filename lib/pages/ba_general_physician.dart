@@ -108,7 +108,13 @@ class BaGenPhyClass extends StatelessWidget {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              const ReminderMainClass()),
+                                              const ReminderMainClass(
+                                                medicineName: '',
+                                                selectedMedicine: '',
+                                                selectedInterval: null,
+                                                medDose: '',
+                                                startTime: '',
+                                              )),
                                     );
                                   },
                                   child: Container(

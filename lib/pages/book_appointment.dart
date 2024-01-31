@@ -85,7 +85,13 @@ class BookClass extends StatelessWidget {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  const ReminderMainClass()),
+                                                  const ReminderMainClass(
+                                                    medicineName: '',
+                                                    selectedMedicine: '',
+                                                    startTime: '',
+                                                    medDose: '',
+                                                    selectedInterval: null,
+                                                  )),
                                         );
                                       },
                                       child: Container(

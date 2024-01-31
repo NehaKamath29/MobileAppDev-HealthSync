@@ -133,7 +133,14 @@ class _BaSlotClassState extends State<BaSlotClass> {
                                                 context,
                                                 MaterialPageRoute(
                                                     builder: (context) =>
-                                                        const ReminderMainClass()),
+                                                        const ReminderMainClass(
+                                                          medicineName: '',
+                                                          selectedMedicine: '',
+                                                          medDose: '',
+                                                          selectedInterval:
+                                                              null,
+                                                          startTime: '',
+                                                        )),
                                               );
                                             },
                                             child: Container(
@@ -693,13 +700,13 @@ class _BaSlotClassState extends State<BaSlotClass> {
                                             textColor: Colors.white,
                                             fontSize: 16.0,
                                           );
-                                            Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const HomeClass()),
-                                    );
-                                            
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const HomeClass()),
+                                          );
+
                                           print('Data updated successfully');
                                         } catch (e) {
                                           print('Error updating data: $e');

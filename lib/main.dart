@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:healthsync_app/pages/ba_doc_info.dart';
 import 'package:healthsync_app/pages/forgetpass_landing.dart';
 import 'package:healthsync_app/pages/health_profile.dart';
+import 'package:healthsync_app/pages/medicalhistory.dart';
 import 'package:healthsync_app/pages/notifications.dart';
 import 'package:healthsync_app/pages/profile_landing.dart';
 import 'package:healthsync_app/utils/utils.dart';
@@ -35,8 +36,6 @@ import 'package:healthsync_app/pages/alarm_landing.dart';
 import 'package:healthsync_app/pages/reminder_main.dart';
 import 'package:healthsync_app/pages/tracking_landing.dart';
 
-
-
 // ...
 
 void main() async {
@@ -57,64 +56,64 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(),
+      home: const LoginClass(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+// class MyHomePage extends StatefulWidget {
+//   const MyHomePage({Key? key}) : super(key: key);
 
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
+//   @override
+//   _MyHomePageState createState() => _MyHomePageState();
+// }
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _selectedIndex = 0;
+// class _MyHomePageState extends State<MyHomePage> {
+//   int _selectedIndex = 0;
 
-  static List<Widget> _widgetOptions = <Widget>[
-    HomeClass(),
-    MedBillApp(),
-    MedicalHistory(),
-    NotifClass(),
-  ];
+//   static List<Widget> _widgetOptions = <Widget>[
+//     HomeClass(),
+//     MedBillApp(),
+//     MedicalHistory(),
+//     NotifClass(),
+//   ];
 
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
+//   void _onItemTapped(int index) {
+//     setState(() {
+//       _selectedIndex = index;
+//     });
+//   }
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: _widgetOptions.elementAt(_selectedIndex),
-      bottomNavigationBar: BottomNavigationBar(
-        // backgroundColor: Colors.blue, // Set the background color
-        selectedItemColor: Colors.blue, // Set the color of the selected item
-        unselectedItemColor:
-            Colors.black, // Set the color of the unselected items
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage('assets/images/navhome.png')),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage('assets/images/navbill.png')),
-            label: 'Medical Bill',
-          ),
-          BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage('assets/images/navhistory.png')),
-            label: 'MedicalHistory',
-          ),
-          BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage('assets/images/navothers.png')),
-            label: 'Notifications',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: _widgetOptions.elementAt(_selectedIndex),
+//       bottomNavigationBar: BottomNavigationBar(
+//         // backgroundColor: Colors.blue, // Set the background color
+//         selectedItemColor: Colors.blue, // Set the color of the selected item
+//         unselectedItemColor:
+//             Colors.black, // Set the color of the unselected items
+//         items: const <BottomNavigationBarItem>[
+//           BottomNavigationBarItem(
+//             icon: ImageIcon(AssetImage('assets/images/navhome.png')),
+//             label: 'Home',
+//           ),
+//           BottomNavigationBarItem(
+//             icon: ImageIcon(AssetImage('assets/images/navbill.png')),
+//             label: 'Medical Bill',
+//           ),
+//           BottomNavigationBarItem(
+//             icon: ImageIcon(AssetImage('assets/images/navhistory.png')),
+//             label: 'MedicalHistory',
+//           ),
+//           BottomNavigationBarItem(
+//             icon: ImageIcon(AssetImage('assets/images/navothers.png')),
+//             label: 'Notifications',
+//           ),
+//         ],
+//         currentIndex: _selectedIndex,
+//         onTap: _onItemTapped,
+//       ),
+//     );
+//   }
+// }
