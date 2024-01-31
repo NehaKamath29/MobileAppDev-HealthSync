@@ -20,6 +20,7 @@ class _FormScreenState extends State<FormScreen> {
   TextEditingController passwordController = TextEditingController();
   TextEditingController phoneNumberController = TextEditingController();
 
+
   @override
   Widget build(BuildContext context) {
     double baseWidth = 360;

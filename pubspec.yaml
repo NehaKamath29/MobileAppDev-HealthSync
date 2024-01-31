@@ -119,7 +119,10 @@ flutter:
      - assets/images/rectangle-102.png
      - assets/images/AddAlarm.png
      - assets/images/deleteSVG.png
-     
+     - assets/images/syringeSVG.png
+     - assets/images/pillSVG.png
+     - assets/images/medicine_bottleSVG.png
+     - assets/images/medicine_tabletSVG.png
 
      
 
