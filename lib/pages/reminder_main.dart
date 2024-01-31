@@ -3,11 +3,11 @@ import 'package:healthsync_app/pages/remind_medicine.dart';
 import 'package:healthsync_app/utils/utils.dart';
 
 class ReminderMainClass extends StatefulWidget {
-  final String medicineName;
-  final String medDose;
-  final String selectedMedicine;
-  final int selectedInterval;
-  final String startTime;
+  final String? medicineName;
+  final String? medDose;
+  final String? selectedMedicine;
+  final int? selectedInterval;
+  final String? startTime;
 
   const ReminderMainClass({
     required this.medicineName,

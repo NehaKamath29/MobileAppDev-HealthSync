@@ -8,6 +8,7 @@ import 'package:healthsync_app/pages/ba_general_physician.dart';
 import 'package:healthsync_app/pages/ba_slot.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:healthsync_app/pages/reminder_main.dart';
+import 'package:healthsync_app/pages/remind_medicine.dart';
 
 Future<Map<String, dynamic>> get_details() async {
   FirebaseFirestore db = FirebaseFirestore.instance;
@@ -173,7 +174,14 @@ class YourWidget extends StatelessWidget {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      const ReminderMainClass()),
+                                                      const ReminderMainClass(
+      medicineName: null,
+      medDose: null,
+      selectedMedicine:null,
+      selectedInterval: null,
+      startTime: null,
+    ),
+                                              ),
                                             );
                                           },
                                           child: Container(

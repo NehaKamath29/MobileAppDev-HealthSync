@@ -215,7 +215,13 @@ class _HomeClassState extends State<HomeClass> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  const ReminderMainClass()),
+                                                  const ReminderMainClass(
+      medicineName: null,
+      medDose: null,
+      selectedMedicine:null,
+      selectedInterval: null,
+      startTime: null,
+    ),),
                                         );
                                       },
                                       child: SizedBox(
